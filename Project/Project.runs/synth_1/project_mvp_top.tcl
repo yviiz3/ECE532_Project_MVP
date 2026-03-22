@@ -41,6 +41,18 @@ add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.src
 add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.coe
 add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.coe
 add_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.coe
+read_mem {
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img09.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img10.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img04.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img08.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img07.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img06.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img01.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img02.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img03.mem
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/imports/Reconstruct_64_1dsp/svd_vectors_64x64_img05.mem
+}
 read_verilog -library xil_defaultlib -sv {
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/reconstruction_buf.sv
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/reconstruction_compute_64_1dsp.sv
@@ -48,6 +60,8 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/project_mvp_top.sv
 }
 read_verilog -library xil_defaultlib {
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/uart_buf.v
+  C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/uart_rx.v
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/vga_buf.v
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/vga_output.v
 }

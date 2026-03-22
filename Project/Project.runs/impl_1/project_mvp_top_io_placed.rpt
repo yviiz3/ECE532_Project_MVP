@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Sun Mar 22 13:52:58 2026
+| Date                      : Sun Mar 22 14:51:06 2026
 | Host                      : Re1nA running 64-bit major release  (build 9200)
 | Command                   : report_io -file project_mvp_top_io_placed.rpt
 | Design                    : project_mvp_top
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            33 |
+|            34 |
 +---------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 | C1         |              | High Range | IO_L16N_T2_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C2         |              | High Range | IO_L16P_T2_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C3         |              | High Range | VCCO_35                      | VCCO        |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| C4         |              | High Range | IO_L7P_T1_AD6P_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| C4         | data_in      | High Range | IO_L7P_T1_AD6P_35            | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | C5         | data_out[10] | High Range | IO_L1N_T0_AD4N_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | C6         | data_out[4]  | High Range | IO_L1P_T0_AD4P_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | C7         | data_out[1]  | High Range | IO_L4N_T0_35                 | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |

@@ -9,7 +9,7 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} [get_ports clk]
 
 # for uart rx
-#set_property -dict {PACKAGE_PIN C4 IOSTANDARD LVCMOS33} [get_ports data_in]
+set_property -dict {PACKAGE_PIN C4 IOSTANDARD LVCMOS33} [get_ports data_in]
 
 #set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { start }]; #IO_L10N_T1_D15_14 Sch=btnr
 #set_property -dict { PACKAGE_PIN H17   IOSTANDARD LVCMOS33 } [get_ports { uart_done }]; #IO_L18P_T2_A24_15 Sch=led[0]

@@ -24,11 +24,48 @@ module project_mvp_top(
     input clk,
     input reset,
     input en,
+    input data_in,
     output [11:0] data_out,
     output HSYNC,
     output VSYNC,
     output led[15:0]
     );
+    
+    wire [7:0] data_out_rx;
+    wire rx_state;
+    uart_rx uart_rx_1(
+        .clk        (clk),
+        .reset      (reset),
+        .data_in    (data_in),
+        .data_out   (data_out_rx),
+        .out_state  (rx_state)
+    );
+    
+    wire bram_ena;
+    wire [0:0] bram_wea;
+    wire [13:0] bram_addra;
+    wire [16:0] bram_dina;
+    wire uart_done;
+    uart_buf uart_buf_1(
+        .clk         (clk),
+        .reset       (reset),
+        .write_en    (rx_state),
+        .data_in     (data_out_rx),
+        .bram_ena    (bram_ena),
+        .bram_wea    (bram_wea),
+        .bram_addra  (bram_addra),
+        .bram_dina   (bram_dina),
+        .uart_done   (uart_done)
+    );
+    
+    reg load_done;
+
+    always @(posedge clk) begin
+        if (reset)
+            load_done <= 1'b0;
+        else if (uart_done)
+            load_done <= 1'b1;
+    end
     
     localparam int W = 17;
     localparam int FRAC = 8;
@@ -40,13 +77,13 @@ module project_mvp_top(
     logic [W-1:0] bram_dout;
     blk_mem_gen_0 input_bram (
         .clka  (clk),
-        .ena   (0),
-        .wea   (0),
-        .addra (0),
-        .dina  (0),
+        .ena   (bram_ena),
+        .wea   (bram_wea),
+        .addra (bram_addra),
+        .dina  (bram_dina),
     
         .clkb  (clk),
-        .enb   (1'b1),
+        .enb   (load_done),
         .addrb (bram_addr),
         .doutb (bram_dout)
     );
@@ -63,7 +100,7 @@ module project_mvp_top(
         .LED_BLINK_BIT(LED_BLINK_BIT)
     ) u_compute (
         .clk(clk),
-        .rst(reset),
+        .rst(reset | ~load_done),
         .bram_dout(bram_dout),
         .bram_addr(bram_addr),
         .bram_addr_in(bram_addr_in),
