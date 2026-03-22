@@ -72,7 +72,7 @@ module project_mvp_top(
         .led_pass(led_pass)
     );
     
-    logic [18:0] vga_bram_addr_in;
+    logic [15:0] vga_bram_addr_in;
     logic [3:0] vga_bram_din;
     logic out_wea;
     reconstruction_buf #(
@@ -123,7 +123,7 @@ assign led[15] = wea_count[15];
         .locked(clk_locked)
     );
     
-    wire [18:0] bram_addrb_vga;
+    wire [15:0] bram_addrb_vga;
     wire [3:0] bram_dout_vga;
     blk_mem_gen_1 output_bram (
         .clka  (clk),

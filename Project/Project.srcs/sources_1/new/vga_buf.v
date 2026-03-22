@@ -25,7 +25,7 @@ module vga_buf(
     input reset,
     input en,
     input [3:0] data_in,
-    output [18:0] bram_addrb,
+    output [15:0] bram_addrb,
     output [11:0] data_out,
     output HSYNC,
     output VSYNC
@@ -35,6 +35,7 @@ module vga_buf(
     wire data_valid;
     wire [9:0] h_valid_count;
     wire [9:0] v_valid_count;
+    wire in_range;
     
     reg data_valid_delayed;
      
@@ -50,8 +51,9 @@ module vga_buf(
         .h_valid_count (h_valid_count),
         .v_valid_count (v_valid_count)
     );
-    
-    assign bram_addrb = v_valid_count * 640 + h_valid_count;
+
+    assign in_range = (v_valid_count < 64) && (h_valid_count < 64);
+    assign bram_addrb = in_range ? (v_valid_count * 64 + h_valid_count):0;
 
 //    always @(posedge clk) begin
 //        if (!en) begin
@@ -66,23 +68,22 @@ module vga_buf(
 //    end
 
     always @(posedge clk) begin
-        if (reset) begin
+        if (reset)
             data_valid_delayed <= 1'b0;
-        end
-        else begin
+        else
             data_valid_delayed <= data_valid;
-        end
     end
 
     always @(posedge clk) begin
-        if (!en) begin
+        if (!en)
             vga_data_in <= 12'h000;
-        end
-        else if (!data_valid_delayed) begin
+        else if (!data_valid_delayed)
             vga_data_in <= 12'h000;
-        end
         else begin
-            vga_data_in <= {data_in[3:0],data_in[3:0],data_in[3:0]};
+            if (in_range)
+                vga_data_in <= {data_in[3:0],data_in[3:0],data_in[3:0]};
+            else
+                vga_data_in <= 12'h000;
         end
     end
 endmodule

@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -52,13 +51,13 @@ read_verilog -library xil_defaultlib {
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/vga_buf.v
   C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/new/vga_output.v
 }
-read_ip -quiet c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
-
-read_ip -quiet c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1.xci
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_1/blk_mem_gen_1_ooc.xdc]
 
-read_ip -quiet c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+
+read_ip -quiet C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
@@ -74,6 +73,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc
 set_property used_in_implementation false [get_files C:/Users/13083/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/constrs_1/new/project_mvp_constraints.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
