@@ -1,0 +1,250 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x504DA775F117752E",
+      "device": "xc7a100tcsg324-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "project_mvp_top_0": "",
+      "proc_sys_reset_0": "",
+      "bram_ctrl_0": ""
+    },
+    "ports": {
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk_100MHz",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "led": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "data_in_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKIN2_JITTER_PS": {
+            "value": "166.66"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "175.402"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "25.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "40"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "1"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "SECONDARY_IN_FREQ": {
+            "value": "100.000"
+          },
+          "SECONDARY_SOURCE": {
+            "value": "Single_ended_clock_capable_pin"
+          },
+          "USE_INCLK_SWITCHOVER": {
+            "value": "false"
+          }
+        }
+      },
+      "project_mvp_top_0": {
+        "vlnv": "xilinx.com:user:project_mvp_top:1.0",
+        "xci_name": "design_1_project_mvp_top_0_0"
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "design_1_proc_sys_reset_0_0"
+      },
+      "bram_ctrl_0": {
+        "vlnv": "xilinx.com:user:bram_ctrl:1.0",
+        "xci_name": "design_1_bram_ctrl_0_0"
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "project_mvp_top_0/clk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "bram_ctrl_0/clk"
+        ]
+      },
+      "clk_100MHz_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "reset_rtl_0_1": {
+        "ports": [
+          "reset",
+          "clk_wiz_0/resetn",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "project_mvp_top_0_bram_ena_uart": {
+        "ports": [
+          "project_mvp_top_0/bram_ena_uart",
+          "bram_ctrl_0/a_en_1"
+        ]
+      },
+      "project_mvp_top_0_bram_wea_uart": {
+        "ports": [
+          "project_mvp_top_0/bram_wea_uart",
+          "bram_ctrl_0/a_we_1"
+        ]
+      },
+      "project_mvp_top_0_bram_addra_uart": {
+        "ports": [
+          "project_mvp_top_0/bram_addra_uart",
+          "bram_ctrl_0/a_addr_1"
+        ]
+      },
+      "project_mvp_top_0_bram_dina_uart": {
+        "ports": [
+          "project_mvp_top_0/bram_dina_uart",
+          "bram_ctrl_0/a_din_1"
+        ]
+      },
+      "project_mvp_top_0_bram_enb_uart": {
+        "ports": [
+          "project_mvp_top_0/bram_enb_uart",
+          "bram_ctrl_0/b_en_1"
+        ]
+      },
+      "project_mvp_top_0_bram_addrb_uart": {
+        "ports": [
+          "project_mvp_top_0/bram_addrb_uart",
+          "bram_ctrl_0/b_addr_1"
+        ]
+      },
+      "project_mvp_top_0_bram_uart_done": {
+        "ports": [
+          "project_mvp_top_0/bram_uart_done",
+          "bram_ctrl_0/status_1"
+        ]
+      },
+      "project_mvp_top_0_bram_ena_dsp": {
+        "ports": [
+          "project_mvp_top_0/bram_ena_dsp",
+          "bram_ctrl_0/a_en_2"
+        ]
+      },
+      "project_mvp_top_0_bram_wea_dsp": {
+        "ports": [
+          "project_mvp_top_0/bram_wea_dsp",
+          "bram_ctrl_0/a_we_2"
+        ]
+      },
+      "project_mvp_top_0_bram_addra_dsp": {
+        "ports": [
+          "project_mvp_top_0/bram_addra_dsp",
+          "bram_ctrl_0/a_addr_2"
+        ]
+      },
+      "project_mvp_top_0_bram_dina_dsp": {
+        "ports": [
+          "project_mvp_top_0/bram_dina_dsp",
+          "bram_ctrl_0/a_din_2"
+        ]
+      },
+      "project_mvp_top_0_bram_enb_dsp": {
+        "ports": [
+          "project_mvp_top_0/bram_enb_dsp",
+          "bram_ctrl_0/b_en_2"
+        ]
+      },
+      "project_mvp_top_0_bram_addrb_dsp": {
+        "ports": [
+          "project_mvp_top_0/bram_addrb_dsp",
+          "bram_ctrl_0/b_addr_2"
+        ]
+      },
+      "project_mvp_top_0_bram_dsp_done": {
+        "ports": [
+          "project_mvp_top_0/bram_dsp_done",
+          "bram_ctrl_0/b_din_2"
+        ]
+      },
+      "project_mvp_top_0_led": {
+        "ports": [
+          "project_mvp_top_0/led",
+          "led"
+        ]
+      },
+      "data_in_0_1": {
+        "ports": [
+          "data_in_0",
+          "project_mvp_top_0/data_in"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "project_mvp_top_0/reset",
+          "bram_ctrl_0/reset_n"
+        ]
+      }
+    }
+  }
+}

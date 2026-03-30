@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../ip/control_fsm.v" \
+"../../../../ip/dot_product.v" \
+"../../../../ip/rotation_param.v" \
+"../../../../ip/tdp_bram.v" \
+"../../../../ip/top.v" \
+"../../../../ip/updated_column.v" \
+"../../../../ip/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

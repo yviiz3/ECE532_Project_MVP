@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>design_1_bram_ctrl_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>reset_n</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset_n</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.RESET_N.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.RESET_N.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.PHASE">0.0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN">/clk_wiz_0_clk_out1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:modelName>bram_ctrl</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ec2e220f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_1_bram_ctrl_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ec2e220f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:modelName>bram_ctrl</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:a75b121f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>design_1_bram_ctrl_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:a75b121f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Mon Mar 23 23:24:31 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ec2e220f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset_n</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_en_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_we_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_addr_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_din_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_dout_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_en_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_we_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_addr_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_din_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_dout_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>status_1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_en_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_we_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_addr_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_din_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_dout_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_en_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_we_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_addr_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_din_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_dout_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>status_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_en_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_we_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_addr_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_din_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_dout_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_en_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_we_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_addr_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_din_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_dout_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>status_3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_en_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_we_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_addr_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_din_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_dout_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_en_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_we_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_addr_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">16</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_din_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b_dout_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>status_4</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/358e/bram_ctrl.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/design_1_bram_ctrl_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/358e/bram_ctrl.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/design_1_bram_ctrl_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>design_1_bram_ctrl_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_bram_ctrl_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_bram_ctrl_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_bram_ctrl_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_bram_ctrl_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>bram_ctrl_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_bram_ctrl_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>bram_ctrl_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="nopcore"/>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fe19c35_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ea3c2d6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35a75f73_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b7ab1e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@773a178c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d46eb40_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45754597_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@519e06f9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c261db3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7df199f2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@164ef6e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b154b4b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c21e331_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bafe97e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f3429d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c9ae3af_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e340fe_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e28191b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@629091c6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b261940_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@356b2af4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56113cae_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b43c46_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@358e4af5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5de86b49_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c91b99f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29826665_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@417d3f18_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@781e9a6c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13457bc3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3adca64e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ccf0cc6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32c705d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262c0b6e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f5d8d1d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d642a86_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b09cfe5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b3d7d67_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@453d8f0b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@459f2a8e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1df427d5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@260c3520_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d45a4de_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29297d42_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e22d899_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa8d795_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b937de_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e1e0c3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66d24c29_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f5a6d86_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e4cdff3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@506b5ce8_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@387fa836_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@387ee4df_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fb705f4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@907322d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632db6a5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5278350f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@797042c7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@959f113_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58041751_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39057f7b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a50029_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c9927e4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@752df49d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f7c08d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53e87a71_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23e6037c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42616c93_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c08a61a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75795098_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@661b6ea_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31be6933_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41f34286_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a2e4c97_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9df4f0f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d609684_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4364703f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1360ac97_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ab83636_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26aac11_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f2f34f6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d785ce2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c084fe4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5452e78f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21bec452_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63edff2a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58a77b6b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce6c297_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d2e788_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39e65f87_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69ed2088_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@686db04f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d39057f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63a9511a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2748c637_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b671719_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9594118_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72b88643_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33fd5123_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c64d17_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bfe8cdb_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b0d66_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@218abe7a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad4a94b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e9a46c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f817c52_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197c427d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32e8ec90_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39be9395_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a8a6482_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@302284ff_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b120ec5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d855fe6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16b39178_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5913415_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f85aedb_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2429eb05_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44c4c672_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37b29843_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3db1c17e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4009498d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28f0a959_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d71f6d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e817f48_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6563c632_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7690fb5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5467fe10_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14dd7410_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f39b0dc_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b846873_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27e192de_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d0031dc_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da6438d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7419f508_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@741a7862_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dab9eed_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ea82174_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62762e02_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118314ed_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4086dab1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69a37a3e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c639e0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f377a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40dbd5c1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@538c5fc4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc7f223_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@378dd502_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70fe8b86_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ed3f17c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66fefb97_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fbae175_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e13ecc7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@623346d9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65997bd1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1867851a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46e33eea_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@258cd562_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52a78ae1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31442b72_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@213edf84_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a5775db_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a523de_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e632438_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66a55bd9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cf7052c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fa2db57_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cab0894_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@acbe578_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ef6941_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45cb0466_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@549b3753_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@597bfbc2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f55a027_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4085019a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b7dafd6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20ee1fab_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@177375c9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26246f00_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c2f5be5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2064f631_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34ec7fc0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a469e83_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b524e7c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a2c8be7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@168f6fa5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79e674b4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@287ab8d0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46db8447_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e70a8bf_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ead44df_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@339589bf_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49a8886c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4db66600_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2acacb30_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RESET_N.POLARITY" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd_and_user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b4a093a7"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f52fa294"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="8c63998e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6007e339"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

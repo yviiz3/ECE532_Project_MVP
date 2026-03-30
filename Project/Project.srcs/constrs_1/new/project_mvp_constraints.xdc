@@ -3,7 +3,7 @@ set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports en]
 
 # for reset signal
 set_property -dict {PACKAGE_PIN N17 IOSTANDARD LVCMOS33} [get_ports reset]
-
+set_property -dict { PACKAGE_PIN C4    IOSTANDARD LVCMOS33 } [get_ports { data_in_0 }]; #IO_L7P_T1_AD6P_35 Sch=uart_txd_in
 # for clk signal
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} [get_ports clk]

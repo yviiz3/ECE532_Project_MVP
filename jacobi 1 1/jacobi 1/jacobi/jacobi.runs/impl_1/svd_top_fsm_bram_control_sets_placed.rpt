@@ -1,0 +1,99 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Sun Mar 29 17:54:38 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file svd_top_fsm_bram_control_sets_placed.rpt
+| Design       : svd_top_fsm_bram
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |   144 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            4 |
+|      3 |            3 |
+|      4 |            1 |
+|      6 |            1 |
+|     10 |            9 |
+|     11 |            3 |
+|    16+ |            8 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              12 |            8 |
+| No           | No                    | Yes                    |               6 |            4 |
+| No           | Yes                   | No                     |              30 |           17 |
+| Yes          | No                    | No                     |             100 |           28 |
+| Yes          | No                    | Yes                    |              49 |           18 |
+| Yes          | Yes                   | No                     |             147 |           40 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------------------+-------------------------------------------+------------------+----------------+
+| Clock Signal |                         Enable Signal                         |              Set/Reset Signal             | Slice Load Count | Bel Load Count |
++--------------+---------------------------------------------------------------+-------------------------------------------+------------------+----------------+
+|  clk         |                                                               | lower_fsm/u_control_fsm/updateb_finished0 |                1 |              2 |
+|  clk         | lower_fsm/u_updated_column_1/flush_count0                     | lower_fsm/u_control_fsm/SR[0]             |                1 |              2 |
+|  clk         | lower_fsm/u_updated_column_2/flush_count0                     | lower_fsm/u_control_fsm/rst_0[0]          |                1 |              2 |
+|  clk         | sub[1]_i_1_n_0                                                | rst                                       |                1 |              2 |
+|  clk         |                                                               | lower_fsm/u_control_fsm/rst_1[0]          |                3 |              3 |
+|  clk         | lower_fsm/u_control_fsm/divide_increment_reg_n_0              | lower_fsm/u_control_fsm/updateb_finished0 |                1 |              3 |
+|  clk         | sweep_cnt[2]_i_1_n_0                                          | rst                                       |                1 |              3 |
+|  clk         | state[3]_i_1_n_0                                              | rst                                       |                1 |              4 |
+|  clk         | lower_fsm/u_control_fsm/addrb_astart0                         | rst                                       |                3 |              6 |
+|  clk         | lower_fsm/u_control_fsm/dot_valid_reg_2                       | lower_fsm/u_control_fsm/rst_1[0]          |                3 |             10 |
+|  clk         | lower_fsm/u_control_fsm/dot_valid_reg_1                       | lower_fsm/u_control_fsm/rst_1[0]          |                2 |             10 |
+|  clk         | lower_fsm/u_control_fsm/dot_valid_reg_0[0]                    | lower_fsm/u_control_fsm/rst_1[0]          |                3 |             10 |
+|  clk         | lower_fsm/u_control_fsm/updateb_validin_reg_0[0]              | lower_fsm/u_control_fsm/SR[0]             |                2 |             10 |
+|  clk         | col_idx[9]_i_1_n_0                                            | rst                                       |                4 |             10 |
+|  clk         | row_idx0                                                      | rst                                       |                3 |             10 |
+|  clk         | p_idx[9]_i_1_n_0                                              | rst                                       |                3 |             10 |
+|  clk         | q_idx[9]_i_1_n_0                                              | rst                                       |                5 |             10 |
+|  clk         | lower_fsm/u_div_gen/U0/i_synth/i_nd_to_rdy/m_axis_dout_tvalid | lower_fsm/u_control_fsm/divideout_count0  |                3 |             10 |
+|  clk         | lower_fsm/u_control_fsm/updatev_validin_reg_0[0]              | lower_fsm/u_control_fsm/rst_0[0]          |                3 |             11 |
+|  clk         | bram2_addr[10]_i_1_n_0                                        |                                           |                2 |             11 |
+|  clk         | bram4_addr[10]_i_2_n_0                                        | bram4_addr[10]_i_1_n_0                    |                2 |             11 |
+|  clk         | mem_din[15]_i_1_n_0                                           |                                           |                7 |             16 |
+|  clk         | lower_fsm/u_control_fsm/FSM_onehot_state[17]_i_1_n_0          | rst                                       |                3 |             18 |
+|  clk         | mem_addr[18]_i_1_n_0                                          |                                           |                6 |             19 |
+|  clk         |                                                               |                                           |                8 |             21 |
+|  clk         | bram1_addr[10]_i_1_n_0                                        |                                           |                6 |             27 |
+|  clk         | bram3_addr[10]_i_1_n_0                                        |                                           |                7 |             27 |
+|  clk         |                                                               | rst                                       |               17 |             31 |
+|  clk         | lower_fsm/u_control_fsm/addrb_bread[10]_i_1_n_0               | rst                                       |               13 |             44 |
++--------------+---------------------------------------------------------------+-------------------------------------------+------------------+----------------+
+
+

@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../jacobi.srcs/sources_1/ip/div_gen_0/sim/div_gen_0.vhd" \
+"../../../../jacobi.srcs/sources_1/ip/cordic_2/sim/cordic_2.vhd" \
+"../../../../jacobi.srcs/sources_1/ip/cordic_1/sim/cordic_1.vhd" \
+"../../../../jacobi.srcs/sources_1/ip/cordic_0/sim/cordic_0.vhd" \
+
+# Do not sort compile order
+nosort

@@ -3,8 +3,19 @@
 
 # XDC: new/project_mvp_constraints.xdc
 
-# IP: ip/blk_mem_gen_1/blk_mem_gen_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_1 || ORIG_REF_NAME==blk_mem_gen_1} -quiet] -quiet
+# Block Designs: bd/design_1/design_1.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
-# IP: ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==blk_mem_gen_0 || ORIG_REF_NAME==blk_mem_gen_0} -quiet] -quiet
+# IP: bd/design_1/ip/design_1_bram_ctrl_0_0/design_1_bram_ctrl_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_bram_ctrl_0_0 || ORIG_REF_NAME==design_1_bram_ctrl_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_project_mvp_top_0_0/design_1_project_mvp_top_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_project_mvp_top_0_0 || ORIG_REF_NAME==design_1_project_mvp_top_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0} -quiet] -quiet
+
+# XDC: bd/design_1/design_1_ooc.xdc

@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../jacobi.srcs/sources_1/imports/ECE532/control_fsm.v" \
+"../../../../jacobi.srcs/sources_1/imports/ECE532/dot_product.v" \
+"../../../../jacobi.srcs/sources_1/new/fsm_victor.v" \
+"../../../../jacobi.srcs/sources_1/imports/ECE532/rotation_param.v" \
+"../../../../jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v" \
+"../../../../jacobi.srcs/sources_1/new/top.v" \
+"../../../../jacobi.srcs/sources_1/imports/ECE532/updated_column.v" \
+"../../../../jacobi.srcs/sim_1/imports/ECE532/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

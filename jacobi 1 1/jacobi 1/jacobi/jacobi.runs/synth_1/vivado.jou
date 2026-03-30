@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Sun Mar 29 17:51:28 2026
+# Process ID: 35096
+# Current directory: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1
+# Command line: vivado.exe -log svd_top_fsm_bram.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source svd_top_fsm_bram.tcl
+# Log file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/svd_top_fsm_bram.vds
+# Journal file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source svd_top_fsm_bram.tcl -notrace
