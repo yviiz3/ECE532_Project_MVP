@@ -98,8 +98,8 @@ module project_mvp_top(
     
     localparam int W = 17;
     localparam int FRAC = 8;
-    localparam int N = 200;
-    localparam int MEM_DEPTH = 40000;
+    localparam int N = 64;
+    localparam int MEM_DEPTH = 12354;
     localparam int LED_BLINK_BIT = 24;
     
     logic [13:0] bram_addr;
@@ -142,7 +142,7 @@ module project_mvp_top(
     logic out_wea;
     reconstruction_buf #(
         .W(17),
-        .SRC_W(200),
+        .SRC_W(64),
         .DST_W(640),
         .A_BASE(8258)
     ) ir_buf (

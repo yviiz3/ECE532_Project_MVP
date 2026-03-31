@@ -27,16 +27,16 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Project.srcs/sources_1/bd/
 "../../../bd/design_1/ip/design_1_bram_ctrl_0_0/sim/design_1_bram_ctrl_0_0.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
-"../../../bd/design_1/ipshared/0a91/uart_buf.v" \
-"../../../bd/design_1/ipshared/0a91/uart_rx.v" \
-"../../../bd/design_1/ipshared/0a91/vga_buf.v" \
-"../../../bd/design_1/ipshared/0a91/vga_output.v" \
+"../../../bd/design_1/ipshared/f376/uart_buf.v" \
+"../../../bd/design_1/ipshared/f376/uart_rx.v" \
+"../../../bd/design_1/ipshared/f376/vga_buf.v" \
+"../../../bd/design_1/ipshared/f376/vga_output.v" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
-"../../../bd/design_1/ipshared/0a91/reconstruction_buf.sv" \
-"../../../bd/design_1/ipshared/0a91/reconstruction_compute_64_1dsp.sv" \
-"../../../bd/design_1/ipshared/0a91/svd_bram_firstcol_checker.sv" \
-"../../../bd/design_1/ipshared/0a91/project_mvp_top.sv" \
+"../../../bd/design_1/ipshared/f376/reconstruction_buf.sv" \
+"../../../bd/design_1/ipshared/f376/reconstruction_compute_64_1dsp.sv" \
+"../../../bd/design_1/ipshared/f376/svd_bram_firstcol_checker.sv" \
+"../../../bd/design_1/ipshared/f376/project_mvp_top.sv" \
 "../../../bd/design_1/ip/design_1_project_mvp_top_0_0/sim/design_1_project_mvp_top_0_0.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \

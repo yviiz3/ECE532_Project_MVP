@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:project_mvp_top:1.0
-// IP Revision: 21
+// IP Revision: 22
 
 (* X_CORE_INFO = "project_mvp_top,Vivado 2018.3.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_project_mvp_top_0_0,project_mvp_top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_project_mvp_top_0_0,project_mvp_top,{x_ipProduct=Vivado 2018.3.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=project_mvp_top,x_ipVersion=1.0,x_ipCoreRevision=21,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_project_mvp_top_0_0,project_mvp_top,{x_ipProduct=Vivado 2018.3.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=project_mvp_top,x_ipVersion=1.0,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_project_mvp_top_0_0 (
