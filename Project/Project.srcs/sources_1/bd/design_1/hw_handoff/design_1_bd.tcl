@@ -157,16 +157,44 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
+  set HSYNC [ create_bd_port -dir O HSYNC ]
+  set VSYNC [ create_bd_port -dir O VSYNC ]
   set clk [ create_bd_port -dir I -type clk clk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {100000000} \
  ] $clk
-  set data_in_0 [ create_bd_port -dir I data_in_0 ]
+  set data_in [ create_bd_port -dir I data_in ]
+  set data_out [ create_bd_port -dir O -from 11 -to 0 data_out ]
+  set en [ create_bd_port -dir I en ]
   set led [ create_bd_port -dir O -from 15 -to 0 led ]
   set reset [ create_bd_port -dir I -type rst reset ]
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_LOW} \
  ] $reset
+
+  # Create instance: blk_mem_gen_0, and set properties
+  set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Enable_B {Use_ENB_Pin} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Port_B_Clock {100} \
+   CONFIG.Port_B_Enable_Rate {100} \
+   CONFIG.Port_B_Write_Rate {50} \
+   CONFIG.Read_Width_A {4} \
+   CONFIG.Read_Width_B {4} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {62500} \
+   CONFIG.Write_Width_A {4} \
+   CONFIG.Write_Width_B {4} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $blk_mem_gen_0
 
   # Create instance: bram_ctrl_0, and set properties
   set bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:bram_ctrl:1.0 bram_ctrl_0 ]
@@ -196,27 +224,46 @@ proc create_root_design { parentCell } {
   # Create instance: project_mvp_top_0, and set properties
   set project_mvp_top_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:project_mvp_top:1.0 project_mvp_top_0 ]
 
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+   CONFIG.CONST_WIDTH {16} \
+ ] $xlconstant_1
+
   # Create port connections
+  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins blk_mem_gen_0/doutb] [get_bd_pins project_mvp_top_0/vga_doutb]
+  connect_bd_net -net bram_ctrl_0_b_dout_1 [get_bd_pins bram_ctrl_0/b_dout_1] [get_bd_pins project_mvp_top_0/bram_doutb_uart]
+  connect_bd_net -net bram_ctrl_0_b_dout_3 [get_bd_pins bram_ctrl_0/b_dout_3] [get_bd_pins project_mvp_top_0/bram_doutb_dsp]
   connect_bd_net -net clk_100MHz_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins bram_ctrl_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins project_mvp_top_0/clk]
-  connect_bd_net -net data_in_0_1 [get_bd_ports data_in_0] [get_bd_pins project_mvp_top_0/data_in]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins bram_ctrl_0/reset_n] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins project_mvp_top_0/reset]
-  connect_bd_net -net project_mvp_top_0_bram_addra_dsp [get_bd_pins bram_ctrl_0/a_addr_2] [get_bd_pins project_mvp_top_0/bram_addra_dsp]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins bram_ctrl_0/clk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins project_mvp_top_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out2] [get_bd_pins project_mvp_top_0/clk2]
+  connect_bd_net -net data_in_0_1 [get_bd_ports data_in] [get_bd_pins project_mvp_top_0/data_in]
+  connect_bd_net -net en_0_1 [get_bd_ports en] [get_bd_pins project_mvp_top_0/en]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins bram_ctrl_0/reset_n] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net project_mvp_top_0_HSYNC [get_bd_ports HSYNC] [get_bd_pins project_mvp_top_0/HSYNC]
+  connect_bd_net -net project_mvp_top_0_VSYNC [get_bd_ports VSYNC] [get_bd_pins project_mvp_top_0/VSYNC]
   connect_bd_net -net project_mvp_top_0_bram_addra_uart [get_bd_pins bram_ctrl_0/a_addr_1] [get_bd_pins project_mvp_top_0/bram_addra_uart]
-  connect_bd_net -net project_mvp_top_0_bram_addrb_dsp [get_bd_pins bram_ctrl_0/b_addr_2] [get_bd_pins project_mvp_top_0/bram_addrb_dsp]
-  connect_bd_net -net project_mvp_top_0_bram_addrb_uart [get_bd_pins bram_ctrl_0/b_addr_1] [get_bd_pins project_mvp_top_0/bram_addrb_uart]
-  connect_bd_net -net project_mvp_top_0_bram_dina_dsp [get_bd_pins bram_ctrl_0/a_din_2] [get_bd_pins project_mvp_top_0/bram_dina_dsp]
+  connect_bd_net -net project_mvp_top_0_bram_addrb_dsp [get_bd_pins bram_ctrl_0/b_addr_3] [get_bd_pins project_mvp_top_0/bram_addrb_dsp]
   connect_bd_net -net project_mvp_top_0_bram_dina_uart [get_bd_pins bram_ctrl_0/a_din_1] [get_bd_pins project_mvp_top_0/bram_dina_uart]
-  connect_bd_net -net project_mvp_top_0_bram_dsp_done [get_bd_pins bram_ctrl_0/b_din_2] [get_bd_pins project_mvp_top_0/bram_dsp_done]
-  connect_bd_net -net project_mvp_top_0_bram_ena_dsp [get_bd_pins bram_ctrl_0/a_en_2] [get_bd_pins project_mvp_top_0/bram_ena_dsp]
+  connect_bd_net -net project_mvp_top_0_bram_dsp_done [get_bd_pins bram_ctrl_0/status_3] [get_bd_pins project_mvp_top_0/bram_dsp_done]
   connect_bd_net -net project_mvp_top_0_bram_ena_uart [get_bd_pins bram_ctrl_0/a_en_1] [get_bd_pins project_mvp_top_0/bram_ena_uart]
-  connect_bd_net -net project_mvp_top_0_bram_enb_dsp [get_bd_pins bram_ctrl_0/b_en_2] [get_bd_pins project_mvp_top_0/bram_enb_dsp]
-  connect_bd_net -net project_mvp_top_0_bram_enb_uart [get_bd_pins bram_ctrl_0/b_en_1] [get_bd_pins project_mvp_top_0/bram_enb_uart]
+  connect_bd_net -net project_mvp_top_0_bram_enb_dsp [get_bd_pins bram_ctrl_0/b_en_3] [get_bd_pins project_mvp_top_0/bram_enb_dsp]
   connect_bd_net -net project_mvp_top_0_bram_uart_done [get_bd_pins bram_ctrl_0/status_1] [get_bd_pins project_mvp_top_0/bram_uart_done]
-  connect_bd_net -net project_mvp_top_0_bram_wea_dsp [get_bd_pins bram_ctrl_0/a_we_2] [get_bd_pins project_mvp_top_0/bram_wea_dsp]
   connect_bd_net -net project_mvp_top_0_bram_wea_uart [get_bd_pins bram_ctrl_0/a_we_1] [get_bd_pins project_mvp_top_0/bram_wea_uart]
+  connect_bd_net -net project_mvp_top_0_data_out [get_bd_ports data_out] [get_bd_pins project_mvp_top_0/data_out]
   connect_bd_net -net project_mvp_top_0_led [get_bd_ports led] [get_bd_pins project_mvp_top_0/led]
-  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins proc_sys_reset_0/ext_reset_in]
+  connect_bd_net -net project_mvp_top_0_vga_addra [get_bd_pins blk_mem_gen_0/addra] [get_bd_pins project_mvp_top_0/vga_addra]
+  connect_bd_net -net project_mvp_top_0_vga_addrb [get_bd_pins blk_mem_gen_0/addrb] [get_bd_pins project_mvp_top_0/vga_addrb]
+  connect_bd_net -net project_mvp_top_0_vga_dina [get_bd_pins blk_mem_gen_0/dina] [get_bd_pins project_mvp_top_0/vga_dina]
+  connect_bd_net -net project_mvp_top_0_vga_enb [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins project_mvp_top_0/vga_enb]
+  connect_bd_net -net project_mvp_top_0_vga_wea [get_bd_pins blk_mem_gen_0/wea] [get_bd_pins project_mvp_top_0/vga_wea]
+  connect_bd_net -net reset_rtl_0_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins project_mvp_top_0/rst]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins bram_ctrl_0/a_addr_2] [get_bd_pins bram_ctrl_0/a_addr_3] [get_bd_pins bram_ctrl_0/a_addr_4] [get_bd_pins bram_ctrl_0/a_din_2] [get_bd_pins bram_ctrl_0/a_din_3] [get_bd_pins bram_ctrl_0/a_din_4] [get_bd_pins bram_ctrl_0/a_en_2] [get_bd_pins bram_ctrl_0/a_en_3] [get_bd_pins bram_ctrl_0/a_en_4] [get_bd_pins bram_ctrl_0/a_we_2] [get_bd_pins bram_ctrl_0/a_we_3] [get_bd_pins bram_ctrl_0/a_we_4] [get_bd_pins bram_ctrl_0/b_addr_1] [get_bd_pins bram_ctrl_0/b_addr_2] [get_bd_pins bram_ctrl_0/b_addr_4] [get_bd_pins bram_ctrl_0/b_din_1] [get_bd_pins bram_ctrl_0/b_din_2] [get_bd_pins bram_ctrl_0/b_din_4] [get_bd_pins bram_ctrl_0/b_en_1] [get_bd_pins bram_ctrl_0/b_en_2] [get_bd_pins bram_ctrl_0/b_en_4] [get_bd_pins bram_ctrl_0/b_we_1] [get_bd_pins bram_ctrl_0/b_we_2] [get_bd_pins bram_ctrl_0/b_we_4] [get_bd_pins bram_ctrl_0/status_2] [get_bd_pins bram_ctrl_0/status_4] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
 

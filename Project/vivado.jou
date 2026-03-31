@@ -2,88 +2,1108 @@
 # Vivado v2018.3.1 (64-bit)
 # SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
 # IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
-# Start of session at: Mon Mar 23 15:36:13 2026
-# Process ID: 28432
+# Start of session at: Tue Mar 31 03:16:11 2026
+# Process ID: 1468
 # Current directory: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9620 C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21148 C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.xpr
 # Log file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/vivado.log
 # Journal file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr
 update_compile_order -fileset sources_1
-set_property  ip_repo_paths  {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl} [current_project]
-update_ip_catalog
-create_bd_design "design_1"
-update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:user:bram_ctrl:1.0 bram_ctrl_0
+make_bd_pins_external  [get_bd_pins project_mvp_top_0/VSYNC] [get_bd_pins project_mvp_top_0/HSYNC]
 endgroup
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
-endgroup
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins bram_ctrl_0/clk]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_HIGH}}  [get_bd_pins clk_wiz_0/reset]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Clk {New External Port (100 MHz)} Manual_Source {Auto}}  [get_bd_pins clk_wiz_0/clk_in1]
-endgroup
-set_property location {-187 -47} [get_bd_ports reset_rtl_0]
-set_property location {-256 18} [get_bd_ports clk_100MHz]
-set_property location {1 99 -60} [get_bd_cells clk_wiz_0]
-set_property location {1 97 -30} [get_bd_cells clk_wiz_0]
-set_property location {2.5 507 357} [get_bd_cells bram_ctrl_0]
-set_property location {2 529 348} [get_bd_cells bram_ctrl_0]
-set_property location {2 505 340} [get_bd_cells bram_ctrl_0]
-set_property location {2 505 341} [get_bd_cells bram_ctrl_0]
-set_property location {2 506 346} [get_bd_cells bram_ctrl_0]
-set_property location {2 506 323} [get_bd_cells bram_ctrl_0]
-set_property location {2 506 358} [get_bd_cells bram_ctrl_0]
-set_property location {2 507 352} [get_bd_cells bram_ctrl_0]
-set_property CONFIG.POLARITY ACTIVE_LOW [get_bd_ports reset_rtl_0]
-startgroup
-set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
-delete_bd_objs [get_bd_nets reset_rtl_0_1]
-endgroup
-connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins clk_wiz_0/resetn]
-connect_bd_net [get_bd_ports reset_rtl_0] [get_bd_pins bram_ctrl_0/reset_n]
+set_property name VSYNC [get_bd_ports VSYNC_0]
+set_property name HSYNC [get_bd_ports HSYNC_0]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+open_run synth_1 -name synth_1
+update_ip_catalog -rebuild
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+ipx::edit_ip_in_project -upgrade true -name project_mvp_top_v1_0_project -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp/project_mvp_top_v1_0_project c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml
 update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 15 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 16 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project project_mvp_top_v1_0_project
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_ila_0_uart_done} }
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/b_dout_1[12]} {design_1_i/bram_ctrl_0/b_dout_1[7]} {design_1_i/bram_ctrl_0/b_dout_1[29]} {design_1_i/bram_ctrl_0/b_dout_1[11]} {design_1_i/bram_ctrl_0/b_dout_1[14]} {design_1_i/bram_ctrl_0/b_dout_1[20]} {design_1_i/bram_ctrl_0/b_dout_1[22]} {design_1_i/bram_ctrl_0/b_dout_1[23]} {design_1_i/bram_ctrl_0/b_dout_1[30]} {design_1_i/bram_ctrl_0/b_dout_1[24]} {design_1_i/bram_ctrl_0/b_dout_1[28]} {design_1_i/bram_ctrl_0/b_dout_1[4]} {design_1_i/bram_ctrl_0/b_dout_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[16]} {design_1_i/bram_ctrl_0/b_dout_1[19]} {design_1_i/bram_ctrl_0/b_dout_1[27]} {design_1_i/bram_ctrl_0/b_dout_1[31]} {design_1_i/bram_ctrl_0/b_dout_1[2]} {design_1_i/bram_ctrl_0/b_dout_1[5]} {design_1_i/bram_ctrl_0/b_dout_1[26]} {design_1_i/bram_ctrl_0/b_dout_1[8]} {design_1_i/bram_ctrl_0/b_dout_1[9]} {design_1_i/bram_ctrl_0/b_dout_1[10]} {design_1_i/bram_ctrl_0/b_dout_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[17]} {design_1_i/bram_ctrl_0/b_dout_1[18]} {design_1_i/bram_ctrl_0/b_dout_1[25]} {design_1_i/bram_ctrl_0/b_dout_1[0]} {design_1_i/bram_ctrl_0/b_dout_1[1]} {design_1_i/bram_ctrl_0/b_dout_1[3]} {design_1_i/bram_ctrl_0/b_dout_1[6]} {design_1_i/bram_ctrl_0/b_dout_1[21]}]]
+set_property mark_debug true [get_nets [list design_1_i/bram_ctrl_0/status_1]]
+set_property mark_debug true [get_nets [list design_1_i/bram_ctrl_0/status_2]]
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/a_addr_1[1]} {design_1_i/bram_ctrl_0/a_addr_1[3]} {design_1_i/bram_ctrl_0/a_addr_1[13]} {design_1_i/bram_ctrl_0/a_addr_1[5]} {design_1_i/bram_ctrl_0/a_addr_1[7]} {design_1_i/bram_ctrl_0/a_addr_1[8]} {design_1_i/bram_ctrl_0/a_addr_1[14]} {design_1_i/bram_ctrl_0/a_addr_1[15]} {design_1_i/bram_ctrl_0/a_addr_1[16]} {design_1_i/bram_ctrl_0/a_addr_1[4]} {design_1_i/bram_ctrl_0/a_addr_1[6]} {design_1_i/bram_ctrl_0/a_addr_1[9]} {design_1_i/bram_ctrl_0/a_addr_1[10]} {design_1_i/bram_ctrl_0/a_addr_1[0]} {design_1_i/bram_ctrl_0/a_addr_1[2]} {design_1_i/bram_ctrl_0/a_addr_1[11]} {design_1_i/bram_ctrl_0/a_addr_1[12]}]]
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/b_addr_1[3]} {design_1_i/bram_ctrl_0/b_addr_1[5]} {design_1_i/bram_ctrl_0/b_addr_1[4]} {design_1_i/bram_ctrl_0/b_addr_1[7]} {design_1_i/bram_ctrl_0/b_addr_1[11]} {design_1_i/bram_ctrl_0/b_addr_1[12]} {design_1_i/bram_ctrl_0/b_addr_1[14]} {design_1_i/bram_ctrl_0/b_addr_1[1]} {design_1_i/bram_ctrl_0/b_addr_1[6]} {design_1_i/bram_ctrl_0/b_addr_1[9]} {design_1_i/bram_ctrl_0/b_addr_1[10]} {design_1_i/bram_ctrl_0/b_addr_1[13]} {design_1_i/bram_ctrl_0/b_addr_1[0]} {design_1_i/bram_ctrl_0/b_addr_1[2]} {design_1_i/bram_ctrl_0/b_addr_1[8]} {design_1_i/bram_ctrl_0/b_addr_1[15]} {design_1_i/bram_ctrl_0/b_addr_1[16]}]]
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/b_din_1[5]} {design_1_i/bram_ctrl_0/b_din_1[6]} {design_1_i/bram_ctrl_0/b_din_1[17]} {design_1_i/bram_ctrl_0/b_din_1[18]} {design_1_i/bram_ctrl_0/b_din_1[24]} {design_1_i/bram_ctrl_0/b_din_1[28]} {design_1_i/bram_ctrl_0/b_din_1[31]} {design_1_i/bram_ctrl_0/b_din_1[7]} {design_1_i/bram_ctrl_0/b_din_1[11]} {design_1_i/bram_ctrl_0/b_din_1[13]} {design_1_i/bram_ctrl_0/b_din_1[14]} {design_1_i/bram_ctrl_0/b_din_1[19]} {design_1_i/bram_ctrl_0/b_din_1[21]} {design_1_i/bram_ctrl_0/b_din_1[22]} {design_1_i/bram_ctrl_0/b_din_1[30]} {design_1_i/bram_ctrl_0/b_din_1[1]} {design_1_i/bram_ctrl_0/b_din_1[4]} {design_1_i/bram_ctrl_0/b_din_1[8]} {design_1_i/bram_ctrl_0/b_din_1[9]} {design_1_i/bram_ctrl_0/b_din_1[12]} {design_1_i/bram_ctrl_0/b_din_1[16]} {design_1_i/bram_ctrl_0/b_din_1[20]} {design_1_i/bram_ctrl_0/b_din_1[25]} {design_1_i/bram_ctrl_0/b_din_1[29]} {design_1_i/bram_ctrl_0/b_din_1[0]} {design_1_i/bram_ctrl_0/b_din_1[2]} {design_1_i/bram_ctrl_0/b_din_1[3]} {design_1_i/bram_ctrl_0/b_din_1[10]} {design_1_i/bram_ctrl_0/b_din_1[15]} {design_1_i/bram_ctrl_0/b_din_1[23]} {design_1_i/bram_ctrl_0/b_din_1[26]} {design_1_i/bram_ctrl_0/b_din_1[27]}]]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/a_addr_1[10]} {design_1_i/bram_ctrl_0/a_din_1[25]} {design_1_i/bram_ctrl_0/a_dout_1[6]} {design_1_i/bram_ctrl_0/a_dout_1[18]} {design_1_i/bram_ctrl_0/a_dout_1[19]} {design_1_i/bram_ctrl_0/b_addr_1[7]} {design_1_i/bram_ctrl_0/b_addr_1[14]} {design_1_i/bram_ctrl_0/b_din_1[6]} {design_1_i/bram_ctrl_0/b_din_1[24]} {design_1_i/bram_ctrl_0/b_din_1[29]} {design_1_i/bram_ctrl_0/b_dout_1[16]} {design_1_i/bram_ctrl_0/a_addr_1[5]} {design_1_i/bram_ctrl_0/a_dout_1[9]} {design_1_i/bram_ctrl_0/a_dout_1[16]} {design_1_i/bram_ctrl_0/a_dout_1[20]} {design_1_i/bram_ctrl_0/a_dout_1[26]} {design_1_i/bram_ctrl_0/b_din_1[1]} {design_1_i/bram_ctrl_0/b_din_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[1]} {design_1_i/bram_ctrl_0/b_dout_1[11]} {design_1_i/bram_ctrl_0/b_dout_1[28]} {design_1_i/bram_ctrl_0/a_addr_1[11]} {design_1_i/bram_ctrl_0/a_din_1[15]} {design_1_i/bram_ctrl_0/a_dout_1[3]} {design_1_i/bram_ctrl_0/b_addr_1[2]} {design_1_i/bram_ctrl_0/b_din_1[12]} {design_1_i/bram_ctrl_0/b_din_1[21]} {design_1_i/bram_ctrl_0/b_dout_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[7]} {design_1_i/bram_ctrl_0/a_addr_1[3]} {design_1_i/bram_ctrl_0/a_din_1[2]} {design_1_i/bram_ctrl_0/a_din_1[6]} {design_1_i/bram_ctrl_0/a_dout_1[2]} {design_1_i/bram_ctrl_0/a_dout_1[23]} {design_1_i/bram_ctrl_0/a_dout_1[31]} {design_1_i/bram_ctrl_0/b_addr_1[11]} {design_1_i/bram_ctrl_0/b_din_1[0]} {design_1_i/bram_ctrl_0/b_din_1[16]} {design_1_i/bram_ctrl_0/b_dout_1[5]} {design_1_i/bram_ctrl_0/a_addr_1[9]} {design_1_i/bram_ctrl_0/a_dout_1[24]} {design_1_i/bram_ctrl_0/b_addr_1[5]} {design_1_i/bram_ctrl_0/b_dout_1[22]} {design_1_i/bram_ctrl_0/b_din_1[7]} {design_1_i/bram_ctrl_0/b_din_1[17]} {design_1_i/bram_ctrl_0/b_dout_1[10]} {design_1_i/bram_ctrl_0/b_dout_1[8]} {design_1_i/bram_ctrl_0/b_dout_1[14]} {design_1_i/bram_ctrl_0/b_dout_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[27]} {design_1_i/bram_ctrl_0/b_dout_1[30]} {design_1_i/bram_ctrl_0/a_addr_1[4]} {design_1_i/bram_ctrl_0/a_addr_1[16]} {design_1_i/bram_ctrl_0/a_dout_1[0]} {design_1_i/bram_ctrl_0/a_din_1[0]} {design_1_i/bram_ctrl_0/a_din_1[7]} {design_1_i/bram_ctrl_0/a_din_1[29]} {design_1_i/bram_ctrl_0/a_dout_1[22]} {design_1_i/bram_ctrl_0/a_dout_1[28]} {design_1_i/bram_ctrl_0/b_din_1[10]} {design_1_i/bram_ctrl_0/b_din_1[19]} {design_1_i/bram_ctrl_0/b_dout_1[19]} {design_1_i/bram_ctrl_0/a_addr_1[8]} {design_1_i/bram_ctrl_0/a_din_1[5]} {design_1_i/bram_ctrl_0/a_din_1[17]} {design_1_i/bram_ctrl_0/a_din_1[21]} {design_1_i/bram_ctrl_0/a_dout_1[11]} {design_1_i/bram_ctrl_0/b_din_1[18]} {design_1_i/bram_ctrl_0/b_din_1[26]} {design_1_i/bram_ctrl_0/b_dout_1[9]} {design_1_i/bram_ctrl_0/b_dout_1[25]} {design_1_i/bram_ctrl_0/a_addr_1[7]} {design_1_i/bram_ctrl_0/a_addr_1[14]} {design_1_i/bram_ctrl_0/a_din_1[10]} {design_1_i/bram_ctrl_0/a_din_1[16]} {design_1_i/bram_ctrl_0/a_din_1[20]} {design_1_i/bram_ctrl_0/a_dout_1[5]} {design_1_i/bram_ctrl_0/a_dout_1[10]} {design_1_i/bram_ctrl_0/a_dout_1[13]} {design_1_i/bram_ctrl_0/b_addr_1[3]} {design_1_i/bram_ctrl_0/b_addr_1[16]} {design_1_i/bram_ctrl_0/b_din_1[5]} {design_1_i/bram_ctrl_0/b_din_1[23]} {design_1_i/bram_ctrl_0/b_dout_1[4]} {design_1_i/bram_ctrl_0/b_dout_1[29]} {design_1_i/bram_ctrl_0/a_din_1[1]} {design_1_i/bram_ctrl_0/a_din_1[4]} {design_1_i/bram_ctrl_0/a_dout_1[25]} {design_1_i/bram_ctrl_0/b_addr_1[10]} {design_1_i/bram_ctrl_0/b_din_1[8]} {design_1_i/bram_ctrl_0/b_din_1[25]} {design_1_i/bram_ctrl_0/b_dout_1[18]} {design_1_i/bram_ctrl_0/b_dout_1[31]} {design_1_i/bram_ctrl_0/b_dout_1[24]} {design_1_i/bram_ctrl_0/a_addr_1[12]} {design_1_i/bram_ctrl_0/a_din_1[9]} {design_1_i/bram_ctrl_0/a_din_1[18]} {design_1_i/bram_ctrl_0/a_din_1[23]} {design_1_i/bram_ctrl_0/a_din_1[31]} {design_1_i/bram_ctrl_0/a_dout_1[29]} {design_1_i/bram_ctrl_0/b_addr_1[6]} {design_1_i/bram_ctrl_0/b_din_1[27]} {design_1_i/bram_ctrl_0/b_dout_1[2]} {design_1_i/bram_ctrl_0/b_dout_1[12]} {design_1_i/bram_ctrl_0/a_addr_1[2]} {design_1_i/bram_ctrl_0/a_addr_1[15]} {design_1_i/bram_ctrl_0/a_din_1[11]} {design_1_i/bram_ctrl_0/a_dout_1[1]} {design_1_i/bram_ctrl_0/a_dout_1[14]} {design_1_i/bram_ctrl_0/a_dout_1[30]} {design_1_i/bram_ctrl_0/b_addr_1[9]} {design_1_i/bram_ctrl_0/b_din_1[9]} {design_1_i/bram_ctrl_0/b_din_1[14]} {design_1_i/bram_ctrl_0/a_addr_1[13]} {design_1_i/bram_ctrl_0/a_din_1[3]} design_1_i/bram_ctrl_0/status_1 {design_1_i/bram_ctrl_0/a_dout_1[12]} {design_1_i/bram_ctrl_0/a_dout_1[21]} {design_1_i/bram_ctrl_0/a_dout_1[27]} {design_1_i/bram_ctrl_0/b_addr_1[4]} {design_1_i/bram_ctrl_0/b_addr_1[15]} {design_1_i/bram_ctrl_0/b_din_1[2]} {design_1_i/bram_ctrl_0/b_din_1[30]} {design_1_i/bram_ctrl_0/b_dout_1[17]} {design_1_i/bram_ctrl_0/b_dout_1[0]} {design_1_i/bram_ctrl_0/a_addr_1[0]} {design_1_i/bram_ctrl_0/a_din_1[8]} {design_1_i/bram_ctrl_0/a_din_1[19]} {design_1_i/bram_ctrl_0/a_din_1[22]} {design_1_i/bram_ctrl_0/a_din_1[28]} {design_1_i/bram_ctrl_0/a_dout_1[4]} {design_1_i/bram_ctrl_0/a_dout_1[7]} {design_1_i/bram_ctrl_0/b_addr_1[13]} {design_1_i/bram_ctrl_0/b_din_1[22]} {design_1_i/bram_ctrl_0/b_din_1[28]} {design_1_i/bram_ctrl_0/a_din_1[24]} {design_1_i/bram_ctrl_0/a_din_1[27]} {design_1_i/bram_ctrl_0/a_dout_1[17]} {design_1_i/bram_ctrl_0/b_din_1[11]} {design_1_i/bram_ctrl_0/b_din_1[31]} {design_1_i/bram_ctrl_0/b_dout_1[20]} {design_1_i/bram_ctrl_0/a_addr_1[1]} {design_1_i/bram_ctrl_0/a_din_1[14]} {design_1_i/bram_ctrl_0/a_din_1[26]} {design_1_i/bram_ctrl_0/a_din_1[30]} {design_1_i/bram_ctrl_0/a_dout_1[8]} {design_1_i/bram_ctrl_0/a_dout_1[15]} {design_1_i/bram_ctrl_0/b_addr_1[12]} {design_1_i/bram_ctrl_0/b_din_1[3]} {design_1_i/bram_ctrl_0/b_din_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[6]} {design_1_i/bram_ctrl_0/a_addr_1[6]} {design_1_i/bram_ctrl_0/a_din_1[12]} {design_1_i/bram_ctrl_0/a_din_1[13]} {design_1_i/bram_ctrl_0/b_addr_1[0]} {design_1_i/bram_ctrl_0/b_addr_1[1]} {design_1_i/bram_ctrl_0/b_addr_1[8]} {design_1_i/bram_ctrl_0/b_din_1[4]} {design_1_i/bram_ctrl_0/b_din_1[20]} {design_1_i/bram_ctrl_0/b_dout_1[26]} {design_1_i/bram_ctrl_0/b_dout_1[23]} {design_1_i/bram_ctrl_0/b_dout_1[3]} {design_1_i/bram_ctrl_0/b_dout_1[21]}]]
+set_property mark_debug true [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[3]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[3]}]]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/clk_wiz_0/inst/clk_out1 ]]
+set_property port_width 4 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[3]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[4]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[5]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[6]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[7]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[8]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[9]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[10]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[11]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[12]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[13]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[14]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[13]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[14]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[15]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {design_1_i/bram_ctrl_0/b_dout_1[0]} {design_1_i/bram_ctrl_0/b_dout_1[1]} {design_1_i/bram_ctrl_0/b_dout_1[2]} {design_1_i/bram_ctrl_0/b_dout_1[3]} {design_1_i/bram_ctrl_0/b_dout_1[4]} {design_1_i/bram_ctrl_0/b_dout_1[5]} {design_1_i/bram_ctrl_0/b_dout_1[6]} {design_1_i/bram_ctrl_0/b_dout_1[7]} {design_1_i/bram_ctrl_0/b_dout_1[8]} {design_1_i/bram_ctrl_0/b_dout_1[9]} {design_1_i/bram_ctrl_0/b_dout_1[10]} {design_1_i/bram_ctrl_0/b_dout_1[11]} {design_1_i/bram_ctrl_0/b_dout_1[12]} {design_1_i/bram_ctrl_0/b_dout_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[14]} {design_1_i/bram_ctrl_0/b_dout_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[16]} {design_1_i/bram_ctrl_0/b_dout_1[17]} {design_1_i/bram_ctrl_0/b_dout_1[18]} {design_1_i/bram_ctrl_0/b_dout_1[19]} {design_1_i/bram_ctrl_0/b_dout_1[20]} {design_1_i/bram_ctrl_0/b_dout_1[21]} {design_1_i/bram_ctrl_0/b_dout_1[22]} {design_1_i/bram_ctrl_0/b_dout_1[23]} {design_1_i/bram_ctrl_0/b_dout_1[24]} {design_1_i/bram_ctrl_0/b_dout_1[25]} {design_1_i/bram_ctrl_0/b_dout_1[26]} {design_1_i/bram_ctrl_0/b_dout_1[27]} {design_1_i/bram_ctrl_0/b_dout_1[28]} {design_1_i/bram_ctrl_0/b_dout_1[29]} {design_1_i/bram_ctrl_0/b_dout_1[30]} {design_1_i/bram_ctrl_0/b_dout_1[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {design_1_i/bram_ctrl_0/a_dout_1[0]} {design_1_i/bram_ctrl_0/a_dout_1[1]} {design_1_i/bram_ctrl_0/a_dout_1[2]} {design_1_i/bram_ctrl_0/a_dout_1[3]} {design_1_i/bram_ctrl_0/a_dout_1[4]} {design_1_i/bram_ctrl_0/a_dout_1[5]} {design_1_i/bram_ctrl_0/a_dout_1[6]} {design_1_i/bram_ctrl_0/a_dout_1[7]} {design_1_i/bram_ctrl_0/a_dout_1[8]} {design_1_i/bram_ctrl_0/a_dout_1[9]} {design_1_i/bram_ctrl_0/a_dout_1[10]} {design_1_i/bram_ctrl_0/a_dout_1[11]} {design_1_i/bram_ctrl_0/a_dout_1[12]} {design_1_i/bram_ctrl_0/a_dout_1[13]} {design_1_i/bram_ctrl_0/a_dout_1[14]} {design_1_i/bram_ctrl_0/a_dout_1[15]} {design_1_i/bram_ctrl_0/a_dout_1[16]} {design_1_i/bram_ctrl_0/a_dout_1[17]} {design_1_i/bram_ctrl_0/a_dout_1[18]} {design_1_i/bram_ctrl_0/a_dout_1[19]} {design_1_i/bram_ctrl_0/a_dout_1[20]} {design_1_i/bram_ctrl_0/a_dout_1[21]} {design_1_i/bram_ctrl_0/a_dout_1[22]} {design_1_i/bram_ctrl_0/a_dout_1[23]} {design_1_i/bram_ctrl_0/a_dout_1[24]} {design_1_i/bram_ctrl_0/a_dout_1[25]} {design_1_i/bram_ctrl_0/a_dout_1[26]} {design_1_i/bram_ctrl_0/a_dout_1[27]} {design_1_i/bram_ctrl_0/a_dout_1[28]} {design_1_i/bram_ctrl_0/a_dout_1[29]} {design_1_i/bram_ctrl_0/a_dout_1[30]} {design_1_i/bram_ctrl_0/a_dout_1[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/data_out[0]_i_1_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_rx_1/rx_state ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list design_1_i/bram_ctrl_0/status_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_buf_1/uart_done ]]
+current_project project_mvp_top_v1_0_project
+current_project Project
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/bram_ctrl_0/b_dout_1} {u_ila_0_a_dout_1} {u_ila_0_b_dout_1} {u_ila_0_out_bram_din1_carry__0_0} {u_ila_0_out_bram_din1_inferred__0/i__carry__0_0} {u_ila_0_status_1} }
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes {design_1_i/project_mvp_top_0/inst/uart_rx_1/data_out[0]_i_1_n_0} -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq1'bX [get_hw_probes u_ila_0_uart_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq1'b0 [get_hw_probes u_ila_0_uart_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_ila_0_uart_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'hX [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'bXXXX [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'b0000 [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'bXXXX [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'b1010 [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'b0000 [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/bram_ctrl_0/a_dout_1} {design_1_i/bram_ctrl_0/b_dout_1} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0} }
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes u_ila_0_uart_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_ila_0_uart_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+set_property mark_debug true [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_0} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_1} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_2} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_3}]]
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_0[0]} {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_0[1]} {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_1[0]} {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_1[1]}]]
+set_property mark_debug false [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_0[0]} {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_0[1]} {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_1[0]} {design_1_i/bram_ctrl_0/inst/driver/mem_reg_0_7_1[1]}]]
+set_property mark_debug true [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[1]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[6]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[14]} {design_1_i/bram_ctrl_0/inst/driver/b_din[12]} {design_1_i/bram_ctrl_0/inst/driver/b_din[22]} {design_1_i/bram_ctrl_0/inst/driver/b_din[25]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[16]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[21]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[23]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[5]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[7]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[13]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[5]} {design_1_i/bram_ctrl_0/inst/driver/b_din[16]} {design_1_i/bram_ctrl_0/inst/driver/b_din[6]} {design_1_i/bram_ctrl_0/inst/driver/b_din[8]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[11]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[31]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[12]} {design_1_i/bram_ctrl_0/inst/driver/b_din[28]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[1]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[4]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[11]} {design_1_i/bram_ctrl_0/inst/driver/b_din[24]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[3]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[7]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[19]} {design_1_i/bram_ctrl_0/inst/driver/b_din[13]} {design_1_i/bram_ctrl_0/inst/driver/b_din[21]} {design_1_i/bram_ctrl_0/inst/driver/b_din[30]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[10]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[28]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[3]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[4]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[9]} {design_1_i/bram_ctrl_0/inst/driver/b_din[2]} {design_1_i/bram_ctrl_0/inst/driver/b_din[3]} {design_1_i/bram_ctrl_0/inst/driver/b_din[5]} {design_1_i/bram_ctrl_0/inst/driver/b_din[10]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[1]} {design_1_i/bram_ctrl_0/inst/driver/b_din[20]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[22]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[2]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[8]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[11]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[12]} {design_1_i/bram_ctrl_0/inst/driver/b_din[17]} {design_1_i/bram_ctrl_0/inst/driver/b_din[23]} {design_1_i/bram_ctrl_0/inst/driver/b_din[26]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[9]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[13]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[14]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[17]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[14]} {design_1_i/bram_ctrl_0/inst/driver/b_din[7]} {design_1_i/bram_ctrl_0/inst/driver/b_din[4]} {design_1_i/bram_ctrl_0/inst/driver/b_din[11]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[8]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[5]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[4]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[20]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[26]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[6]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[12]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[7]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[8]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[10]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[13]} {design_1_i/bram_ctrl_0/inst/driver/b_din[27]} {design_1_i/bram_ctrl_0/inst/driver/b_din[0]} {design_1_i/bram_ctrl_0/inst/driver/b_din[9]} {design_1_i/bram_ctrl_0/inst/driver/b_din[14]} {design_1_i/bram_ctrl_0/inst/driver/b_din[15]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[6]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[24]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[25]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[29]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[30]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[9]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[10]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[2]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[3]} {design_1_i/bram_ctrl_0/inst/driver/b_din[1]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[2]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[15]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[18]} {design_1_i/bram_ctrl_0/inst/driver/b_din[18]} {design_1_i/bram_ctrl_0/inst/driver/b_din[19]} {design_1_i/bram_ctrl_0/inst/driver/b_din[31]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[27]} {design_1_i/bram_ctrl_0/inst/driver/b_din[29]}]]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/clk_wiz_0/inst/clk_out1 ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[3]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[4]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[5]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[6]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[7]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[8]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[9]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[10]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[11]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[12]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[13]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[14]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[13]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[14]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[15]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {design_1_i/bram_ctrl_0/a_addr_1[14]} {design_1_i/bram_ctrl_0/a_addr_1[15]} {design_1_i/bram_ctrl_0/a_addr_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {design_1_i/bram_ctrl_0/a_dout_1[0]} {design_1_i/bram_ctrl_0/a_dout_1[1]} {design_1_i/bram_ctrl_0/a_dout_1[2]} {design_1_i/bram_ctrl_0/a_dout_1[3]} {design_1_i/bram_ctrl_0/a_dout_1[4]} {design_1_i/bram_ctrl_0/a_dout_1[5]} {design_1_i/bram_ctrl_0/a_dout_1[6]} {design_1_i/bram_ctrl_0/a_dout_1[7]} {design_1_i/bram_ctrl_0/a_dout_1[8]} {design_1_i/bram_ctrl_0/a_dout_1[9]} {design_1_i/bram_ctrl_0/a_dout_1[10]} {design_1_i/bram_ctrl_0/a_dout_1[11]} {design_1_i/bram_ctrl_0/a_dout_1[12]} {design_1_i/bram_ctrl_0/a_dout_1[13]} {design_1_i/bram_ctrl_0/a_dout_1[14]} {design_1_i/bram_ctrl_0/a_dout_1[15]} {design_1_i/bram_ctrl_0/a_dout_1[16]} {design_1_i/bram_ctrl_0/a_dout_1[17]} {design_1_i/bram_ctrl_0/a_dout_1[18]} {design_1_i/bram_ctrl_0/a_dout_1[19]} {design_1_i/bram_ctrl_0/a_dout_1[20]} {design_1_i/bram_ctrl_0/a_dout_1[21]} {design_1_i/bram_ctrl_0/a_dout_1[22]} {design_1_i/bram_ctrl_0/a_dout_1[23]} {design_1_i/bram_ctrl_0/a_dout_1[24]} {design_1_i/bram_ctrl_0/a_dout_1[25]} {design_1_i/bram_ctrl_0/a_dout_1[26]} {design_1_i/bram_ctrl_0/a_dout_1[27]} {design_1_i/bram_ctrl_0/a_dout_1[28]} {design_1_i/bram_ctrl_0/a_dout_1[29]} {design_1_i/bram_ctrl_0/a_dout_1[30]} {design_1_i/bram_ctrl_0/a_dout_1[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 15 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {design_1_i/bram_ctrl_0/a_din_1[17]} {design_1_i/bram_ctrl_0/a_din_1[18]} {design_1_i/bram_ctrl_0/a_din_1[19]} {design_1_i/bram_ctrl_0/a_din_1[20]} {design_1_i/bram_ctrl_0/a_din_1[21]} {design_1_i/bram_ctrl_0/a_din_1[22]} {design_1_i/bram_ctrl_0/a_din_1[23]} {design_1_i/bram_ctrl_0/a_din_1[24]} {design_1_i/bram_ctrl_0/a_din_1[25]} {design_1_i/bram_ctrl_0/a_din_1[26]} {design_1_i/bram_ctrl_0/a_din_1[27]} {design_1_i/bram_ctrl_0/a_din_1[28]} {design_1_i/bram_ctrl_0/a_din_1[29]} {design_1_i/bram_ctrl_0/a_din_1[30]} {design_1_i/bram_ctrl_0/a_din_1[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {design_1_i/bram_ctrl_0/b_addr_1[0]} {design_1_i/bram_ctrl_0/b_addr_1[1]} {design_1_i/bram_ctrl_0/b_addr_1[2]} {design_1_i/bram_ctrl_0/b_addr_1[3]} {design_1_i/bram_ctrl_0/b_addr_1[4]} {design_1_i/bram_ctrl_0/b_addr_1[5]} {design_1_i/bram_ctrl_0/b_addr_1[6]} {design_1_i/bram_ctrl_0/b_addr_1[7]} {design_1_i/bram_ctrl_0/b_addr_1[8]} {design_1_i/bram_ctrl_0/b_addr_1[9]} {design_1_i/bram_ctrl_0/b_addr_1[10]} {design_1_i/bram_ctrl_0/b_addr_1[11]} {design_1_i/bram_ctrl_0/b_addr_1[12]} {design_1_i/bram_ctrl_0/b_addr_1[13]} {design_1_i/bram_ctrl_0/b_addr_1[14]} {design_1_i/bram_ctrl_0/b_addr_1[15]} {design_1_i/bram_ctrl_0/b_addr_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {design_1_i/bram_ctrl_0/b_din_1[0]} {design_1_i/bram_ctrl_0/b_din_1[1]} {design_1_i/bram_ctrl_0/b_din_1[2]} {design_1_i/bram_ctrl_0/b_din_1[3]} {design_1_i/bram_ctrl_0/b_din_1[4]} {design_1_i/bram_ctrl_0/b_din_1[5]} {design_1_i/bram_ctrl_0/b_din_1[6]} {design_1_i/bram_ctrl_0/b_din_1[7]} {design_1_i/bram_ctrl_0/b_din_1[8]} {design_1_i/bram_ctrl_0/b_din_1[9]} {design_1_i/bram_ctrl_0/b_din_1[10]} {design_1_i/bram_ctrl_0/b_din_1[11]} {design_1_i/bram_ctrl_0/b_din_1[12]} {design_1_i/bram_ctrl_0/b_din_1[13]} {design_1_i/bram_ctrl_0/b_din_1[14]} {design_1_i/bram_ctrl_0/b_din_1[15]} {design_1_i/bram_ctrl_0/b_din_1[16]} {design_1_i/bram_ctrl_0/b_din_1[17]} {design_1_i/bram_ctrl_0/b_din_1[18]} {design_1_i/bram_ctrl_0/b_din_1[19]} {design_1_i/bram_ctrl_0/b_din_1[20]} {design_1_i/bram_ctrl_0/b_din_1[21]} {design_1_i/bram_ctrl_0/b_din_1[22]} {design_1_i/bram_ctrl_0/b_din_1[23]} {design_1_i/bram_ctrl_0/b_din_1[24]} {design_1_i/bram_ctrl_0/b_din_1[25]} {design_1_i/bram_ctrl_0/b_din_1[26]} {design_1_i/bram_ctrl_0/b_din_1[27]} {design_1_i/bram_ctrl_0/b_din_1[28]} {design_1_i/bram_ctrl_0/b_din_1[29]} {design_1_i/bram_ctrl_0/b_din_1[30]} {design_1_i/bram_ctrl_0/b_din_1[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {design_1_i/bram_ctrl_0/b_dout_1[0]} {design_1_i/bram_ctrl_0/b_dout_1[1]} {design_1_i/bram_ctrl_0/b_dout_1[2]} {design_1_i/bram_ctrl_0/b_dout_1[3]} {design_1_i/bram_ctrl_0/b_dout_1[4]} {design_1_i/bram_ctrl_0/b_dout_1[5]} {design_1_i/bram_ctrl_0/b_dout_1[6]} {design_1_i/bram_ctrl_0/b_dout_1[7]} {design_1_i/bram_ctrl_0/b_dout_1[8]} {design_1_i/bram_ctrl_0/b_dout_1[9]} {design_1_i/bram_ctrl_0/b_dout_1[10]} {design_1_i/bram_ctrl_0/b_dout_1[11]} {design_1_i/bram_ctrl_0/b_dout_1[12]} {design_1_i/bram_ctrl_0/b_dout_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[14]} {design_1_i/bram_ctrl_0/b_dout_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[16]} {design_1_i/bram_ctrl_0/b_dout_1[17]} {design_1_i/bram_ctrl_0/b_dout_1[18]} {design_1_i/bram_ctrl_0/b_dout_1[19]} {design_1_i/bram_ctrl_0/b_dout_1[20]} {design_1_i/bram_ctrl_0/b_dout_1[21]} {design_1_i/bram_ctrl_0/b_dout_1[22]} {design_1_i/bram_ctrl_0/b_dout_1[23]} {design_1_i/bram_ctrl_0/b_dout_1[24]} {design_1_i/bram_ctrl_0/b_dout_1[25]} {design_1_i/bram_ctrl_0/b_dout_1[26]} {design_1_i/bram_ctrl_0/b_dout_1[27]} {design_1_i/bram_ctrl_0/b_dout_1[28]} {design_1_i/bram_ctrl_0/b_dout_1[29]} {design_1_i/bram_ctrl_0/b_dout_1[30]} {design_1_i/bram_ctrl_0/b_dout_1[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/b_din[0]} {design_1_i/bram_ctrl_0/inst/driver/b_din[1]} {design_1_i/bram_ctrl_0/inst/driver/b_din[2]} {design_1_i/bram_ctrl_0/inst/driver/b_din[3]} {design_1_i/bram_ctrl_0/inst/driver/b_din[4]} {design_1_i/bram_ctrl_0/inst/driver/b_din[5]} {design_1_i/bram_ctrl_0/inst/driver/b_din[6]} {design_1_i/bram_ctrl_0/inst/driver/b_din[7]} {design_1_i/bram_ctrl_0/inst/driver/b_din[8]} {design_1_i/bram_ctrl_0/inst/driver/b_din[9]} {design_1_i/bram_ctrl_0/inst/driver/b_din[10]} {design_1_i/bram_ctrl_0/inst/driver/b_din[11]} {design_1_i/bram_ctrl_0/inst/driver/b_din[12]} {design_1_i/bram_ctrl_0/inst/driver/b_din[13]} {design_1_i/bram_ctrl_0/inst/driver/b_din[14]} {design_1_i/bram_ctrl_0/inst/driver/b_din[15]} {design_1_i/bram_ctrl_0/inst/driver/b_din[16]} {design_1_i/bram_ctrl_0/inst/driver/b_din[17]} {design_1_i/bram_ctrl_0/inst/driver/b_din[18]} {design_1_i/bram_ctrl_0/inst/driver/b_din[19]} {design_1_i/bram_ctrl_0/inst/driver/b_din[20]} {design_1_i/bram_ctrl_0/inst/driver/b_din[21]} {design_1_i/bram_ctrl_0/inst/driver/b_din[22]} {design_1_i/bram_ctrl_0/inst/driver/b_din[23]} {design_1_i/bram_ctrl_0/inst/driver/b_din[24]} {design_1_i/bram_ctrl_0/inst/driver/b_din[25]} {design_1_i/bram_ctrl_0/inst/driver/b_din[26]} {design_1_i/bram_ctrl_0/inst/driver/b_din[27]} {design_1_i/bram_ctrl_0/inst/driver/b_din[28]} {design_1_i/bram_ctrl_0/inst/driver/b_din[29]} {design_1_i/bram_ctrl_0/inst/driver/b_din[30]} {design_1_i/bram_ctrl_0/inst/driver/b_din[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/b_dout[0]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[1]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[2]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[3]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[4]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[5]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[6]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[7]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[8]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[9]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[10]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[11]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[12]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[13]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[14]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[15]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[16]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[17]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[18]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[19]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[20]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[21]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[22]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[23]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[24]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[25]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[26]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[27]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[28]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[29]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[30]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 15 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[1]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[2]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[3]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[4]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[5]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[6]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[7]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[8]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[9]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[10]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[11]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[12]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[13]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[14]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 15 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[1]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[2]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[3]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[4]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[5]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[6]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[7]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[8]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[9]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[10]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[11]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[12]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[13]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[14]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/data_out[0]_i_1_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_1} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_2} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_3} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_rx_1/rx_state ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list design_1_i/bram_ctrl_0/status_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe24]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe24]
+connect_debug_port u_ila_0/probe24 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_buf_1/uart_done ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name bram_ctrl_v1_0_project -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp/bram_ctrl_v1_0_project c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl/component.xml
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp
-add_files -norecurse {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/test_square_writer.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv}
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/test_square_writer.v] -no_script -reset -force -quiet
-remove_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/test_square_writer.v
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v] -no_script -reset -force -quiet
-remove_files  {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v}
-export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -reset -force -quiet
-remove_files  -fileset clk_wiz_0 C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-update_compile_order -fileset sources_1
-ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp
-ipx::edit_ip_in_project -upgrade true -name edit_ip_project -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml
-ipx::current_core c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml
-update_compile_order -fileset sources_1
-set_property core_revision 2 [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 17 [ipx::current_core]
 ipx::update_source_project_archive -component [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
 current_project Project
 open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
-update_ip_catalog -add_ip C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml -repo_path c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux
-set_property  ip_repo_paths  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp} [current_project]
-update_ip_catalog
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+current_project bram_ctrl_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 18 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project bram_ctrl_v1_0_project
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+current_project bram_ctrl_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 19 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project bram_ctrl_v1_0_project
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/clk_wiz_0/inst/clk_out1 ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[3]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[4]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[5]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[6]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[7]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[8]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[9]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[10]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[11]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[12]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[13]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[14]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[13]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[14]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[15]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {design_1_i/bram_ctrl_0/b_dout_1[0]} {design_1_i/bram_ctrl_0/b_dout_1[1]} {design_1_i/bram_ctrl_0/b_dout_1[2]} {design_1_i/bram_ctrl_0/b_dout_1[3]} {design_1_i/bram_ctrl_0/b_dout_1[4]} {design_1_i/bram_ctrl_0/b_dout_1[5]} {design_1_i/bram_ctrl_0/b_dout_1[6]} {design_1_i/bram_ctrl_0/b_dout_1[7]} {design_1_i/bram_ctrl_0/b_dout_1[8]} {design_1_i/bram_ctrl_0/b_dout_1[9]} {design_1_i/bram_ctrl_0/b_dout_1[10]} {design_1_i/bram_ctrl_0/b_dout_1[11]} {design_1_i/bram_ctrl_0/b_dout_1[12]} {design_1_i/bram_ctrl_0/b_dout_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[14]} {design_1_i/bram_ctrl_0/b_dout_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {design_1_i/bram_ctrl_0/a_addr_1[14]} {design_1_i/bram_ctrl_0/a_addr_1[15]} {design_1_i/bram_ctrl_0/a_addr_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {design_1_i/bram_ctrl_0/b_din_1[0]} {design_1_i/bram_ctrl_0/b_din_1[1]} {design_1_i/bram_ctrl_0/b_din_1[2]} {design_1_i/bram_ctrl_0/b_din_1[3]} {design_1_i/bram_ctrl_0/b_din_1[4]} {design_1_i/bram_ctrl_0/b_din_1[5]} {design_1_i/bram_ctrl_0/b_din_1[6]} {design_1_i/bram_ctrl_0/b_din_1[7]} {design_1_i/bram_ctrl_0/b_din_1[8]} {design_1_i/bram_ctrl_0/b_din_1[9]} {design_1_i/bram_ctrl_0/b_din_1[10]} {design_1_i/bram_ctrl_0/b_din_1[11]} {design_1_i/bram_ctrl_0/b_din_1[12]} {design_1_i/bram_ctrl_0/b_din_1[13]} {design_1_i/bram_ctrl_0/b_din_1[14]} {design_1_i/bram_ctrl_0/b_din_1[15]} {design_1_i/bram_ctrl_0/b_din_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {design_1_i/bram_ctrl_0/a_dout_1[0]} {design_1_i/bram_ctrl_0/a_dout_1[1]} {design_1_i/bram_ctrl_0/a_dout_1[2]} {design_1_i/bram_ctrl_0/a_dout_1[3]} {design_1_i/bram_ctrl_0/a_dout_1[4]} {design_1_i/bram_ctrl_0/a_dout_1[5]} {design_1_i/bram_ctrl_0/a_dout_1[6]} {design_1_i/bram_ctrl_0/a_dout_1[7]} {design_1_i/bram_ctrl_0/a_dout_1[8]} {design_1_i/bram_ctrl_0/a_dout_1[9]} {design_1_i/bram_ctrl_0/a_dout_1[10]} {design_1_i/bram_ctrl_0/a_dout_1[11]} {design_1_i/bram_ctrl_0/a_dout_1[12]} {design_1_i/bram_ctrl_0/a_dout_1[13]} {design_1_i/bram_ctrl_0/a_dout_1[14]} {design_1_i/bram_ctrl_0/a_dout_1[15]} {design_1_i/bram_ctrl_0/a_dout_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {design_1_i/bram_ctrl_0/b_addr_1[0]} {design_1_i/bram_ctrl_0/b_addr_1[1]} {design_1_i/bram_ctrl_0/b_addr_1[2]} {design_1_i/bram_ctrl_0/b_addr_1[3]} {design_1_i/bram_ctrl_0/b_addr_1[4]} {design_1_i/bram_ctrl_0/b_addr_1[5]} {design_1_i/bram_ctrl_0/b_addr_1[6]} {design_1_i/bram_ctrl_0/b_addr_1[7]} {design_1_i/bram_ctrl_0/b_addr_1[8]} {design_1_i/bram_ctrl_0/b_addr_1[9]} {design_1_i/bram_ctrl_0/b_addr_1[10]} {design_1_i/bram_ctrl_0/b_addr_1[11]} {design_1_i/bram_ctrl_0/b_addr_1[12]} {design_1_i/bram_ctrl_0/b_addr_1[13]} {design_1_i/bram_ctrl_0/b_addr_1[14]} {design_1_i/bram_ctrl_0/b_addr_1[15]} {design_1_i/bram_ctrl_0/b_addr_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/b_dout[0]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[1]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[2]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[3]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[4]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[5]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[6]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[7]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[8]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[9]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[10]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[11]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[12]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[13]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[14]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[15]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 15 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[1]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[2]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[3]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[4]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[5]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[6]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[7]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[8]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[9]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[10]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[11]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[12]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[13]} {design_1_i/bram_ctrl_0/inst/driver/ADDRARDADDR[14]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 15 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[0]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[1]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[2]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[3]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[4]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[5]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[6]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[7]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[8]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[9]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[10]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[11]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[12]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[13]} {design_1_i/bram_ctrl_0/inst/driver/ADDRBWRADDR[14]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/b_din[0]} {design_1_i/bram_ctrl_0/inst/driver/b_din[1]} {design_1_i/bram_ctrl_0/inst/driver/b_din[2]} {design_1_i/bram_ctrl_0/inst/driver/b_din[3]} {design_1_i/bram_ctrl_0/inst/driver/b_din[4]} {design_1_i/bram_ctrl_0/inst/driver/b_din[5]} {design_1_i/bram_ctrl_0/inst/driver/b_din[6]} {design_1_i/bram_ctrl_0/inst/driver/b_din[7]} {design_1_i/bram_ctrl_0/inst/driver/b_din[8]} {design_1_i/bram_ctrl_0/inst/driver/b_din[9]} {design_1_i/bram_ctrl_0/inst/driver/b_din[10]} {design_1_i/bram_ctrl_0/inst/driver/b_din[11]} {design_1_i/bram_ctrl_0/inst/driver/b_din[12]} {design_1_i/bram_ctrl_0/inst/driver/b_din[13]} {design_1_i/bram_ctrl_0/inst/driver/b_din[14]} {design_1_i/bram_ctrl_0/inst/driver/b_din[15]} {design_1_i/bram_ctrl_0/inst/driver/b_din[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/data_out[0]_i_1_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_1} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_2} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_3} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_rx_1/rx_state ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list design_1_i/bram_ctrl_0/status_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_buf_1/uart_done ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/bram_ctrl_0/b_dout_1} {u_ila_0_ADDRARDADDR} {u_ila_0_ADDRBWRADDR} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_addr_1} {u_ila_0_a_dout_1} {u_ila_0_b_addr_1} {u_ila_0_b_din} {u_ila_0_b_dout} {u_ila_0_out_bram_din1_carry__0_0} {u_ila_0_out_bram_din1_inferred__0/i__carry__0_0} }
+set_property TRIGGER_COMPARE_VALUE eq4'hX [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+undo
+undo
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq4'b1010 [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq4'hX [get_hw_probes u_ila_0_out_bram_din1_carry__0_0 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq15'hXXXX [get_hw_probes u_ila_0_ADDRARDADDR -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq15'h0000 [get_hw_probes u_ila_0_ADDRARDADDR -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq15'h3041 [get_hw_probes u_ila_0_ADDRARDADDR -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq15'hXXXX [get_hw_probes u_ila_0_ADDRARDADDR -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq14'hXXXX [get_hw_probes u_ila_0_b_addr_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq14'h1841 [get_hw_probes u_ila_0_b_addr_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq14'hXXXX [get_hw_probes u_ila_0_b_addr_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq1'bX [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq1'b1 [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE neq1'b0 [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE neq1'b1 [get_hw_probes u_ila_0_status_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]
+set_property core_revision 20 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+open_project C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.xpr
+update_compile_order -fileset sources_1
+current_project Project
 startgroup
-create_bd_cell -type ip -vlnv xilinx.com:user:project_mvp_top:1.0 project_mvp_top_0
+make_bd_pins_external  [get_bd_pins project_mvp_top_0/data_out]
 endgroup
-set_property location {1 35 282} [get_bd_cells project_mvp_top_0]
-connect_bd_net [get_bd_pins project_mvp_top_0/bram_ena_uart] [get_bd_pins bram_ctrl_0/a_en_1]
+set_property name data_out [get_bd_ports data_out_0]
 save_bd_design
+make_wrapper -files [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -top
+current_project bram_ctrl_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 21 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project Project(2)
+current_project Project
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {design_1_i/bram_ctrl_0/a_dout_1} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0} }
+current_project project_mvp_top_v1_0_project
+current_project Project
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+save_wave_config {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
 close_project
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/impl_1/project_mvp_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.runs\impl_1\design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.runs\impl_1\design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.runs/impl_1/project_mvp_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_project C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+set_property name data_in [get_bd_ports data_in_0]
+save_bd_design
+report_ip_status -name ip_status 
+set_property core_revision 22 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+save_wave_config {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP_bram_mux/Project/Project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+current_project Project(2)
+close_project
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7a100t_0] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+current_project project_mvp_top_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 17 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 18 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip [get_ips  {design_1_bram_ctrl_0_0 design_1_project_mvp_top_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_bram_ctrl_0_0 design_1_project_mvp_top_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 {design_1_bram_ctrl_0_0_synth_1 design_1_project_mvp_top_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_ena_dsp]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_wea_dsp]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_addra_dsp]
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out2]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_addrb_dsp]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_enb_dsp]
+set_property location {3 977 637} [get_bd_cells blk_mem_gen_0]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_addra] [get_bd_pins blk_mem_gen_0/addra]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_wea] [get_bd_pins blk_mem_gen_0/wea]
+current_project project_mvp_top_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 19 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project project_mvp_top_v1_0_project
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_doutb] [get_bd_pins blk_mem_gen_0/douta]
+startgroup
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_dina] [get_bd_pins blk_mem_gen_0/dina]
+endgroup
+startgroup
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_enb] [get_bd_pins blk_mem_gen_0/enb]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_enb] [get_bd_pins blk_mem_gen_0/clka]
+endgroup
+undo
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_enb] [get_bd_pins blk_mem_gen_0/enb]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_addrb] [get_bd_pins blk_mem_gen_0/addrb]
+current_project project_mvp_top_v1_0_project
+current_project Project
+delete_bd_objs [get_bd_nets blk_mem_gen_0_douta]
+delete_bd_objs [get_bd_nets blk_mem_gen_0_doutb]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_doutb] [get_bd_pins blk_mem_gen_0/doutb]
+connect_bd_net [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins bram_ctrl_0/clk]
+connect_bd_net [get_bd_pins project_mvp_top_0/clk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins project_mvp_top_0/clk2] [get_bd_pins clk_wiz_0/clk_out2]
+connect_bd_net [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins blk_mem_gen_0/ena]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_addrb_dsp] [get_bd_pins bram_ctrl_0/b_addr_2]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_dout_3] [get_bd_pins project_mvp_top_0/bram_doutb_dsp]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_enb_dsp] [get_bd_pins bram_ctrl_0/b_en_2]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_dsp_done] [get_bd_pins bram_ctrl_0/status_2]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_dsp_done]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_addrb_dsp]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_enb_dsp]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_dsp_done] [get_bd_pins bram_ctrl_0/status_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_addrb_dsp] [get_bd_pins bram_ctrl_0/b_addr_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_enb_dsp] [get_bd_pins bram_ctrl_0/b_en_3]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project project_mvp_top_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 20 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+connect_bd_net [get_bd_ports clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+disconnect_bd_net /clk_100MHz_1 [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "/clk_wiz_0/clk_out1 (100 MHz)" }  [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {3 1058 1020} [get_bd_cells xlconstant_1]
+startgroup
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/status_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+endgroup
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_we_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_addr_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_din_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_en_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_we_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_addr_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_din_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_3] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_we_3] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_addr_3] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_din_3] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_we_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_addr_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_din_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_en_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_we_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_addr_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_din_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/status_4] [get_bd_pins xlconstant_1/dout]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+current_project bram_ctrl_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 23 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project bram_ctrl_v1_0_project
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+current_project bram_ctrl_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 24 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project bram_ctrl_v1_0_project
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:bram_ctrl:1.0 [get_ips  design_1_bram_ctrl_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_bram_ctrl_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_bram_ctrl_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_bram_ctrl_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/clk_wiz_0/inst/clk_out1 ]]
+set_property port_width 17 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/bram_ctrl_0/b_addr_1[0]} {design_1_i/bram_ctrl_0/b_addr_1[1]} {design_1_i/bram_ctrl_0/b_addr_1[2]} {design_1_i/bram_ctrl_0/b_addr_1[3]} {design_1_i/bram_ctrl_0/b_addr_1[4]} {design_1_i/bram_ctrl_0/b_addr_1[5]} {design_1_i/bram_ctrl_0/b_addr_1[6]} {design_1_i/bram_ctrl_0/b_addr_1[7]} {design_1_i/bram_ctrl_0/b_addr_1[8]} {design_1_i/bram_ctrl_0/b_addr_1[9]} {design_1_i/bram_ctrl_0/b_addr_1[10]} {design_1_i/bram_ctrl_0/b_addr_1[11]} {design_1_i/bram_ctrl_0/b_addr_1[12]} {design_1_i/bram_ctrl_0/b_addr_1[13]} {design_1_i/bram_ctrl_0/b_addr_1[14]} {design_1_i/bram_ctrl_0/b_addr_1[15]} {design_1_i/bram_ctrl_0/b_addr_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/bram_ctrl_0/b_din_1[0]} {design_1_i/bram_ctrl_0/b_din_1[1]} {design_1_i/bram_ctrl_0/b_din_1[2]} {design_1_i/bram_ctrl_0/b_din_1[3]} {design_1_i/bram_ctrl_0/b_din_1[4]} {design_1_i/bram_ctrl_0/b_din_1[5]} {design_1_i/bram_ctrl_0/b_din_1[6]} {design_1_i/bram_ctrl_0/b_din_1[7]} {design_1_i/bram_ctrl_0/b_din_1[8]} {design_1_i/bram_ctrl_0/b_din_1[9]} {design_1_i/bram_ctrl_0/b_din_1[10]} {design_1_i/bram_ctrl_0/b_din_1[11]} {design_1_i/bram_ctrl_0/b_din_1[12]} {design_1_i/bram_ctrl_0/b_din_1[13]} {design_1_i/bram_ctrl_0/b_din_1[14]} {design_1_i/bram_ctrl_0/b_din_1[15]} {design_1_i/bram_ctrl_0/b_din_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/bram_ctrl_0/a_addr_1[14]} {design_1_i/bram_ctrl_0/a_addr_1[15]} {design_1_i/bram_ctrl_0/a_addr_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/bram_ctrl_0/a_dout_1[0]} {design_1_i/bram_ctrl_0/a_dout_1[1]} {design_1_i/bram_ctrl_0/a_dout_1[2]} {design_1_i/bram_ctrl_0/a_dout_1[3]} {design_1_i/bram_ctrl_0/a_dout_1[4]} {design_1_i/bram_ctrl_0/a_dout_1[5]} {design_1_i/bram_ctrl_0/a_dout_1[6]} {design_1_i/bram_ctrl_0/a_dout_1[7]} {design_1_i/bram_ctrl_0/a_dout_1[8]} {design_1_i/bram_ctrl_0/a_dout_1[9]} {design_1_i/bram_ctrl_0/a_dout_1[10]} {design_1_i/bram_ctrl_0/a_dout_1[11]} {design_1_i/bram_ctrl_0/a_dout_1[12]} {design_1_i/bram_ctrl_0/a_dout_1[13]} {design_1_i/bram_ctrl_0/a_dout_1[14]} {design_1_i/bram_ctrl_0/a_dout_1[15]} {design_1_i/bram_ctrl_0/a_dout_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_1_i/bram_ctrl_0/b_dout_1[0]} {design_1_i/bram_ctrl_0/b_dout_1[1]} {design_1_i/bram_ctrl_0/b_dout_1[2]} {design_1_i/bram_ctrl_0/b_dout_1[3]} {design_1_i/bram_ctrl_0/b_dout_1[4]} {design_1_i/bram_ctrl_0/b_dout_1[5]} {design_1_i/bram_ctrl_0/b_dout_1[6]} {design_1_i/bram_ctrl_0/b_dout_1[7]} {design_1_i/bram_ctrl_0/b_dout_1[8]} {design_1_i/bram_ctrl_0/b_dout_1[9]} {design_1_i/bram_ctrl_0/b_dout_1[10]} {design_1_i/bram_ctrl_0/b_dout_1[11]} {design_1_i/bram_ctrl_0/b_dout_1[12]} {design_1_i/bram_ctrl_0/b_dout_1[13]} {design_1_i/bram_ctrl_0/b_dout_1[14]} {design_1_i/bram_ctrl_0/b_dout_1[15]} {design_1_i/bram_ctrl_0/b_dout_1[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[0]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[1]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[2]} {design_1_i/project_mvp_top_0/inst/ir_buf/out_bram_din1_inferred__0/i__carry__0_0[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[13]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[14]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[15]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_dina_uart[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 14 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[0]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[1]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[2]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[3]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[4]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[5]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[6]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[7]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[8]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[9]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[10]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[11]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[12]} {design_1_i/project_mvp_top_0/inst/uart_buf_1/bram_addra_uart[13]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/bit_count[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[0]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[1]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[2]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[3]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[4]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[5]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[6]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[7]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[8]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[9]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[10]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[11]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[12]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[13]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[14]} {design_1_i/project_mvp_top_0/inst/uart_rx_1/clk_count[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/b_din[0]} {design_1_i/bram_ctrl_0/inst/driver/b_din[1]} {design_1_i/bram_ctrl_0/inst/driver/b_din[2]} {design_1_i/bram_ctrl_0/inst/driver/b_din[3]} {design_1_i/bram_ctrl_0/inst/driver/b_din[4]} {design_1_i/bram_ctrl_0/inst/driver/b_din[5]} {design_1_i/bram_ctrl_0/inst/driver/b_din[6]} {design_1_i/bram_ctrl_0/inst/driver/b_din[7]} {design_1_i/bram_ctrl_0/inst/driver/b_din[8]} {design_1_i/bram_ctrl_0/inst/driver/b_din[9]} {design_1_i/bram_ctrl_0/inst/driver/b_din[10]} {design_1_i/bram_ctrl_0/inst/driver/b_din[11]} {design_1_i/bram_ctrl_0/inst/driver/b_din[12]} {design_1_i/bram_ctrl_0/inst/driver/b_din[13]} {design_1_i/bram_ctrl_0/inst/driver/b_din[14]} {design_1_i/bram_ctrl_0/inst/driver/b_din[15]} {design_1_i/bram_ctrl_0/inst/driver/b_din[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 17 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list {design_1_i/bram_ctrl_0/inst/driver/b_dout[0]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[1]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[2]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[3]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[4]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[5]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[6]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[7]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[8]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[9]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[10]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[11]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[12]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[13]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[14]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[15]} {design_1_i/bram_ctrl_0/inst/driver/b_dout[16]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_rx_1/data_out[0]_i_1_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_0} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_1} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_2} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list {design_1_i/project_mvp_top_0/inst/uart_buf_1/row_count_write_reg[4]_i_2_n_3} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_rx_1/rx_state ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list design_1_i/bram_ctrl_0/status_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list design_1_i/project_mvp_top_0/inst/uart_buf_1/uart_done ]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+make_wrapper -files [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {16}] [get_bd_cells xlconstant_1]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+set_property STEPS.OPT_DESIGN.IS_ENABLED false [get_runs impl_1]
+reset_run impl_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_addrb_uart]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_enb_uart]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_en_1] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_we_1] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_addr_1] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_din_1] [get_bd_pins xlconstant_1/dout]
+save_bd_design
+set_property STEPS.OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+current_project project_mvp_top_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 21 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+current_project project_mvp_top_v1_0_project
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

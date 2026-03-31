@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:bram_ctrl:1.0
-// IP Revision: 14
+// IP Revision: 24
 
 (* X_CORE_INFO = "bram_ctrl,Vivado 2018.3.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_bram_ctrl_0_0,bram_ctrl,{}" *)
-(* CORE_GENERATION_INFO = "design_1_bram_ctrl_0_0,bram_ctrl,{x_ipProduct=Vivado 2018.3.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=bram_ctrl,x_ipVersion=1.0,x_ipCoreRevision=14,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "design_1_bram_ctrl_0_0,bram_ctrl,{x_ipProduct=Vivado 2018.3.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=bram_ctrl,x_ipVersion=1.0,x_ipCoreRevision=24,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_bram_ctrl_0_0 (

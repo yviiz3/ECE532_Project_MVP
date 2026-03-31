@@ -15,6 +15,8 @@ module top(
     output wire signed [15:0] doutb_btop,
     output wire signed [15:0] doutv_atop,
     output wire signed [15:0] doutv_btop
+
+    //add ports for dataflow in and out
     );
 
     wire dot_start, alpha_done, beta_done, gamma_done, dot_valid;
@@ -23,6 +25,17 @@ module top(
     wire sqrt_start, sqrt_done, sqrt_validout;
     wire divide_validin, divide_validout;
     wire [10:0] addrb_aread, addrb_bread, addrv_aread, addrv_bread, addrb_awrite, addrb_bwrite, addrv_awrite, addrv_bwrite;
+
+    wire brama_addr, brama_din, brama_dout, brama_we;
+    wire bramb_addr, bramb_din, bramb_dout, bramb_we;
+    wire bramc_addr, bramc_din, bramc_dout, bramc_we;
+    wire bramd_addr, bramd_din, bramd_dout, bramd_we;
+    wire brama_re, bramb_re, bramc_re, bramd_re;
+    
+    wire top_brama_addr, top_brama_din, top_brama_dout, top_brama_we;
+    wire top_bramb_addr, top_bramb_din, top_bramb_dout, top_bramb_we;
+    wire top_bramc_addr, top_bramc_din, top_bramc_dout, top_bramc_we;
+    wire top_bramd_addr, top_bramd_din, top_bramd_dout, top_bramd_we
 
     control_fsm u_control_fsm (
         .clk (clk),
@@ -69,9 +82,9 @@ module top(
         .MEM_FILE("matrixb.mem")
     ) u_tdp_bram_1 (
         .clk (clk),
-        .we_a (),
-        .addr_a (addrb_aread),
-        .din_a (),
+        .we_a (top_brama_we),
+        .addr_a (top_brama_addr),
+        .din_a (top_brama_din),
         .dout_a (doutb_a),
         .we_b (),
         .addr_b (addrb_bread),
@@ -79,20 +92,33 @@ module top(
         .dout_b (doutb_b)
     );
 
+    assign top_brama_addr = brama_re ? brama_addr : addrb_aread;
+    assign top_brama_din = brama_we ? brama_din : 16'bz;
+    assign top_brama_dout = brama_re ? brama_dout : doutb_a;
+    assign top_brama_we = brama_re ? brama_we : 1'b0;
+
     wire signed [15:0] xb_out, yb_out;
     wire signed [55:0] divgen_out;
 
     tdp_bram u_tdp_bram_2 (
         .clk (clk),
-        .we_a (updateb_validout || divide_validout),
-        .addr_a (addrb_awrite),
-        .din_a (divide_validout ? divgen_out[15:0] : xb_out),
-        .dout_a (doutb_atop),
+        .we_a (top_bramb_we),
+        .addr_a (top_bramb_addr),
+        .din_a (top_bramb_din),
+        .dout_a (top_bramb_dout),
         .we_b (updateb_validout),
         .addr_b (addrb_bwrite),
         .din_b (yb_out),
         .dout_b (doutb_btop)
     );
+wire we_b = updateb_validout || divide_validout;
+wire divide = divide_validout ? divgen_out[15:0] : xb_out;
+assign top_bramb_addr = bramb_re ? bramb_addr : addrb_awrite;
+assign top_bramb_din = bramb_re ? bramb_din : divide;
+assign top_bramb_dout = bramb_re ? bramb_dout : doutb_atop;
+assign top_bramb_we = bramb_re ? bramb_we : we_b;
+
+
 
     wire signed [15:0] doutv_a, doutv_b;
 
@@ -100,9 +126,9 @@ module top(
         .MEM_FILE("matrixv.mem")
     ) u_tdp_bram_3 (
         .clk (clk),
-        .we_a (),
-        .addr_a (addrv_aread),
-        .din_a (),
+        .we_a (top_bramc_we),
+        .addr_a (top_bramc_addr),
+        .din_a (top_bramc_din),
         .dout_a (doutv_a),
         .we_b (),
         .addr_b (addrv_bread),
@@ -110,21 +136,31 @@ module top(
         .dout_b (doutv_b)
     );
 
+    assign top_bramc_addr = bramc_re ? bramc_addr : addrv_aread;
+    assign top_bramc_din = bramc_re ? bramc_din : 16'bz;
+    assign top_bramc_dout = bramc_re ? bramc_dout : doutv_a;
+    assign top_bramc_we = bramc_re ? bramc_we : 1'b0;
     wire signed [15:0] xv_out, yv_out;
     wire signed [47:0] sqrt_out;
 
     tdp_bram u_tdp_bram_4 (
         .clk (clk),
         .we_a (updatev_validout || sqrt_validout),
-        .addr_a (addrv_awrite),
-        .din_a (sqrt_validout ? sqrt_out[38:23] : xv_out),
-        .dout_a (doutv_atop),
+        .addr_a (top_bramd_addr),
+        .din_a (top_bramd_din),
+        .dout_a (top_bramd_dout),
         .we_b (updatev_validout),
         .addr_b (addrv_bwrite),
         .din_b (yv_out),
         .dout_b (doutv_btop)
     );
+    assign updateval = updatev_validout || sqrt_validout;
+    assign top_bramd_addr = bramd_re ? bramd_addr : addrv_awrite;
+    assign top_bramd_din = bramd_re ? bramd_din : sqrt_validout ? sqrt_out[38:23] : xv_out;
+    assign top_bramd_dout = bramd_re ? bramd_dout : doutv_atop;
+    assign top_bramd_we = bramd_re ? bramd_we : updateval;
 
+    
     wire signed [47:0] alpha_in, beta_in, gamma_in;
 
     dot_product u_dot_product_1 (

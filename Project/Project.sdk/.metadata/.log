@@ -1,0 +1,95 @@
+!SESSION 2026-03-31 01:13:48.318 -----------------------------------------------
+eclipse.buildId=2018.3
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk
+
+!ENTRY org.eclipse.ui 2 0 2026-03-31 01:14:04.901
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-03-31 01:14:04.901
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2026-03-31 01:14:05.447
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2026-03-31 01:14:05.447
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:13.168
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:13.168
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:17.573
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:17.574
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:17.575
+!MESSAGE XSCT Command: [setws C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk], Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:17.576
+!MESSAGE XSCT command with result: [setws C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk], Result: [null, ]. Thread: Thread-15
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:17.641
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:21.090
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:21.103
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:21.105
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "7a100t",
+"family": "artix7",
+"timestamp": "Tue Mar 31 01:06:26 2026",
+"vivado_version": "2018.3.1",
+"part": "xc7a100tcsg324-1",
+}]. Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:21.108
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2026-03-31 01:14:21.111
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, {"blk_mem_gen_0": {"hier_name": "blk_mem_gen_0",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"bram_ctrl_0": {"hier_name": "bram_ctrl_0",
+"type": "bram_ctrl",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_0": {"hier_name": "clk_wiz_0",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"proc_sys_reset_0": {"hier_name": "proc_sys_reset_0",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+"project_mvp_top_0": {"hier_name": "project_mvp_top_0",
+"type": "project_mvp_top",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-5
+
+!ENTRY org.eclipse.tcf 4 0 2026-03-31 01:52:10.766
+!MESSAGE TCF channel terminated
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:209)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:185)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:84)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:327)

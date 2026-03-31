@@ -48,15 +48,16 @@
 
 
 // IP VLNV: xilinx.com:user:project_mvp_top:1.0
-// IP Revision: 3
+// IP Revision: 21
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_project_mvp_top_0_0 (
+  clk2,
   clk,
-  reset,
+  rst,
   en,
   data_in,
   data_out,
@@ -78,23 +79,28 @@ module design_1_project_mvp_top_0_0 (
   bram_enb_dsp,
   bram_addrb_dsp,
   bram_doutb_dsp,
-  bram_dsp_done
+  bram_dsp_done,
+  vga_wea,
+  vga_addra,
+  vga_dina,
+  vga_enb,
+  vga_addrb,
+  vga_doutb
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+input wire clk2;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst:reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 reset RST" *)
-input wire reset;
+input wire rst;
 input wire en;
 input wire data_in;
 output wire [11 : 0] data_out;
 output wire HSYNC;
 output wire VSYNC;
 output wire [15 : 0] led;
-wire   led_unpacked [15:0];
-assign {>>{led}} = led_unpacked;
 output wire bram_ena_uart;
 output wire bram_wea_uart;
 output wire [13 : 0] bram_addra_uart;
@@ -111,16 +117,23 @@ output wire bram_enb_dsp;
 output wire [13 : 0] bram_addrb_dsp;
 input wire [16 : 0] bram_doutb_dsp;
 output wire bram_dsp_done;
+output wire vga_wea;
+output wire [13 : 0] vga_addra;
+output wire [16 : 0] vga_dina;
+output wire vga_enb;
+output wire [13 : 0] vga_addrb;
+input wire [16 : 0] vga_doutb;
 
   project_mvp_top inst (
+    .clk2(clk2),
     .clk(clk),
-    .reset(reset),
+    .rst(rst),
     .en(en),
     .data_in(data_in),
     .data_out(data_out),
     .HSYNC(HSYNC),
     .VSYNC(VSYNC),
-    .led(led_unpacked),
+    .led(led),
     .bram_ena_uart(bram_ena_uart),
     .bram_wea_uart(bram_wea_uart),
     .bram_addra_uart(bram_addra_uart),
@@ -136,6 +149,12 @@ output wire bram_dsp_done;
     .bram_enb_dsp(bram_enb_dsp),
     .bram_addrb_dsp(bram_addrb_dsp),
     .bram_doutb_dsp(bram_doutb_dsp),
-    .bram_dsp_done(bram_dsp_done)
+    .bram_dsp_done(bram_dsp_done),
+    .vga_wea(vga_wea),
+    .vga_addra(vga_addra),
+    .vga_dina(vga_dina),
+    .vga_enb(vga_enb),
+    .vga_addrb(vga_addrb),
+    .vga_doutb(vga_doutb)
   );
 endmodule

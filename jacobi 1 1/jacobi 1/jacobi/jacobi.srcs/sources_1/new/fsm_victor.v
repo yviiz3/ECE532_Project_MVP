@@ -40,7 +40,7 @@ module svd_top_fsm_bram #
     input  wire [DW-1:0] mem_dout
 );
 
-    
+    curraddr <= (addra + col_idx) + row_idx * ROWS; 
     // control to lower engine
     reg start_bv;
     reg start_sigmau;

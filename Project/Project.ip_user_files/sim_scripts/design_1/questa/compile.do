@@ -5,11 +5,15 @@ vlib questa_lib/msim/xil_defaultlib
 vlib questa_lib/msim/xpm
 vlib questa_lib/msim/lib_cdc_v1_0_2
 vlib questa_lib/msim/proc_sys_reset_v5_0_13
+vlib questa_lib/msim/blk_mem_gen_v8_4_2
+vlib questa_lib/msim/xlconstant_v1_1_5
 
 vmap xil_defaultlib questa_lib/msim/xil_defaultlib
 vmap xpm questa_lib/msim/xpm
 vmap lib_cdc_v1_0_2 questa_lib/msim/lib_cdc_v1_0_2
 vmap proc_sys_reset_v5_0_13 questa_lib/msim/proc_sys_reset_v5_0_13
+vmap blk_mem_gen_v8_4_2 questa_lib/msim/blk_mem_gen_v8_4_2
+vmap xlconstant_v1_1_5 questa_lib/msim/xlconstant_v1_1_5
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
 "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -19,20 +23,20 @@ vcom -work xpm -64 -93 \
 "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
-"../../../bd/design_1/ipshared/358e/bram_ctrl.v" \
+"../../../bd/design_1/ipshared/6150/bram_ctrl.v" \
 "../../../bd/design_1/ip/design_1_bram_ctrl_0_0/sim/design_1_bram_ctrl_0_0.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
-"../../../bd/design_1/ipshared/c443/uart_buf.v" \
-"../../../bd/design_1/ipshared/c443/uart_rx.v" \
-"../../../bd/design_1/ipshared/c443/vga_buf.v" \
-"../../../bd/design_1/ipshared/c443/vga_output.v" \
+"../../../bd/design_1/ipshared/0a91/uart_buf.v" \
+"../../../bd/design_1/ipshared/0a91/uart_rx.v" \
+"../../../bd/design_1/ipshared/0a91/vga_buf.v" \
+"../../../bd/design_1/ipshared/0a91/vga_output.v" \
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
-"../../../bd/design_1/ipshared/c443/reconstruction_buf.sv" \
-"../../../bd/design_1/ipshared/c443/reconstruction_compute_64_1dsp.sv" \
-"../../../bd/design_1/ipshared/c443/svd_bram_firstcol_checker.sv" \
-"../../../bd/design_1/ipshared/c443/project_mvp_top.sv" \
+"../../../bd/design_1/ipshared/0a91/reconstruction_buf.sv" \
+"../../../bd/design_1/ipshared/0a91/reconstruction_compute_64_1dsp.sv" \
+"../../../bd/design_1/ipshared/0a91/svd_bram_firstcol_checker.sv" \
+"../../../bd/design_1/ipshared/0a91/project_mvp_top.sv" \
 "../../../bd/design_1/ip/design_1_project_mvp_top_0_0/sim/design_1_project_mvp_top_0_0.sv" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
@@ -46,6 +50,19 @@ vcom -work proc_sys_reset_v5_0_13 -64 -93 \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/ip/design_1_proc_sys_reset_0_0/sim/design_1_proc_sys_reset_0_0.vhd" \
+
+vlog -work blk_mem_gen_v8_4_2 -64 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
+"../../../../Project.srcs/sources_1/bd/design_1/ipshared/37c2/simulation/blk_mem_gen_v8_4.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
+"../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
+
+vlog -work xlconstant_v1_1_5 -64 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
+"../../../../Project.srcs/sources_1/bd/design_1/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../Project.srcs/sources_1/bd/design_1/ipshared/85a3" \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconstant_1_0/sim/design_1_xlconstant_1_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

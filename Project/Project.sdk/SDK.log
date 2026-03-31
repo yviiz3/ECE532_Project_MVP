@@ -1,0 +1,6 @@
+01:14:09 INFO  : Registering command handlers for SDK TCF services
+01:14:10 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.sdk\temp_xsdb_launch_script.tcl
+01:14:13 INFO  : XSCT server has started successfully.
+01:14:17 INFO  : Successfully done setting XSCT server connection channel  
+01:14:17 INFO  : Successfully done setting SDK workspace  
+01:14:17 INFO  : Processing command line option -hwspec C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.sdk/design_1_wrapper.hdf.

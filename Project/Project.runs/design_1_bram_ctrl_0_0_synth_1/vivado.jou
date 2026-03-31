@@ -2,8 +2,8 @@
 # Vivado v2018.3.1 (64-bit)
 # SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
 # IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
-# Start of session at: Mon Mar 23 19:24:03 2026
-# Process ID: 24296
+# Start of session at: Tue Mar 31 08:11:18 2026
+# Process ID: 3936
 # Current directory: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_bram_ctrl_0_0_synth_1
 # Command line: vivado.exe -log design_1_bram_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_bram_ctrl_0_0.tcl
 # Log file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_bram_ctrl_0_0_synth_1/design_1_bram_ctrl_0_0.vds

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Tue Mar 31 07:36:50 2026
+# Process ID: 23232
+# Current directory: c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1
+# Command line: vivado.exe -log project_mvp_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source project_mvp_top.tcl
+# Log file: c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1/project_mvp_top.vds
+# Journal file: c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source project_mvp_top.tcl -notrace

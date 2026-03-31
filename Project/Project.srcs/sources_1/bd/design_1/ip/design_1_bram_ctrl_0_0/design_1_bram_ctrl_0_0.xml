@@ -127,11 +127,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+            <spirit:value>Tue Mar 31 12:10:49 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ec2e220f</spirit:value>
+            <spirit:value>9:eed74490</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -147,11 +147,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+            <spirit:value>Tue Mar 31 12:10:49 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ec2e220f</spirit:value>
+            <spirit:value>9:eed74490</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -166,11 +166,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+            <spirit:value>Tue Mar 31 12:10:49 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a75b121f</spirit:value>
+            <spirit:value>9:a5a27480</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -186,11 +186,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 23 23:23:40 UTC 2026</spirit:value>
+            <spirit:value>Tue Mar 31 12:10:49 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a75b121f</spirit:value>
+            <spirit:value>9:a5a27480</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -204,11 +204,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 23 23:24:31 UTC 2026</spirit:value>
+            <spirit:value>Tue Mar 31 12:11:42 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ec2e220f</spirit:value>
+            <spirit:value>9:eed74490</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -914,7 +914,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/358e/bram_ctrl.v</spirit:name>
+        <spirit:name>../../ipshared/6150/bram_ctrl.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -929,7 +929,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/358e/bram_ctrl.v</spirit:name>
+        <spirit:name>../../ipshared/6150/bram_ctrl.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -989,7 +989,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>bram_ctrl_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>14</xilinx:coreRevision>
+      <xilinx:coreRevision>24</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@fe19c35_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/aps420/Memory_Controller/bram_ctrl</xilinx:tag>
@@ -1187,6 +1187,254 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@49a8886c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4db66600_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2acacb30_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30f37881_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2a434a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14faa687_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f356cd0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3899dfa8_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a8b051_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@494f0a78_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c1a64e9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@759d2087_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48b0902b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2da3b08_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c04737_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16eb8b3b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18741c4b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1110968c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cf72fcd_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73246221_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@711bc0b2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@463bae37_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33ae5f7c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56962423_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a5666f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28bc2888_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aa59fd9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7844f6c7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@377a30d2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f72b6eb_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e2fe85_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@470429e1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ea7ca94_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48d6c6e5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@777b2de_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75f4c0df_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b471fae_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d8fc72_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@150df89c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@511e308b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bf78e74_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a1c2342_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56e10a24_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@345ed7f3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e0bac5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d751092_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@352c955a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41b72650_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9bd293c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dadc95e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2349df14_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34b4ffde_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ab4295_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@581b43e5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b14823_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16646_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@429bbbc7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71ba44a5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e287ecd_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f0bd0f7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2356401c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72a6c7d7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a4cc241_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a7130f6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1474c008_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7c325_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@559687f5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3885d2f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4028aea3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e0e4558_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@96cf446_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e891794_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40559c59_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a6fcbad_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c4cf095_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73dc0d13_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56d12101_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47bff063_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e2c27f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a851ad_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433842c0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@575e6249_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@aad180b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dfbd11_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cbb0842_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b837b06_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16cdf3e4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63195a9c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c58df6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f500397_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3577f7f0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d419632_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@410a187f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8c363d0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@146b2e7e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff692c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7925c69d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6261563a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cf70f2c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4685ee7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73848c33_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@755a0873_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e08530e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f3382fc_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42603744_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73656cac_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25abddfe_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c67db7e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b53a326_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64141d23_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76f703b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6679ebca_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b90090a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73684e29_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c3a7e0a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1634eda9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14c74950_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff40e99_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12cbbc22_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2db25dfe_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c320e57_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27227712_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73deb9e3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75d87a8_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@774f26cf_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc0268e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cd9865d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f6deb42_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@579e2f4f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ecb4858_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d4a679b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f2397b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cdd9521_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c5ad3e1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae2f7e6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@669cd15b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b509b3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b5e9390_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21f941de_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@726403ed_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c4eb89f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1307ff8f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b88bf5f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78eb0b8e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14f51565_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d227a1d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@232d089d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79b13b77_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158641b5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e1746d9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1094675a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57981cf3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c11461f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44558ac0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3afb0cf4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a7f801_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48d51ae3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15dd6f68_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b774f52_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2459bc47_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10890eca_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@422ee571_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b74986e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@184430b3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3aac8a07_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7003a41a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60c0759_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2993ca96_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20ce83e4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3284f4fa_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c7707c7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@266cf374_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44aa1915_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@124f68c5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a9e166b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e8aafa_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4912d3e7_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@708d90e3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d694d5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42518cb2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a621167_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fc50adb_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@713764d9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2baa8bd2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34624b03_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1df79b99_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f9f476_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@103f0a2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@842f43b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23a784cf_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@478ed91f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@179bf6db_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2373fae3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d50e039_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d40acd6_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54a60f8c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15516ee4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f68dd53_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d27452_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a8dcc93_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@100db310_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11b7c588_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@665b22f9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff76132_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62f5f0e2_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dc68560_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394391c4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@727f7ae0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a5a04f8_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d73b8be_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1275e1e5_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5805df07_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34183d3c_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc19b49_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f34f47f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cc36d0f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@644ea42b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38e5864a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d2fece_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9618214_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b591ae_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e998cb0_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1010c6b1_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e990e00_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a967c7b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39bb94ba_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@559c1bf4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d4cade4_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e029c2f_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@473c74e3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ead06fe_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76372e10_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56e4533_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15198a4a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11e02a36_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@645c8e0b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9cd7153_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68fdc0a3_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f221fdf_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50c22c04_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e39fcbf_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2527da1b_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40135abb_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67761154_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d2cafa9_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2573a84_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@986735a_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae5d81e_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a549d32_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dc60c64_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9ab419d_ARCHIVE_LOCATION">c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
@@ -1198,7 +1446,7 @@
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="b4a093a7"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f52fa294"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d94940db"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="8c63998e"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="6007e339"/>
     </xilinx:packagingInfo>

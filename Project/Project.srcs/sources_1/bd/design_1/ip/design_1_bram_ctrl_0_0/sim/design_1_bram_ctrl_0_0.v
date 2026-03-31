@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:bram_ctrl:1.0
-// IP Revision: 14
+// IP Revision: 24
 
 `timescale 1ns/1ps
 
