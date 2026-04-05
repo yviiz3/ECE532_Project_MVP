@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
-//Date        : Sun Apr  5 16:54:39 2026
+//Date        : Sun Apr  5 17:24:11 2026
 //Host        : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -15,26 +15,71 @@ module design_1_wrapper
     clk,
     data_in,
     data_out,
+    ddr2_sdram_addr,
+    ddr2_sdram_ba,
+    ddr2_sdram_cas_n,
+    ddr2_sdram_ck_n,
+    ddr2_sdram_ck_p,
+    ddr2_sdram_cke,
+    ddr2_sdram_cs_n,
+    ddr2_sdram_dm,
+    ddr2_sdram_dq,
+    ddr2_sdram_dqs_n,
+    ddr2_sdram_dqs_p,
+    ddr2_sdram_odt,
+    ddr2_sdram_ras_n,
+    ddr2_sdram_we_n,
     en,
     led,
-    reset);
+    reset,
+    reset_0);
   output HSYNC;
   output VSYNC;
   input clk;
   input data_in;
   output [11:0]data_out;
+  output [12:0]ddr2_sdram_addr;
+  output [2:0]ddr2_sdram_ba;
+  output ddr2_sdram_cas_n;
+  output [0:0]ddr2_sdram_ck_n;
+  output [0:0]ddr2_sdram_ck_p;
+  output [0:0]ddr2_sdram_cke;
+  output [0:0]ddr2_sdram_cs_n;
+  output [1:0]ddr2_sdram_dm;
+  inout [15:0]ddr2_sdram_dq;
+  inout [1:0]ddr2_sdram_dqs_n;
+  inout [1:0]ddr2_sdram_dqs_p;
+  output [0:0]ddr2_sdram_odt;
+  output ddr2_sdram_ras_n;
+  output ddr2_sdram_we_n;
   input en;
   output [15:0]led;
   input reset;
+  input reset_0;
 
   wire HSYNC;
   wire VSYNC;
   wire clk;
   wire data_in;
   wire [11:0]data_out;
+  wire [12:0]ddr2_sdram_addr;
+  wire [2:0]ddr2_sdram_ba;
+  wire ddr2_sdram_cas_n;
+  wire [0:0]ddr2_sdram_ck_n;
+  wire [0:0]ddr2_sdram_ck_p;
+  wire [0:0]ddr2_sdram_cke;
+  wire [0:0]ddr2_sdram_cs_n;
+  wire [1:0]ddr2_sdram_dm;
+  wire [15:0]ddr2_sdram_dq;
+  wire [1:0]ddr2_sdram_dqs_n;
+  wire [1:0]ddr2_sdram_dqs_p;
+  wire [0:0]ddr2_sdram_odt;
+  wire ddr2_sdram_ras_n;
+  wire ddr2_sdram_we_n;
   wire en;
   wire [15:0]led;
   wire reset;
+  wire reset_0;
 
   design_1 design_1_i
        (.HSYNC(HSYNC),
@@ -42,7 +87,22 @@ module design_1_wrapper
         .clk(clk),
         .data_in(data_in),
         .data_out(data_out),
+        .ddr2_sdram_addr(ddr2_sdram_addr),
+        .ddr2_sdram_ba(ddr2_sdram_ba),
+        .ddr2_sdram_cas_n(ddr2_sdram_cas_n),
+        .ddr2_sdram_ck_n(ddr2_sdram_ck_n),
+        .ddr2_sdram_ck_p(ddr2_sdram_ck_p),
+        .ddr2_sdram_cke(ddr2_sdram_cke),
+        .ddr2_sdram_cs_n(ddr2_sdram_cs_n),
+        .ddr2_sdram_dm(ddr2_sdram_dm),
+        .ddr2_sdram_dq(ddr2_sdram_dq),
+        .ddr2_sdram_dqs_n(ddr2_sdram_dqs_n),
+        .ddr2_sdram_dqs_p(ddr2_sdram_dqs_p),
+        .ddr2_sdram_odt(ddr2_sdram_odt),
+        .ddr2_sdram_ras_n(ddr2_sdram_ras_n),
+        .ddr2_sdram_we_n(ddr2_sdram_we_n),
         .en(en),
         .led(led),
-        .reset(reset));
+        .reset(reset),
+        .reset_0(reset_0));
 endmodule
