@@ -1,6 +1,444 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Sun Apr  5 16:54:34 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_ram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_ram_0_0 (xilinx.com:user:axi_ram:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Sun Apr  5 16:47:14 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_ram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_ram_0_0 (xilinx.com:user:axi_ram:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Sun Apr  5 16:20:52 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_ram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_axi_ram_0_0 (xilinx.com:user:axi_ram:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Sun Apr  5 16:19:10 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_ram_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_axi_ram_0_0 (xilinx.com:user:axi_ram:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_axi_ram_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'bram_wstrb'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Sun Apr  5 16:18:33 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_axi_ram_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_axi_ram_0_0 (xilinx.com:user:axi_ram:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 16:27:04 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_top_0_0 (xilinx.com:user:top:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 16:27:04 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 33) to (Rev. 34)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 16:21:38 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 32) to (Rev. 33)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 15:43:29 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_top_0_0 (xilinx.com:user:top:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 15:40:54 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 31) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 15:35:43 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 30) to (Rev. 31)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 15:29:21 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 29) to (Rev. 30)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 15:27:21 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 28) to (Rev. 29)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 15:24:52 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 26) to (Rev. 28)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_project_mvp_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'bram_addra_dsp'
+
+-Upgrade has removed port 'bram_addrb_dsp'
+
+-Upgrade has removed port 'bram_addrb_uart'
+
+-Upgrade has removed port 'bram_dina_dsp'
+
+-Upgrade has removed port 'bram_doutb_dsp'
+
+-Upgrade has removed port 'bram_doutb_uart'
+
+-Upgrade has removed port 'bram_ena_dsp'
+
+-Upgrade has removed port 'bram_enb_dsp'
+
+-Upgrade has removed port 'bram_wea_dsp'
+
+-Upgrade has added port 'bram_addra_3'
+
+-Upgrade has added port 'bram_addrb_3'
+
+-Upgrade has added port 'bram_adouta_3'
+
+-Upgrade has added port 'bram_doutb_3'
+
+-Upgrade has added port 'bram_ena_3'
+
+-Upgrade has added port 'bram_enb_3'
+
+-Upgrade has added port 'bram_wea_3'
+
+-Upgrade has added port 'vga_addra_dsp'
+
+-Upgrade has added port 'vga_addrb_dsp'
+
+-Upgrade has added port 'vga_dina_dsp'
+
+-Upgrade has added port 'vga_dout'
+
+-Upgrade has added port 'vga_ena_dsp'
+
+-Upgrade has added port 'vga_enb_dsp'
+
+-Upgrade has added port 'vga_wea_dsp'
+
+-Upgrade has added port 'vga_web_dsp'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 14:16:49 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_top_0_0 (xilinx.com:user:top:1.0) from (Rev. 2) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 14:16:49 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 24) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
+| Date         : Tue Mar 31 14:00:28 2026
+| Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_project_mvp_top_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_project_mvp_top_0_0 (xilinx.com:user:project_mvp_top:1.0) from (Rev. 22) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_project_mvp_top_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'vic_done'
+
+-Upgrade has added port 'vic_start'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
 | Date         : Tue Mar 31 12:55:50 2026
 | Host         : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

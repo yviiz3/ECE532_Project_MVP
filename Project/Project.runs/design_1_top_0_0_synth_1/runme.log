@@ -1,0 +1,1183 @@
+
+*** Running vivado
+    with args -log design_1_top_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_0.tcl
+
+
+****** Vivado v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_top_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/ip 
+Command: synth_design -top design_1_top_0_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24952 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 476.117 ; gain = 103.898
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_0' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'top' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/top.v:3]
+	Parameter ROWS bound to: 5 - type: integer 
+	Parameter COLS bound to: 5 - type: integer 
+	Parameter AW bound to: 19 - type: integer 
+	Parameter DW bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'victor_fsm' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:3]
+	Parameter ROWS bound to: 5 - type: integer 
+	Parameter COLS bound to: 5 - type: integer 
+	Parameter SWEEPS bound to: 1 - type: integer 
+	Parameter AW bound to: 19 - type: integer 
+	Parameter DW bound to: 19 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter BV_LOADB bound to: 5'b00001 
+	Parameter BV_LOADV bound to: 5'b00010 
+	Parameter BV_START bound to: 5'b00011 
+	Parameter BV_IDLE bound to: 5'b00100 
+	Parameter BV_STOREB bound to: 5'b00101 
+	Parameter BV_STOREV bound to: 5'b00110 
+	Parameter SIGMAU_LOAD bound to: 5'b00111 
+	Parameter SIGMAU_START bound to: 5'b01000 
+	Parameter SIGMAU_IDLE bound to: 5'b01001 
+	Parameter SIGMAU_STOREU bound to: 5'b01010 
+	Parameter SIGMAU_STORESIGMA bound to: 5'b01011 
+	Parameter DONE bound to: 5'b01100 
+	Parameter BUFFER_A bound to: 5'b01101 
+	Parameter BUFFER_B bound to: 5'b01110 
+	Parameter BUFFER_C bound to: 5'b01111 
+	Parameter BUFFER_D bound to: 5'b10000 
+	Parameter BUFFER_E bound to: 5'b10001 
+	Parameter BUFFER_F bound to: 5'b10010 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:93]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'victor_fsm' (1#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'control_fsm' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:3]
+	Parameter VECTOR_LEN bound to: 5 - type: integer 
+	Parameter VECTORV_LEN bound to: 5 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter DOT_START bound to: 5'b00001 
+	Parameter DOT_DO bound to: 5'b00010 
+	Parameter DOT_IDLE bound to: 5'b00011 
+	Parameter ROTATE_START bound to: 5'b00100 
+	Parameter ROTATE_IDLE bound to: 5'b00101 
+	Parameter UPDATE_START bound to: 5'b00110 
+	Parameter UPDATE_DO bound to: 5'b00111 
+	Parameter UPDATE_IDLE bound to: 5'b01000 
+	Parameter DONE bound to: 5'b01001 
+	Parameter DOT2_START bound to: 5'b01010 
+	Parameter DOT2_DO bound to: 5'b01011 
+	Parameter DOT2_IDLE bound to: 5'b01100 
+	Parameter SQRT_START bound to: 5'b01101 
+	Parameter SQRT_IDLE bound to: 5'b01110 
+	Parameter DIVIDE_START bound to: 5'b01111 
+	Parameter DIVIDE_DO bound to: 5'b10000 
+	Parameter DIVIDE_IDLE bound to: 5'b10001 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:88]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'control_fsm' (2#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+	Parameter MEM_FILE bound to: default.mem - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:22]
+INFO: [Synth 8-3876] $readmem data file 'default.mem' is read successfully [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram' (3#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram__parameterized0' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+	Parameter MEM_FILE bound to: default.mem - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'default.mem' is read successfully [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram__parameterized0' (3#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dot_product' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter VECTOR_LEN bound to: 5 - type: integer 
+	Parameter ACC_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'dot_product' (4#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rotation_param' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/rotation_param.v:3]
+	Parameter ACC_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'cordic_0' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:69]
+	Parameter C_ARCHITECTURE bound to: 2 - type: integer 
+	Parameter C_CORDIC_FUNCTION bound to: 3 - type: integer 
+	Parameter C_COARSE_ROTATE bound to: 1 - type: integer 
+	Parameter C_DATA_FORMAT bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLK bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 48 - type: integer 
+	Parameter C_ITERATIONS bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 48 - type: integer 
+	Parameter C_PHASE_FORMAT bound to: 0 - type: integer 
+	Parameter C_PIPELINE_MODE bound to: -1 - type: integer 
+	Parameter C_PRECISION bound to: 0 - type: integer 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_SCALE_COMP bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_PHASE_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_S_AXIS_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TDATA_WIDTH bound to: 96 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'cordic_v6_0_14' declared at 'c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_14' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:144]
+INFO: [Synth 8-256] done synthesizing module 'cordic_0' (25#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/synth/cordic_0.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'cordic_1' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1/synth/cordic_1.vhd:69]
+	Parameter C_ARCHITECTURE bound to: 2 - type: integer 
+	Parameter C_CORDIC_FUNCTION bound to: 2 - type: integer 
+	Parameter C_COARSE_ROTATE bound to: 1 - type: integer 
+	Parameter C_DATA_FORMAT bound to: 0 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLK bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 48 - type: integer 
+	Parameter C_ITERATIONS bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 48 - type: integer 
+	Parameter C_PHASE_FORMAT bound to: 0 - type: integer 
+	Parameter C_PIPELINE_MODE bound to: -1 - type: integer 
+	Parameter C_PRECISION bound to: 0 - type: integer 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_SCALE_COMP bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_PHASE_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_S_AXIS_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TDATA_WIDTH bound to: 96 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 96 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'cordic_v6_0_14' declared at 'c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_14' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1/synth/cordic_1.vhd:144]
+INFO: [Synth 8-256] done synthesizing module 'cordic_1' (26#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1/synth/cordic_1.vhd:69]
+INFO: [Synth 8-6155] done synthesizing module 'rotation_param' (27#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/rotation_param.v:3]
+INFO: [Synth 8-6157] synthesizing module 'updated_column' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter VECTOR_LEN bound to: 5 - type: integer 
+	Parameter ACC_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'updated_column' (28#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:3]
+INFO: [Synth 8-638] synthesizing module 'cordic_2' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:69]
+	Parameter C_ARCHITECTURE bound to: 2 - type: integer 
+	Parameter C_CORDIC_FUNCTION bound to: 6 - type: integer 
+	Parameter C_COARSE_ROTATE bound to: 0 - type: integer 
+	Parameter C_DATA_FORMAT bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLK bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 47 - type: integer 
+	Parameter C_ITERATIONS bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 47 - type: integer 
+	Parameter C_PHASE_FORMAT bound to: 0 - type: integer 
+	Parameter C_PIPELINE_MODE bound to: -1 - type: integer 
+	Parameter C_PRECISION bound to: 0 - type: integer 
+	Parameter C_ROUND_MODE bound to: 3 - type: integer 
+	Parameter C_SCALE_COMP bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_PHASE_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_PHASE_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_S_AXIS_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_CARTESIAN_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_S_AXIS_CARTESIAN_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'cordic_v6_0_14' declared at 'c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/hdl/cordic_v6_0_vh_rfs.vhd:10135' bound to instance 'U0' of component 'cordic_v6_0_14' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:144]
+INFO: [Synth 8-256] done synthesizing module 'cordic_2' (31#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2/synth/cordic_2.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'div_gen_0' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:73]
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 33 - type: integer 
+	Parameter ALGORITHM_TYPE bound to: 3 - type: integer 
+	Parameter DIVISOR_WIDTH bound to: 48 - type: integer 
+	Parameter DIVIDEND_WIDTH bound to: 16 - type: integer 
+	Parameter SIGNED_B bound to: 1 - type: integer 
+	Parameter DIVCLK_SEL bound to: 1 - type: integer 
+	Parameter FRACTIONAL_B bound to: 1 - type: integer 
+	Parameter FRACTIONAL_WIDTH bound to: 37 - type: integer 
+	Parameter C_HAS_DIV_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVISOR_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVISOR_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_DIVISOR_TDATA_WIDTH bound to: 48 - type: integer 
+	Parameter C_S_AXIS_DIVISOR_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVIDEND_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVIDEND_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_DIVIDEND_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 56 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'div_gen_v5_1_14' declared at 'c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/hdl/div_gen_v5_1_vh_rfs.vhd:13859' bound to instance 'U0' of component 'div_gen_v5_1_14' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:147]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_0' (65#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/synth/div_gen_0.vhd:73]
+INFO: [Synth 8-6155] done synthesizing module 'top' (66#1) [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_0' (67#1) [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/ip/design_1_top_0_0/synth/design_1_top_0_0.v:58]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized83 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized93 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized93 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized93 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized91 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized91 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized91 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized79 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized81 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized81 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized81 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[46]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[45]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[44]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[43]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[42]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[41]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[40]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[39]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[38]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[37]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[36]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[35]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[34]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[33]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[32]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[31]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[30]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[29]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[28]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[27]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[26]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[25]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[24]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[23]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[22]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[21]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[20]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[19]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[18]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[17]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[16]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[15]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[14]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[13]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[12]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[11]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[10]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[9]
+WARNING: [Synth 8-3331] design fix_to_flt_conv_exp has unconnected port A[8]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:09 ; elapsed = 00:02:11 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:10 ; elapsed = 00:02:12 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:10 ; elapsed = 00:02:12 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 34722 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/constrs_1/new/constraints.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/constrs_1/new/constraints.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_top_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_top_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1397.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  FDE => FDRE: 12 instances
+  RAMB16 => RAMB18E1: 1 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1397.953 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.679 . Memory (MB): peak = 1397.953 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:02:39 ; elapsed = 00:02:41 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:39 ; elapsed = 00:02:41 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_top_0_0_synth_1/dont_touch.xdc, line 21).
+Applied set_property DONT_TOUCH = true for inst/u_rotation_param/u_arctan. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/u_rotation_param/u_sincos. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/u_sqrt. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/u_div_gen. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:39 ; elapsed = 00:02:41 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'bram32_wet_reg' into 'bram31_wet_reg' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:339]
+INFO: [Synth 8-4471] merging register 'bram32_we_reg' into 'bram31_we_reg' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:401]
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "row_incr" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "start_bv" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_sigmau" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "victor_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram21_re" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram12_wet" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "row_incr" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "start_bv" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_sigmau" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "victor_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram21_re" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram12_wet" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'control_fsm'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "divide_increment" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "update_increment" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dot_increment" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "divide_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sqrt_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "update_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rotate_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dot_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |               000000000000000001 |                            00000
+               DOT_START |               000000000000000010 |                            00001
+                  DOT_DO |               000000000000000100 |                            00010
+                DOT_IDLE |               000000000000001000 |                            00011
+            ROTATE_START |               000000000000010000 |                            00100
+             ROTATE_IDLE |               000000000000100000 |                            00101
+            UPDATE_START |               000000000001000000 |                            00110
+               UPDATE_DO |               000000000010000000 |                            00111
+             UPDATE_IDLE |               000000000100000000 |                            01000
+              DOT2_START |               000000001000000000 |                            01010
+                 DOT2_DO |               000000010000000000 |                            01011
+               DOT2_IDLE |               000000100000000000 |                            01100
+              SQRT_START |               000001000000000000 |                            01101
+               SQRT_IDLE |               000010000000000000 |                            01110
+            DIVIDE_START |               000100000000000000 |                            01111
+               DIVIDE_DO |               001000000000000000 |                            10000
+             DIVIDE_IDLE |               010000000000000000 |                            10001
+                    DONE |               100000000000000000 |                            01001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'control_fsm'
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_INVALID_OP' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (floating_point_v7_0_15_delay__parameterized13) to 'inst/u_div_gen/U0/i_synth/i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_fixed.i_fix_to_flt/i_fpo/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |cordic_eng__GB0                           |           1|     12036|
+|2     |cordic_eng__GB1                           |           1|     11033|
+|3     |cordic_eng__GB2                           |           1|     12036|
+|4     |cordic_eng__GB3                           |           1|     11033|
+|5     |cordic_v6_0_14_synth__GC0                 |           1|      2045|
+|6     |xbip_pipe_v3_0_5_viv__1__GU               |           1|        51|
+|7     |cordic_eng__parameterized1__GB0           |           1|     12036|
+|8     |cordic_eng__parameterized1__GB1           |           1|     11033|
+|9     |cordic_eng__parameterized1__GB2           |           1|     12036|
+|10    |cordic_eng__parameterized1__GB3           |           1|     11033|
+|11    |cordic_v6_0_14_synth__parameterized1__GC0 |           1|      2882|
+|12    |xbip_pipe_v3_0_5_viv__GU                  |           1|        51|
+|13    |rotation_param__GC0                       |           1|       482|
+|14    |top__GC0                                  |           1|     18665|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[0]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[1]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[2]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[3]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[4]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[5]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[6]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[7]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[8]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[9]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[10]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[11]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[12]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[13]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[14]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[15]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[16]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[17]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[18]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[19]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[20]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[21]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[22]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[23]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[24]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[25]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[26]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[27]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[28]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[29]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[30]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[31]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[32]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[33]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[34]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[35]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[36]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[37]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[38]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[39]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[40]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[41]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[42]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[43]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[44]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[45]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[46]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[47]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[48]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[49]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.output_stage/gen_rotation.gen_translate.gen_phase_rot_reg/gen_rtl.gen_reg.d_reg_reg[51]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_y_int_dly/gen_rtl.gen_reg.d_reg_reg[0]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[0]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_y_int_dly/gen_rtl.gen_reg.d_reg_reg[1]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[1]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_y_int_dly/gen_rtl.gen_reg.d_reg_reg[2]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[2]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_y_int_dly/gen_rtl.gen_reg.d_reg_reg[3]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[3]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_y_int_dly/gen_rtl.gen_reg.d_reg_reg[4]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[4]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_y_int_dly/gen_rtl.gen_reg.d_reg_reg[5]' (FDRE) to 'inst/u_rotation_param/u_arctan/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\u_rotation_param/u_arctan /U0/i_synth/i_synthi_4/\gen_cordic.input_stage/gen_rotation.gen_rot_xy.gen_data_x_int_dly/gen_rtl.gen_reg.d_reg_reg[5] )
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[0]' (FDRE) to 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[1]' (FDRE) to 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[2]' (FDRE) to 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[3]' (FDRE) to 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[4]' (FDRE) to 'inst/u_rotation_param/u_sincos/U0/i_synth/i_synthi_4/gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\u_rotation_param/u_sincos /U0/i_synth/i_synthi_4/\gen_cordic.input_stage/gen_rotation.gen_rot_phase.gen_phase_int_dly/gen_rtl.gen_reg.d_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/u_rotation_parami_1/\two_gamma_reg_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/u_rotation_parami_1/theta_reg_reg[46]' (FDRE) to 'inst/u_rotation_parami_1/theta_reg_reg[47]'
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-4471] merging register 'u_dot_product_1/a_reg_reg[15:0]' into 'u_dot_product_1/b_reg_reg[15:0]' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+INFO: [Synth 8-4471] merging register 'u_dot_product_2/a_reg_reg[15:0]' into 'u_dot_product_2/b_reg_reg[15:0]' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:71]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:70]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:73]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:72]
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP sy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg0.
+DSP Report: register A is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register A is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP cx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg0.
+DSP Report: register A is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register A is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP sx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg0.
+DSP Report: register A is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register A is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: Generating DSP cy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg0.
+DSP Report: register A is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register A is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:71]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:70]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:73]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:72]
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP sy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg0.
+DSP Report: register A is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register A is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP cx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg0.
+DSP Report: register A is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register A is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP sx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg0.
+DSP Report: register A is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register A is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: Generating DSP cy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg0.
+DSP Report: register A is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register A is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "FIX_TO_FLT_OP.SPD.OP/LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3936] Found unconnected internal register 'i_nonzero_fract.i_synth/opt_high_radix.i_nonzero_fract.i_high_radix/i_quotient_collector/i_typical_case.i_quot_carousel_balance/opt_has_pipe.first_q_reg' and it is trimmed from '58' to '44' bits. [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-4471] merging register 'u_dot_product_1/b_reg_reg[15:0]' into 'u_dot_product_1/b_reg_reg[15:0]' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+INFO: [Synth 8-4471] merging register 'u_dot_product_2/b_reg_reg[15:0]' into 'u_dot_product_2/b_reg_reg[15:0]' [c:/Users/khanm/OneDrive/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+DSP Report: Generating DSP u_dot_product_1/accumulator_reg, operation Mode is: (P+A2*B2)'.
+DSP Report: register u_dot_product_1/b_reg_reg is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: register u_dot_product_1/b_reg_reg is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: register u_dot_product_1/accumulator_reg is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: operator u_dot_product_1/accumulator0 is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: operator u_dot_product_1/accumulator1 is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: Generating DSP u_dot_product_2/accumulator_reg, operation Mode is: (P+A2*B2)'.
+DSP Report: register u_dot_product_2/b_reg_reg is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: register u_dot_product_2/b_reg_reg is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: register u_dot_product_2/accumulator_reg is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: operator u_dot_product_2/accumulator0 is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: operator u_dot_product_2/accumulator1 is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: Generating DSP u_dot_product_3/accumulator_reg, operation Mode is: (P+A2*B2)'.
+DSP Report: register u_dot_product_3/b_reg_reg is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: register u_dot_product_3/a_reg_reg is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: register u_dot_product_3/accumulator_reg is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: operator u_dot_product_3/accumulator0 is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: operator u_dot_product_3/accumulator1 is absorbed into DSP u_dot_product_3/accumulator_reg.
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3971] The signal u_tdp_bram_1/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal u_tdp_bram_2/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal u_tdp_bram_3/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal u_tdp_bram_4/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram31_addrt_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram11_addrt_reg[10] )
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[10]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[9]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[8]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[7]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[6]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[5]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[4]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[3]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[2]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[0]' (FDRE) to 'u_control_fsm/addrv_astart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[1]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[10]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[9]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[8]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[7]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[6]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[5]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[4]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[3]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[2]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[0]' (FDRE) to 'u_control_fsm/addrb_bstart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[1]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[10]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[9]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[8]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[7]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[6]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[5]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[4]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[3]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[1]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[0]' (FDRE) to 'u_control_fsm/addrb_astart_reg[2]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_control_fsm/addrb_bstart_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram41_addr_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram21_addr_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[49].gen_last.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[49].gen_last.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[48].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[48].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[47].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[47].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[46].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[46].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[45].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[45].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[44].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[44].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[43].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[43].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[42].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[42].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[41].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[41].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[40].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[40].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[39].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[39].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[38].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[38].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[37].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[37].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[36].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[36].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[35].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[35].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[34].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[34].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[33].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[33].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[32].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[32].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[31].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[31].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[30].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[30].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[29].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[29].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[28].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[28].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[27].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[27].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[26].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[26].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[26].gen_pre_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[26].gen_pre_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[49].gen_last.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[49].gen_last.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[48].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[48].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[47].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[47].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[46].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[46].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[45].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[45].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[44].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[44].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[43].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[43].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[42].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[42].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[41].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[41].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[40].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[40].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[39].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[39].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[38].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[38].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[37].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[37].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[36].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[36].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[35].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[35].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_sqrt/U0/i_synth/\i_synth/gen_sqrt.square_root/gen_iterations[34].gen_post_mid.gen_rem/gen_data_int/gen_rtl.gen_dly.gen_shiftreg.delay_bus_reg[1][0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:08 ; elapsed = 00:03:23 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_62/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_62/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_63/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_63/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_64/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_64/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_65/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/i_65/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |cordic_eng__GB0                           |           1|     10152|
+|2     |cordic_eng__GB1                           |           1|      8800|
+|3     |cordic_eng__GB2                           |           1|      9048|
+|4     |cordic_eng__GB3                           |           1|      7787|
+|5     |cordic_v6_0_14_synth__GC0                 |           1|      1683|
+|6     |xbip_pipe_v3_0_5_viv__1__GU               |           1|        51|
+|7     |cordic_eng__parameterized1__GB0           |           1|     10152|
+|8     |cordic_eng__parameterized1__GB1           |           1|      8800|
+|9     |cordic_eng__parameterized1__GB2           |           1|      9048|
+|10    |cordic_eng__parameterized1__GB3           |           1|      7787|
+|11    |cordic_v6_0_14_synth__parameterized1__GC0 |           1|      2133|
+|12    |xbip_pipe_v3_0_5_viv__GU                  |           1|        51|
+|13    |rotation_param__GC0                       |           1|       396|
+|14    |top__GC0                                  |           1|     14834|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:19 ; elapsed = 00:03:34 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:29 ; elapsed = 00:03:44 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |cordic_eng__GB0                           |           1|     10091|
+|2     |cordic_eng__GB1                           |           1|      8800|
+|3     |cordic_eng__GB2                           |           1|      9048|
+|4     |cordic_eng__GB3                           |           1|      6892|
+|5     |cordic_v6_0_14_synth__GC0                 |           1|      1683|
+|6     |xbip_pipe_v3_0_5_viv__1__GU               |           1|        51|
+|7     |cordic_eng__parameterized1__GB0           |           1|      9772|
+|8     |cordic_eng__parameterized1__GB1           |           1|      8745|
+|9     |cordic_eng__parameterized1__GB2           |           1|      8988|
+|10    |cordic_eng__parameterized1__GB3           |           1|      7412|
+|11    |cordic_v6_0_14_synth__parameterized1__GC0 |           1|      2133|
+|12    |xbip_pipe_v3_0_5_viv__GU                  |           1|        51|
+|13    |rotation_param__GC0                       |           1|       396|
+|14    |top__GC0                                  |           1|     14833|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_0/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:43 ; elapsed = 00:04:00 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+------------------------------------------+------------+----------+
+|      |RTL Partition                             |Replication |Instances |
++------+------------------------------------------+------------+----------+
+|1     |cordic_eng__GB0                           |           1|      7819|
+|2     |cordic_eng__GB1                           |           1|      7194|
+|3     |cordic_eng__GB2                           |           1|      7848|
+|4     |cordic_eng__GB3                           |           1|      6348|
+|5     |cordic_v6_0_14_synth__GC0                 |           1|      1276|
+|6     |xbip_pipe_v3_0_5_viv__1__GU               |           1|        51|
+|7     |cordic_eng__parameterized1__GB0           |           1|      7753|
+|8     |cordic_eng__parameterized1__GB1           |           1|      7161|
+|9     |cordic_eng__parameterized1__GB2           |           1|      7812|
+|10    |cordic_eng__parameterized1__GB3           |           1|      6840|
+|11    |cordic_v6_0_14_synth__parameterized1__GC0 |           1|      1748|
+|12    |xbip_pipe_v3_0_5_viv__GU                  |           1|        51|
+|13    |rotation_param__GC0                       |           1|       351|
+|14    |top__GC0                                  |           1|     12452|
++------+------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:50 ; elapsed = 00:04:08 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:51 ; elapsed = 00:04:08 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:58 ; elapsed = 00:04:15 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:58 ; elapsed = 00:04:15 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:59 ; elapsed = 00:04:16 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:59 ; elapsed = 00:04:16 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |   200|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     2|
+|4     |DSP48E1_2 |     7|
+|5     |DSP48E1_3 |     8|
+|6     |DSP48E1_5 |     8|
+|7     |DSP48E1_6 |    11|
+|8     |DSP48E1_7 |     8|
+|9     |LUT1      |   640|
+|10    |LUT2      |  7283|
+|11    |LUT3      | 11002|
+|12    |LUT4      |   288|
+|13    |LUT5      |   741|
+|14    |LUT6      |   438|
+|15    |MUXCY     | 16633|
+|16    |RAMB16    |     1|
+|17    |RAMB36E1  |     4|
+|18    |SRL16E    |   240|
+|19    |SRLC32E   |    16|
+|20    |XORCY     | 16448|
+|21    |FDCE      |   256|
+|22    |FDE       |    12|
+|23    |FDPE      |     1|
+|24    |FDRE      | 19499|
+|25    |FDSE      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:59 ; elapsed = 00:04:16 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 360 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:03:50 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+Synthesis Optimization Complete : Time (s): cpu = 00:03:59 ; elapsed = 00:04:17 . Memory (MB): peak = 1397.953 ; gain = 1025.734
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 33343 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1506.840 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4416 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 4403 instances
+  FDE => FDRE: 12 instances
+  RAMB16 => RAMB18E1: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+394 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:35 ; elapsed = 00:04:54 . Memory (MB): peak = 1506.840 ; gain = 1146.133
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1506.840 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_top_0_0_synth_1/design_1_top_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1506.840 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1506.840 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_top_0_0, cache-ID = fb11cc8bf2e8c546
+INFO: [Coretcl 2-1174] Renamed 2672 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1506.840 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_top_0_0_synth_1/design_1_top_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1506.840 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_0_utilization_synth.rpt -pb design_1_top_0_0_utilization_synth.pb
+write_vhdl: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1506.840 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 16:33:15 2026...

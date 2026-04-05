@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
-| Date             : Tue Mar 31 12:59:56 2026
+| Date             : Sun Apr  5 16:58:21 2026
 | Host             : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.233        |
+| Total On-Chip Power (W)  | 0.236        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.134        |
+| Dynamic (W)              | 0.137        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.9         |
@@ -49,24 +49,26 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.006 |        6 |       --- |             --- |
-| Slice Logic    |     0.001 |     3071 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      978 |     63400 |            1.54 |
-|   CARRY4       |    <0.001 |       84 |     15850 |            0.53 |
-|   Register     |    <0.001 |     1594 |    126800 |            1.26 |
-|   F7/F8 Muxes  |    <0.001 |      204 |     63400 |            0.32 |
-|   Others       |     0.000 |       36 |       --- |             --- |
-| Signals        |     0.001 |     2522 |       --- |             --- |
-| Block RAM      |     0.020 |       25 |       135 |           18.52 |
-| MMCM           |     0.106 |        1 |         6 |           16.67 |
-| DSPs           |    <0.001 |        1 |       240 |            0.42 |
-| I/O            |    <0.001 |       34 |       210 |           16.19 |
-| Static Power   |     0.099 |          |           |                 |
-| Total          |     0.233 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.009 |        8 |       --- |             --- |
+| Slice Logic              |     0.003 |    10339 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     4278 |     63400 |            6.75 |
+|   LUT as Distributed RAM |    <0.001 |       96 |     19000 |            0.51 |
+|   CARRY4                 |    <0.001 |       80 |     15850 |            0.50 |
+|   Register               |    <0.001 |     3731 |    126800 |            2.94 |
+|   F7/F8 Muxes            |    <0.001 |     1071 |     63400 |            1.69 |
+|   LUT as Shift Register  |    <0.001 |       64 |     19000 |            0.34 |
+|   Others                 |    <0.001 |      478 |       --- |             --- |
+| Signals                  |     0.004 |     7285 |       --- |             --- |
+| Block RAM                |     0.013 |       32 |       135 |           23.70 |
+| MMCM                     |     0.106 |        1 |         6 |           16.67 |
+| DSPs                     |    <0.001 |       14 |       240 |            5.83 |
+| I/O                      |    <0.001 |       20 |       210 |            9.52 |
+| Static Power             |     0.099 |          |           |                 |
+| Total                    |     0.236 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -75,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.043 |       0.027 |      0.016 |
+| Vccint    |       1.000 |     0.046 |       0.030 |      0.016 |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -84,7 +86,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.003 |       0.002 |      0.001 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -128,14 +130,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+---------------------------------+---------------------------------------------------------+-----------------+
-| Clock                           | Domain                                                  | Constraint (ns) |
-+---------------------------------+---------------------------------------------------------+-----------------+
-| clk_out1_design_1_clk_wiz_0_0_1 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0 |            10.0 |
-| clk_out2_design_1_clk_wiz_0_0_1 | design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0 |            40.0 |
-| clkfbout_design_1_clk_wiz_0_0_1 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0 |            10.0 |
-| sys_clk_pin                     | clk                                                     |            10.0 |
-+---------------------------------+---------------------------------------------------------+-----------------+
++------------------------------------------------------------+---------------------------------------------------------+-----------------+
+| Clock                                                      | Domain                                                  | Constraint (ns) |
++------------------------------------------------------------+---------------------------------------------------------+-----------------+
+| clk_out1_design_1_clk_wiz_0_0_1                            | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0 |            20.0 |
+| clk_out2_design_1_clk_wiz_0_0_1                            | design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0 |            40.0 |
+| clkfbout_design_1_clk_wiz_0_0_1                            | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0 |            10.0 |
+| design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK   | design_1_i/mdm_1/U0/Use_E2.BSCAN_I/DRCK                 |            33.3 |
+| design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | design_1_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0         |            33.3 |
+| sys_clk_pin                                                | clk                                                     |            10.0 |
++------------------------------------------------------------+---------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -144,19 +148,23 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------+-----------+
-| Name                  | Power (W) |
-+-----------------------+-----------+
-| design_1_wrapper      |     0.134 |
-|   design_1_i          |     0.134 |
-|     blk_mem_gen_0     |     0.009 |
-|       U0              |     0.009 |
-|     bram_ctrl_0       |     0.011 |
-|       inst            |     0.011 |
-|     clk_wiz_0         |     0.106 |
-|       inst            |     0.106 |
-|     project_mvp_top_0 |     0.007 |
-|       inst            |     0.007 |
-+-----------------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| design_1_wrapper              |     0.137 |
+|   design_1_i                  |     0.137 |
+|     blk_mem_gen_0             |     0.002 |
+|       U0                      |     0.002 |
+|     bram_ctrl_0               |     0.010 |
+|       inst                    |     0.010 |
+|     clk_wiz_0                 |     0.106 |
+|       inst                    |     0.106 |
+|     microblaze_0              |     0.006 |
+|       U0                      |     0.006 |
+|     microblaze_0_local_memory |     0.002 |
+|       lmb_bram                |     0.002 |
+|     project_mvp_top_0         |     0.009 |
+|       inst                    |     0.009 |
++-------------------------------+-----------+
 
 

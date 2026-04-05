@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3.1 (win64) Build 2489853 Tue Mar 26 04:20:25 MDT 2019
-// Date        : Tue Mar 31 12:56:35 2026
+// Date        : Tue Mar 31 16:28:18 2026
 // Host        : DESKTOP-CDKE44D running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/ip/design_1_project_mvp_top_0_0/design_1_project_mvp_top_0_0_stub.v
@@ -16,10 +16,11 @@
 (* X_CORE_INFO = "project_mvp_top,Vivado 2018.3.1" *)
 module design_1_project_mvp_top_0_0(clk2, clk, rst, en, data_in, data_out, HSYNC, VSYNC, led, 
   bram_ena_uart, bram_wea_uart, bram_addra_uart, bram_dina_uart, bram_enb_uart, 
-  bram_addrb_uart, bram_doutb_uart, bram_uart_done, bram_ena_dsp, bram_wea_dsp, 
-  bram_addra_dsp, bram_dina_dsp, bram_enb_dsp, bram_addrb_dsp, bram_doutb_dsp, bram_dsp_done, 
-  vga_wea, vga_addra, vga_dina, vga_enb, vga_addrb, vga_doutb)
-/* synthesis syn_black_box black_box_pad_pin="clk2,clk,rst,en,data_in,data_out[11:0],HSYNC,VSYNC,led[15:0],bram_ena_uart,bram_wea_uart,bram_addra_uart[13:0],bram_dina_uart[16:0],bram_enb_uart,bram_addrb_uart[13:0],bram_doutb_uart[16:0],bram_uart_done,bram_ena_dsp,bram_wea_dsp,bram_addra_dsp[13:0],bram_dina_dsp[16:0],bram_enb_dsp,bram_addrb_dsp[13:0],bram_doutb_dsp[16:0],bram_dsp_done,vga_wea,vga_addra[13:0],vga_dina[16:0],vga_enb,vga_addrb[13:0],vga_doutb[16:0]" */;
+  bram_uart_done, bram_dsp_done, vga_wea, vga_addra, vga_dina, vga_enb, vga_addrb, vga_doutb, 
+  vic_done, vic_start, vga_wea_dsp, vga_addra_dsp, vga_dina_dsp, vga_ena_dsp, vga_addrb_dsp, 
+  vga_dout, vga_enb_dsp, vga_web_dsp, bram_ena_3, bram_wea_3, bram_adouta_3, bram_addra_3, 
+  bram_enb_3, bram_addrb_3, bram_doutb_3)
+/* synthesis syn_black_box black_box_pad_pin="clk2,clk,rst,en,data_in,data_out[11:0],HSYNC,VSYNC,led[15:0],bram_ena_uart,bram_wea_uart,bram_addra_uart[13:0],bram_dina_uart[16:0],bram_enb_uart,bram_uart_done,bram_dsp_done,vga_wea,vga_addra[13:0],vga_dina[16:0],vga_enb,vga_addrb[13:0],vga_doutb[16:0],vic_done,vic_start,vga_wea_dsp,vga_addra_dsp[13:0],vga_dina_dsp[16:0],vga_ena_dsp,vga_addrb_dsp[13:0],vga_dout[3:0],vga_enb_dsp,vga_web_dsp,bram_ena_3,bram_wea_3,bram_adouta_3[16:0],bram_addra_3[13:0],bram_enb_3,bram_addrb_3[13:0],bram_doutb_3[16:0]" */;
   input clk2;
   input clk;
   input rst;
@@ -34,16 +35,7 @@ module design_1_project_mvp_top_0_0(clk2, clk, rst, en, data_in, data_out, HSYNC
   output [13:0]bram_addra_uart;
   output [16:0]bram_dina_uart;
   output bram_enb_uart;
-  output [13:0]bram_addrb_uart;
-  input [16:0]bram_doutb_uart;
   output bram_uart_done;
-  output bram_ena_dsp;
-  output bram_wea_dsp;
-  output [13:0]bram_addra_dsp;
-  output [16:0]bram_dina_dsp;
-  output bram_enb_dsp;
-  output [13:0]bram_addrb_dsp;
-  input [16:0]bram_doutb_dsp;
   output bram_dsp_done;
   output vga_wea;
   output [13:0]vga_addra;
@@ -51,4 +43,21 @@ module design_1_project_mvp_top_0_0(clk2, clk, rst, en, data_in, data_out, HSYNC
   output vga_enb;
   output [13:0]vga_addrb;
   input [16:0]vga_doutb;
+  input vic_done;
+  output vic_start;
+  output vga_wea_dsp;
+  output [13:0]vga_addra_dsp;
+  output [16:0]vga_dina_dsp;
+  output vga_ena_dsp;
+  output [13:0]vga_addrb_dsp;
+  input [3:0]vga_dout;
+  output vga_enb_dsp;
+  output vga_web_dsp;
+  output bram_ena_3;
+  output bram_wea_3;
+  input [16:0]bram_adouta_3;
+  output [13:0]bram_addra_3;
+  output bram_enb_3;
+  output [13:0]bram_addrb_3;
+  input [16:0]bram_doutb_3;
 endmodule

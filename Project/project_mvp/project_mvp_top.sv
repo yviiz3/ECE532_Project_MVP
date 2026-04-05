@@ -55,8 +55,9 @@ module project_mvp_top(
     output [16:0] vga_dina, 
     output vga_enb, 
     output [13:0] vga_addrb,
-    input [16:0] vga_doutb
-
+    input [16:0] vga_doutb,
+    input vic_done,
+    output reg vic_start
     );
     wire reset = ~rst;
     wire [7:0] data_out_rx;
@@ -90,10 +91,14 @@ module project_mvp_top(
     reg load_done;
 
     always @(posedge clk) begin
-        if (reset)
+        if (reset) begin
+            vic_start <= 1'b0;
             load_done <= 1'b0;
-        else if (uart_done)
+        end
+        else if (uart_done) begin
+            vic_start <= 1'b1;
             load_done <= 1'b1;
+        end
     end
     
     localparam int W = 17;
@@ -128,7 +133,7 @@ module project_mvp_top(
         .LED_BLINK_BIT(LED_BLINK_BIT)
     ) u_compute (
         .clk(clk),
-        .rst(reset | ~load_done),
+        .rst(reset | ~load_done | vic_done),
         .bram_dout(bram_dout),
         .bram_addr(bram_addr),
         .bram_addr_in(bram_addr_in),

@@ -17,8 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7a100tcsg324-1
@@ -36,6 +37,7 @@ set_property ip_repo_paths {
   c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux
   c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl
   c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp
+  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi}
 } [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/ip [current_project]

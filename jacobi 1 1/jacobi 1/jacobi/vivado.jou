@@ -2,227 +2,452 @@
 # Vivado v2018.3.1 (64-bit)
 # SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
 # IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
-# Start of session at: Sun Mar 29 15:11:40 2026
-# Process ID: 29956
+# Start of session at: Tue Mar 31 13:20:19 2026
+# Process ID: 26176
 # Current directory: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28748 C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\jacobi 1 1\jacobi 1\jacobi\jacobi.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30508 C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\jacobi 1 1\jacobi 1\jacobi\jacobi.xpr
 # Log file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/vivado.log
 # Journal file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.xpr}
 update_compile_order -fileset sources_1
-open_project C:/Users/khanm/OneDrive/Documents/GitHub/DigitalAnnealer/FINAL_HARDWARE/DDR_GOLDEN/DDR_GOLDEN.xpr
 update_compile_order -fileset sources_1
-current_project jacobi
-open_run impl_1
-current_project DDR_GOLDEN
-update_ip_catalog -rebuild -scan_changes
-report_ip_status -name ip_status
-upgrade_ip [get_ips  {bit_sieve_engine_25_0 bit_sieve_engine_25_1 design_1_bit_sieve_engine_25_0_0}] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips {bit_sieve_engine_25_0 bit_sieve_engine_25_1 design_1_bit_sieve_engine_25_0_0}] -no_script -sync -force -quiet
-ipx::edit_ip_in_project -upgrade true -name bit_sieve_engine_25_v1_0_project -directory C:/Users/khanm/OneDrive/Documents/GitHub/DigitalAnnealer/FINAL_HARDWARE/DDR_GOLDEN/DDR_GOLDEN.tmp/bit_sieve_engine_25_v1_0_project c:/Users/khanm/OneDrive/Documents/GitHub/DigitalAnnealer/FINAL_HARDWARE/top/component.xml
-update_compile_order -fileset sources_1
-set_property core_revision 12 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-current_project DDR_GOLDEN
-update_ip_catalog -rebuild -scan_changes
-report_ip_status -name ip_status
-current_project bit_sieve_engine_25_v1_0_project
-current_project DDR_GOLDEN
-upgrade_ip [get_ips  {bit_sieve_engine_25_0 bit_sieve_engine_25_1 design_1_bit_sieve_engine_25_0_0}] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips {bit_sieve_engine_25_0 bit_sieve_engine_25_1 design_1_bit_sieve_engine_25_0_0}] -no_script -sync -force -quiet
-report_ip_status -name ip_status 
+export_ip_user_files -of_objects  [get_files {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/fsm_victor.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/fsm_victor.v}}
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-current_project jacobi
-add_files -norecurse {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/fsm_victor.v}}
+add_files -norecurse {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/matrixv.mem} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/matrixb.mem} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/default.mem} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/init.mem}}
+add_files -norecurse {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/fsm_victor.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/bv_fsm.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sim_1/imports/ECE532/tb.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/rotation_param.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/top.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v} {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v}}
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
-current_project DDR_GOLDEN
-open_run impl_1
-current_project jacobi
-create_bd_design "design_1"
+move_files -fileset sim_1 [get_files  {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sim_1/imports/ECE532/tb.v}}]
+export_ip_user_files -of_objects  [get_files {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sim_1/imports/ECE532/tb.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sim_1/imports/ECE532/tb.v}}
 update_compile_order -fileset sources_1
-open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/bd/design_1/design_1.bd}
-export_ip_user_files -of_objects  [get_files {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -reset -force -quiet
-remove_files  {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/bd/design_1/design_1.bd}}
 reset_run synth_1
-launch_runs synth_1 -jobs 16
-wait_on_run synth_1
-close_design
-launch_runs impl_1 -jobs 16
+launch_runs impl_1 -to_step write_bitstream -jobs 16
 wait_on_run impl_1
-reset_run impl_1
-launch_runs impl_1 -jobs 16
-wait_on_run impl_1
-ipx::package_project -root_dir {c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs} -vendor xilinx.com -library user -taxonomy /UserIP -generated_files
-set_property core_revision 13 [ipx::current_core]
-ipx::update_source_project_archive -component [ipx::current_core]
+ipx::open_ipxact_file {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/component.xml}
+set_property core_revision 7 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
-current_project bit_sieve_engine_25_v1_0_project
-close_project
+update_ip_catalog -rebuild -repo_path {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
+reset_run impl_1
+ipx::package_project -root_dir {c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs} -vendor xilinx.com -library user -taxonomy /UserIP -force
 set_property core_revision 2 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
-current_project jacobi
-set_property  ip_repo_paths  {{c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}} [current_project]
-current_project DDR_GOLDEN
-current_project jacobi
-update_ip_catalog
-current_project DDR_GOLDEN
-create_project project_1 C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1 -part xc7a100tcsg324-1
-set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-current_project DDR_GOLDEN
-current_project project_1
-create_bd_design "design_1"
+update_ip_catalog -rebuild -repo_path {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
+open_project C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr
 update_compile_order -fileset sources_1
-set_property  ip_repo_paths  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-update_ip_catalog
-update_ip_catalog -rebuild
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+export_ip_user_files -of_objects  [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/top_0/top_0.xci] -no_script -reset -force -quiet
+remove_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/top_0/top_0.xci
 current_project jacobi
+current_project Project
+create_ip -name cordic -vendor xilinx.com -library ip -version 6.0 -module_name cordic_0 -dir c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.Functional_Selection {Arc_Tan} CONFIG.Pipelining_Mode {Optimal} CONFIG.Input_Width {48} CONFIG.Output_Width {48} CONFIG.Round_Mode {Nearest_Even} CONFIG.Data_Format {SignedFraction}] [get_ips cordic_0]
+generate_target {instantiation_template} [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_0/cordic_0.xci]
+generate_target all [get_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_0/cordic_0.xci]
+catch { config_ip_cache -export [get_ips -all cordic_0] }
+export_ip_user_files -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_0/cordic_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_0/cordic_0.xci]
+launch_runs -jobs 16 cordic_0_synth_1
+export_simulation -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_0/cordic_0.xci] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project jacobi
+current_project Project
+current_project jacobi
+current_project Project
+create_ip -name cordic -vendor xilinx.com -library ip -version 6.0 -module_name cordic_1 -dir c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.Functional_Selection {Sin_and_Cos} CONFIG.Pipelining_Mode {Optimal} CONFIG.Input_Width {48} CONFIG.Output_Width {48} CONFIG.Round_Mode {Nearest_Even} CONFIG.Data_Format {SignedFraction}] [get_ips cordic_1]
+generate_target {instantiation_template} [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_1/cordic_1.xci]
+generate_target all [get_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_1/cordic_1.xci]
+catch { config_ip_cache -export [get_ips -all cordic_1] }
+export_ip_user_files -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_1/cordic_1.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_1/cordic_1.xci]
+launch_runs -jobs 16 cordic_1_synth_1
+export_simulation -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_1/cordic_1.xci] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project jacobi
+current_project Project
+current_project jacobi
+current_project Project
+create_ip -name cordic -vendor xilinx.com -library ip -version 6.0 -module_name cordic_2 -dir c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.Functional_Selection {Square_Root} CONFIG.Pipelining_Mode {Optimal} CONFIG.Input_Width {47} CONFIG.Output_Width {47} CONFIG.Round_Mode {Nearest_Even} CONFIG.Data_Format {UnsignedFraction} CONFIG.Coarse_Rotation {false}] [get_ips cordic_2]
+generate_target {instantiation_template} [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_2/cordic_2.xci]
+generate_target all [get_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_2/cordic_2.xci]
+catch { config_ip_cache -export [get_ips -all cordic_2] }
+export_ip_user_files -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_2/cordic_2.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_2/cordic_2.xci]
+launch_runs -jobs 16 cordic_2_synth_1
+export_simulation -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/cordic_2/cordic_2.xci] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project jacobi
+current_project Project
+create_ip -name div_gen -vendor xilinx.com -library ip -version 5.1 -module_name div_gen_0 -dir c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip
+set_property -dict [list CONFIG.algorithm_type {High_Radix} CONFIG.divisor_width {48} CONFIG.fractional_width {37} CONFIG.dividend_and_quotient_width {16} CONFIG.remainder_type {Fractional} CONFIG.latency {33}] [get_ips div_gen_0]
+generate_target {instantiation_template} [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+generate_target all [get_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all div_gen_0] }
+export_ip_user_files -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+launch_runs -jobs 16 div_gen_0_synth_1
+export_simulation -of_objects [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project jacobi
+current_project Project
+create_bd_cell -type ip -vlnv xilinx.com:user:top:1.0 top_0
+set_property location {1 172 601} [get_bd_cells top_0]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+connect_bd_net [get_bd_pins top_0/clk] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins top_0/bram2_dout] [get_bd_pins top_0/bram1_dout]
+undo
+connect_bd_net [get_bd_ports reset] [get_bd_pins top_0/rst]
+save_bd_design
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+connect_bd_net [get_bd_pins top_0/bram1_dout] [get_bd_pins bram_ctrl_0/a_dout_4]
+connect_bd_net [get_bd_pins top_0/bram2_dout] [get_bd_pins bram_ctrl_0/b_dout_4]
+disconnect_bd_net /xlconstant_1_dout [get_bd_pins bram_ctrl_0/a_addr_4] [get_bd_pins bram_ctrl_0/b_din_4] [get_bd_pins bram_ctrl_0/a_en_4] [get_bd_pins bram_ctrl_0/b_addr_4] [get_bd_pins bram_ctrl_0/a_din_4] [get_bd_pins bram_ctrl_0/b_we_4] [get_bd_pins bram_ctrl_0/b_en_4] [get_bd_pins bram_ctrl_0/a_we_4] [get_bd_pins bram_ctrl_0/status_4]
+set_property location {2 663 1003} [get_bd_cells top_0]
+connect_bd_net [get_bd_pins top_0/done] [get_bd_pins bram_ctrl_0/status_4]
+undo
+connect_bd_net [get_bd_pins top_0/status] [get_bd_pins bram_ctrl_0/status_4]
+connect_bd_net [get_bd_pins top_0/bram2_din] [get_bd_pins bram_ctrl_0/b_din_4]
+connect_bd_net [get_bd_pins top_0/bram2_we] [get_bd_pins bram_ctrl_0/b_we_4]
+connect_bd_net [get_bd_pins top_0/bram2_addr] [get_bd_pins bram_ctrl_0/b_addr_4]
+connect_bd_net [get_bd_pins top_0/bram1_addr] [get_bd_pins bram_ctrl_0/a_addr_4]
+connect_bd_net [get_bd_pins top_0/bram1_we] [get_bd_pins bram_ctrl_0/a_we_4]
+connect_bd_net [get_bd_pins top_0/bram1_din] [get_bd_pins bram_ctrl_0/a_din_4]
+startgroup
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_dsp_done]
+disconnect_bd_net /xlconstant_1_dout [get_bd_pins bram_ctrl_0/status_2]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_uart_done]
+endgroup
+connect_bd_net [get_bd_pins bram_ctrl_0/status_2] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/status_3] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/status_1] [get_bd_pins xlconstant_1/dout]
+disconnect_bd_net /xlconstant_1_dout [get_bd_pins bram_ctrl_0/status_1]
+undo
+undo
+undo
+undo
+undo
+delete_bd_objs [get_bd_nets xlconstant_1_dout]
+delete_bd_objs [get_bd_nets bram_ctrl_0_b_dout_4] [get_bd_nets bram_ctrl_0_a_dout_4]
+delete_bd_objs [get_bd_nets top_0_bram1_din] [get_bd_nets top_0_status] [get_bd_nets top_0_bram2_addr] [get_bd_nets top_0_bram1_addr] [get_bd_nets top_0_bram2_we] [get_bd_nets top_0_bram2_din] [get_bd_nets top_0_bram1_we]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_dout_2] [get_bd_pins top_0/bram1_dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_dout_2] [get_bd_pins top_0/bram2_dout]
+connect_bd_net [get_bd_pins top_0/bram1_addr] [get_bd_pins bram_ctrl_0/a_addr_2]
+connect_bd_net [get_bd_pins top_0/bram1_we] [get_bd_pins bram_ctrl_0/a_we_2]
+connect_bd_net [get_bd_pins top_0/bram1_din] [get_bd_pins bram_ctrl_0/a_din_2]
+connect_bd_net [get_bd_pins top_0/bram2_addr] [get_bd_pins bram_ctrl_0/b_addr_2]
+connect_bd_net [get_bd_pins top_0/bram2_we] [get_bd_pins bram_ctrl_0/b_we_2]
+connect_bd_net [get_bd_pins top_0/bram2_din] [get_bd_pins bram_ctrl_0/b_din_2]
+connect_bd_net [get_bd_pins top_0/status] [get_bd_pins bram_ctrl_0/status_2]
+ipx::edit_ip_in_project -upgrade true -name project_mvp_top_v1_0_project -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.tmp/project_mvp_top_v1_0_project c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project jacobi
+current_project Project
+connect_bd_net [get_bd_pins project_mvp_top_0/vic_done] [get_bd_pins top_0/done]
+connect_bd_net [get_bd_pins top_0/start] [get_bd_pins project_mvp_top_0/vic_start]
+delete_bd_objs [get_bd_nets reset_rtl_0_1]
+set_property location {-190 -53} [get_bd_ports reset]
+connect_bd_net [get_bd_ports reset] [get_bd_pins proc_sys_reset_0/ext_reset_in]
+connect_bd_net [get_bd_pins project_mvp_top_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+connect_bd_net [get_bd_pins top_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_reset]
+connect_bd_net [get_bd_pins clk_wiz_0/resetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+undo
+connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn]
+save_bd_design
+report_ip_status -name ip_status 
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/status_4]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_din_4]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_addr_4]
+startgroup
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_4] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/a_addr_4]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/a_din_4]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_we_4]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_en_4]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/a_we_4]
+endgroup
+startgroup
+connect_bd_net [get_bd_pins bram_ctrl_0/a_addr_3] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/a_we_3]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/a_din_3]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/a_en_3]
+endgroup
+startgroup
+connect_bd_net [get_bd_pins bram_ctrl_0/b_din_1] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_we_1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_addr_1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins bram_ctrl_0/b_en_1]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_2] [get_bd_pins xlconstant_0/dout]
+undo
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_2] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_en_2] [get_bd_pins xlconstant_0/dout]
+save_bd_design
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+current_project jacobi
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
 set_property core_revision 3 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path {c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
-current_project project_1
-set_property  ip_repo_paths  {} [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-update_ip_catalog
-current_project DDR_GOLDEN
-current_project project_1
-set_property  ip_repo_paths  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1 [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-update_ip_catalog
-set_property  ip_repo_paths  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1 C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.ip_user_files} [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-update_ip_catalog
-set_property  ip_repo_paths  {} [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-update_ip_catalog
-current_project DDR_GOLDEN
-current_project project_1
-set_property  ip_repo_paths  {{C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi}} [current_project]
-current_project DDR_GOLDEN
-current_project project_1
-update_ip_catalog
-current_project DDR_GOLDEN
-current_project project_1
-create_bd_cell -type ip -vlnv xilinx.com:user:svd_top_fsm_bram:1.0 svd_top_fsm_bram_0
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
-endgroup
-set_property location {2.5 693 92} [get_bd_cells blk_mem_gen_0]
-set_property location {2 798 46} [get_bd_cells blk_mem_gen_0]
-set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Assume_Synchronous_Clk {true} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells blk_mem_gen_0]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram1_addr] [get_bd_pins blk_mem_gen_0/addra]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram1_we] [get_bd_pins blk_mem_gen_0/wea]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram1_din] [get_bd_pins blk_mem_gen_0/dina]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram1_dout] [get_bd_pins blk_mem_gen_0/douta]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/clk] [get_bd_pins blk_mem_gen_0/clka]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/clk] [get_bd_pins blk_mem_gen_0/clkb]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram2_addr] [get_bd_pins blk_mem_gen_0/addrb]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram2_we] [get_bd_pins blk_mem_gen_0/web]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram2_din] [get_bd_pins blk_mem_gen_0/dinb]
-connect_bd_net [get_bd_pins svd_top_fsm_bram_0/bram2_dout] [get_bd_pins blk_mem_gen_0/doutb]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
-endgroup
-connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins blk_mem_gen_0/ena]
-connect_bd_net [get_bd_pins blk_mem_gen_0/enb] [get_bd_pins xlconstant_0/dout]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New Clocking Wizard (100 MHz)" }  [get_bd_pins svd_top_fsm_bram_0/clk]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_HIGH)}}  [get_bd_pins clk_wiz/reset]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {sys_clock ( System Clock ) } Manual_Source {Auto}}  [get_bd_pins clk_wiz/clk_in1]
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins rst_clk_wiz_100M/ext_reset_in]
-endgroup
-save_bd_design
-file mkdir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sim_1/new/tb.v w ]
-add_files -fileset sim_1 C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sim_1/new/tb.v
-launch_simulation
-make_wrapper -files [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-set_property CONFIG.POLARITY ACTIVE_LOW [get_bd_ports reset]
-startgroup
-set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz]
-endgroup
-connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz/resetn]
-save_bd_design
-make_wrapper -files [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-add_files -norecurse C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-startgroup
-make_bd_pins_external  [get_bd_pins svd_top_fsm_bram_0/start] [get_bd_pins svd_top_fsm_bram_0/done]
-endgroup
-startgroup
-make_bd_pins_external  [get_bd_pins svd_top_fsm_bram_0/bram3_din] [get_bd_pins svd_top_fsm_bram_0/mem_we] [get_bd_pins svd_top_fsm_bram_0/mem_addr] [get_bd_pins svd_top_fsm_bram_0/bram4_addr] [get_bd_pins svd_top_fsm_bram_0/bram4_we] [get_bd_pins svd_top_fsm_bram_0/bram4_din] [get_bd_pins svd_top_fsm_bram_0/bram3_addr] [get_bd_pins svd_top_fsm_bram_0/bram3_we] [get_bd_pins svd_top_fsm_bram_0/mem_din]
-endgroup
-make_wrapper -files [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
+update_ip_catalog -rebuild -repo_path {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
 current_project jacobi
+current_project Project
+upgrade_ip [get_ips  {design_1_top_0_0 design_1_project_mvp_top_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_top_0_0 design_1_project_mvp_top_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 {design_1_project_mvp_top_0_0_synth_1 design_1_top_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_ip_catalog -rebuild
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run design_1_project_mvp_top_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+update_ip_catalog -rebuild
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project jacobi
+current_project Project
+update_ip_catalog -rebuild
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+current_project jacobi
+current_project Project
+reset_run impl_1
+current_project jacobi
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
 set_property core_revision 4 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path {c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
-ipx::merge_project_changes hdl_parameters [ipx::current_core]
+update_ip_catalog -rebuild -repo_path {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
+current_project Project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project jacobi
+current_project Project
+upgrade_ip -vlnv xilinx.com:user:top:1.0 [get_ips  design_1_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run synth_1
+reset_run design_1_top_0_0_synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+delete_bd_objs [get_bd_nets project_mvp_top_0_vga_addra]
+delete_bd_objs [get_bd_nets xlconstant_0_dout] [get_bd_nets project_mvp_top_0_vga_dina] [get_bd_nets project_mvp_top_0_vga_addrb] [get_bd_nets blk_mem_gen_0_doutb] [get_bd_nets project_mvp_top_0_vga_wea] [get_bd_nets project_mvp_top_0_vga_enb]
+startgroup
+disconnect_bd_net /project_mvp_top_0_bram_enb_dsp [get_bd_pins bram_ctrl_0/b_en_3]
+disconnect_bd_net /project_mvp_top_0_bram_addrb_dsp [get_bd_pins bram_ctrl_0/b_addr_3]
+delete_bd_objs [get_bd_nets project_mvp_top_0_bram_dsp_done]
+disconnect_bd_net /xlconstant_1_dout [get_bd_pins bram_ctrl_0/a_addr_3] [get_bd_pins bram_ctrl_0/a_we_3] [get_bd_pins bram_ctrl_0/a_en_3] [get_bd_pins bram_ctrl_0/a_din_3]
+endgroup
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_ena_3] [get_bd_pins bram_ctrl_0/a_en_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_wea_3] [get_bd_pins bram_ctrl_0/a_we_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_addra_3] [get_bd_pins bram_ctrl_0/a_addr_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_enb_3] [get_bd_pins bram_ctrl_0/b_en_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_addrb_3] [get_bd_pins bram_ctrl_0/b_addr_3]
+delete_bd_objs [get_bd_nets bram_ctrl_0_b_dout_3]
+connect_bd_net [get_bd_pins bram_ctrl_0/b_dout_3] [get_bd_pins project_mvp_top_0/bram_doutb_3]
+delete_bd_objs [get_bd_nets bram_ctrl_0_b_dout_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_adouta_3] [get_bd_pins bram_ctrl_0/b_dout_3]
+delete_bd_objs [get_bd_nets bram_ctrl_0_b_dout_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_adouta_3] [get_bd_pins bram_ctrl_0/a_dout_3]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_doutb_3] [get_bd_pins bram_ctrl_0/b_dout_3]
+regenerate_bd_layout
+set_property location {5.5 2063 604} [get_bd_cells blk_mem_gen_0]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_wea] [get_bd_pins blk_mem_gen_0/wea]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_addra] [get_bd_pins blk_mem_gen_0/addra]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_dina] [get_bd_pins blk_mem_gen_0/dina]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_enb] [get_bd_pins blk_mem_gen_0/ena]
+undo
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_web_dsp] [get_bd_pins blk_mem_gen_0/web]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_enb_dsp] [get_bd_pins blk_mem_gen_0/enb]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_dout] [get_bd_pins blk_mem_gen_0/douta]
+delete_bd_objs [get_bd_nets blk_mem_gen_0_douta]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_dout] [get_bd_pins blk_mem_gen_0/doutb]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_addrb_dsp] [get_bd_pins blk_mem_gen_0/addrb]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_ena_dsp] [get_bd_pins blk_mem_gen_0/ena]
+delete_bd_objs [get_bd_nets project_mvp_top_0_vga_dina]
+delete_bd_objs [get_bd_nets project_mvp_top_0_vga_addra]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_dina_dsp] [get_bd_pins blk_mem_gen_0/dina]
+connect_bd_net [get_bd_pins project_mvp_top_0/vga_addra_dsp] [get_bd_pins blk_mem_gen_0/addra]
+connect_bd_net [get_bd_pins project_mvp_top_0/bram_dsp_done] [get_bd_pins bram_ctrl_0/status_3]
+set_property location {2 386 463} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins bram_ctrl_0/b_en_2]
+connect_bd_net [get_bd_pins bram_ctrl_0/a_en_2] [get_bd_pins xlconstant_0/dout]
+disconnect_bd_net /bram_ctrl_0_b_dout_1 [get_bd_pins bram_ctrl_0/b_dout_1]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER {151.636}] [get_bd_cells clk_wiz_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_clk_wiz_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
 set_property core_revision 5 [ipx::current_core]
 ipx::create_xgui_files [ipx::current_core]
 ipx::update_checksums [ipx::current_core]
 ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path {c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
-current_project project_1
+current_project jacobi
+update_ip_catalog -rebuild -repo_path {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
+current_project Project
 update_ip_catalog -rebuild -scan_changes
 report_ip_status -name ip_status
 current_project jacobi
-current_project project_1
-current_project project_1
-upgrade_ip -vlnv xilinx.com:user:svd_top_fsm_bram:1.0 [get_ips  design_1_svd_top_fsm_bram_0_0] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_1_svd_top_fsm_bram_0_0] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
-catch { config_ip_cache -export [get_ips -all design_1_svd_top_fsm_bram_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_blk_mem_gen_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_clk_wiz_0] }
-catch { config_ip_cache -export [get_ips -all design_1_rst_clk_wiz_100M_0] }
-export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 16 {design_1_svd_top_fsm_bram_0_0_synth_1 design_1_blk_mem_gen_0_0_synth_1 design_1_clk_wiz_0_synth_1 design_1_rst_clk_wiz_100M_0_synth_1}
-export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/MergerVic_Momin/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-current_project DDR_GOLDEN
-current_project project_1
+current_project Project
+upgrade_ip [get_ips  {design_1_top_0_0 design_1_project_mvp_top_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {design_1_top_0_0 design_1_project_mvp_top_0_0}] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 {design_1_project_mvp_top_0_0_synth_1 design_1_top_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
 current_project jacobi
-launch_simulation
-launch_simulation
-ipx::add_bus_interface done [ipx::current_core]
-set_property abstraction_type_vlnv xilinx.com:signal:data_rtl:1.0 [ipx::get_bus_interfaces done -of_objects [ipx::current_core]]
-set_property bus_type_vlnv xilinx.com:signal:data:1.0 [ipx::get_bus_interfaces done -of_objects [ipx::current_core]]
-set_property interface_mode master [ipx::get_bus_interfaces done -of_objects [ipx::current_core]]
-ipx::remove_bus_interface done [ipx::current_core]
-set_property core_revision 6 [ipx::current_core]
-ipx::create_xgui_files [ipx::current_core]
-ipx::update_checksums [ipx::current_core]
-ipx::save_core [ipx::current_core]
-update_ip_catalog -rebuild -repo_path {c:/users/khanm/onedrive/documents/github/ece532_project_mvp/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs}
-launch_simulation
-source tb.tcl
-restart
-run 100 ns
-run 100 ns
-run 100 ns
-run 100 ns
-run 1000 ns
+close_project
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+undo
+undo
+undo
+disconnect_bd_net /proc_sys_reset_0_peripheral_aresetn [get_bd_pins project_mvp_top_0/rst]
+connect_bd_net [get_bd_pins project_mvp_top_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_reset]

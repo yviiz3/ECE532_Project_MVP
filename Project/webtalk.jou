@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Tue Mar 31 16:35:42 2026
+# Process ID: 16856
+# Current directory: c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project
+# Command line: wbtcv.exe -mode batch -source c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/webtalk.log
+# Journal file: c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project\webtalk.jou
+#-----------------------------------------------------------
+source c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace

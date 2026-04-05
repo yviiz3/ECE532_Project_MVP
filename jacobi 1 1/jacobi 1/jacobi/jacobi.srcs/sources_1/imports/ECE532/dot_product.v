@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module dot_product #(
+module dot_product # (
     parameter DATA_WIDTH = 16,
     parameter VECTOR_LEN = 480,
     parameter ACC_WIDTH = 48

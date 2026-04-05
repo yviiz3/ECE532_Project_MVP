@@ -66,17 +66,18 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/wt [current_project]
   set_property parent.project_path C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux
-  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl
-  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp
+  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux
+  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl
+  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp
+  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi}
+  c:/Users/khanm/OneDrive/Documents/GitHub/DigitalAnnealer/FINAL_HARDWARE/axi4
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/axi_bram
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/ip [current_project]
@@ -172,6 +173,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force design_1_wrapper.mmi }
+  catch { write_bmm -force design_1_wrapper_bd.bmm }
   write_bitstream -force design_1_wrapper.bit 
   catch { write_sysdef -hwdef design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
   catch {write_debug_probes -quiet -force design_1_wrapper}

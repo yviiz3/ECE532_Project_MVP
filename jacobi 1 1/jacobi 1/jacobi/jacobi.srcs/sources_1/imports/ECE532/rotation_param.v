@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module rotation_param #(
+module rotation_param # (
     parameter ACC_WIDTH = 48
 )(
     input  wire                        clk,

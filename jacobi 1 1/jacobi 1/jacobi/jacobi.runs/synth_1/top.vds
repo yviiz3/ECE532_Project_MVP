@@ -1,0 +1,1065 @@
+#-----------------------------------------------------------
+# Vivado v2018.3.1 (64-bit)
+# SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+# IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+# Start of session at: Tue Mar 31 13:22:54 2026
+# Process ID: 2476
+# Current directory: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/top.vds
+# Journal file: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.cache/ip 
+Command: synth_design -top top -part xc7a100tcsg324-1 -directive AreaOptimized_high -control_set_opt_threshold 1 -no_iobuf -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12068 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 472.367 ; gain = 100.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/top.v:3]
+	Parameter ROWS bound to: 5 - type: integer 
+	Parameter COLS bound to: 5 - type: integer 
+	Parameter AW bound to: 19 - type: integer 
+	Parameter DW bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'victor_fsm' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:3]
+	Parameter ROWS bound to: 5 - type: integer 
+	Parameter COLS bound to: 5 - type: integer 
+	Parameter SWEEPS bound to: 1 - type: integer 
+	Parameter AW bound to: 19 - type: integer 
+	Parameter DW bound to: 19 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter BV_LOADB bound to: 5'b00001 
+	Parameter BV_LOADV bound to: 5'b00010 
+	Parameter BV_START bound to: 5'b00011 
+	Parameter BV_IDLE bound to: 5'b00100 
+	Parameter BV_STOREB bound to: 5'b00101 
+	Parameter BV_STOREV bound to: 5'b00110 
+	Parameter SIGMAU_LOAD bound to: 5'b00111 
+	Parameter SIGMAU_START bound to: 5'b01000 
+	Parameter SIGMAU_IDLE bound to: 5'b01001 
+	Parameter SIGMAU_STOREU bound to: 5'b01010 
+	Parameter SIGMAU_STORESIGMA bound to: 5'b01011 
+	Parameter DONE bound to: 5'b01100 
+	Parameter BUFFER_A bound to: 5'b01101 
+	Parameter BUFFER_B bound to: 5'b01110 
+	Parameter BUFFER_C bound to: 5'b01111 
+	Parameter BUFFER_D bound to: 5'b10000 
+	Parameter BUFFER_E bound to: 5'b10001 
+	Parameter BUFFER_F bound to: 5'b10010 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:93]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'victor_fsm' (1#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'control_fsm' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:3]
+	Parameter VECTOR_LEN bound to: 5 - type: integer 
+	Parameter VECTORV_LEN bound to: 5 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter DOT_START bound to: 5'b00001 
+	Parameter DOT_DO bound to: 5'b00010 
+	Parameter DOT_IDLE bound to: 5'b00011 
+	Parameter ROTATE_START bound to: 5'b00100 
+	Parameter ROTATE_IDLE bound to: 5'b00101 
+	Parameter UPDATE_START bound to: 5'b00110 
+	Parameter UPDATE_DO bound to: 5'b00111 
+	Parameter UPDATE_IDLE bound to: 5'b01000 
+	Parameter DONE bound to: 5'b01001 
+	Parameter DOT2_START bound to: 5'b01010 
+	Parameter DOT2_DO bound to: 5'b01011 
+	Parameter DOT2_IDLE bound to: 5'b01100 
+	Parameter SQRT_START bound to: 5'b01101 
+	Parameter SQRT_IDLE bound to: 5'b01110 
+	Parameter DIVIDE_START bound to: 5'b01111 
+	Parameter DIVIDE_DO bound to: 5'b10000 
+	Parameter DIVIDE_IDLE bound to: 5'b10001 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:88]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'control_fsm' (2#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+	Parameter MEM_FILE bound to: default.mem - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:22]
+INFO: [Synth 8-3876] $readmem data file 'default.mem' is read successfully [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram' (3#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tdp_bram__parameterized0' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+	Parameter MEM_FILE bound to: default.mem - type: string 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'default.mem' is read successfully [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'tdp_bram__parameterized0' (3#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dot_product' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter VECTOR_LEN bound to: 5 - type: integer 
+	Parameter ACC_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'dot_product' (4#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:3]
+INFO: [Synth 8-6157] synthesizing module 'rotation_param' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/rotation_param.v:3]
+	Parameter ACC_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cordic_0' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/cordic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_0' (5#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/cordic_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'cordic_1' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/cordic_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_1' (6#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/cordic_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rotation_param' (7#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/rotation_param.v:3]
+INFO: [Synth 8-6157] synthesizing module 'updated_column' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:3]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter VECTOR_LEN bound to: 5 - type: integer 
+	Parameter ACC_WIDTH bound to: 48 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* use_dsp = "yes" *) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'updated_column' (8#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cordic_2' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/cordic_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_2' (9#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/cordic_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (10#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/.Xil/Vivado-2476-DESKTOP-CDKE44D/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top' (11#1) [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/top.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 531.480 ; gain = 159.293
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 531.480 ; gain = 159.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 531.480 ; gain = 159.293
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'u_rotation_param/u_arctan'
+Finished Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/cordic_0/cordic_0_in_context.xdc] for cell 'u_rotation_param/u_arctan'
+Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1/cordic_1/cordic_1_in_context.xdc] for cell 'u_rotation_param/u_sincos'
+Finished Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1/cordic_1/cordic_1_in_context.xdc] for cell 'u_rotation_param/u_sincos'
+Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2/cordic_2/cordic_2_in_context.xdc] for cell 'u_sqrt'
+Finished Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2/cordic_2/cordic_2_in_context.xdc] for cell 'u_sqrt'
+Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'u_div_gen'
+Finished Parsing XDC File [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'u_div_gen'
+Parsing XDC File [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/constrs_1/new/constraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 891.957 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 892.500 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 893.816 ; gain = 1.859
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 893.816 ; gain = 521.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 893.816 ; gain = 521.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for u_rotation_param/u_arctan. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_rotation_param/u_sincos. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_sqrt. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for u_div_gen. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 893.816 ; gain = 521.629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'bram32_wet_reg' into 'bram31_wet_reg' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:339]
+INFO: [Synth 8-4471] merging register 'bram32_we_reg' into 'bram31_we_reg' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v:401]
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "row_incr" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "start_bv" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_sigmau" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "victor_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram21_re" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram12_wet" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "row_incr" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "start_bv" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "start_sigmau" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "victor_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "status" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram21_re" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram1_wett" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "bram12_wet" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'control_fsm'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "divide_increment" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "update_increment" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dot_increment" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "divide_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sqrt_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "update_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rotate_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "dot_start" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |               000000000000000001 |                            00000
+               DOT_START |               000000000000000010 |                            00001
+                  DOT_DO |               000000000000000100 |                            00010
+                DOT_IDLE |               000000000000001000 |                            00011
+            ROTATE_START |               000000000000010000 |                            00100
+             ROTATE_IDLE |               000000000000100000 |                            00101
+            UPDATE_START |               000000000001000000 |                            00110
+               UPDATE_DO |               000000000010000000 |                            00111
+             UPDATE_IDLE |               000000000100000000 |                            01000
+              DOT2_START |               000000001000000000 |                            01010
+                 DOT2_DO |               000000010000000000 |                            01011
+               DOT2_IDLE |               000000100000000000 |                            01100
+              SQRT_START |               000001000000000000 |                            01101
+               SQRT_IDLE |               000010000000000000 |                            01110
+            DIVIDE_START |               000100000000000000 |                            01111
+               DIVIDE_DO |               001000000000000000 |                            10000
+             DIVIDE_IDLE |               010000000000000000 |                            10001
+                    DONE |               100000000000000000 |                            01001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'control_fsm'
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 893.816 ; gain = 521.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     65 Bit       Adders := 2     
+	   2 Input     65 Bit       Adders := 2     
+	   3 Input     48 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 7     
+	   2 Input     11 Bit       Adders := 13    
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 3     
++---Registers : 
+	               65 Bit    Registers := 4     
+	               64 Bit    Registers := 8     
+	               48 Bit    Registers := 13    
+	               19 Bit    Registers := 4     
+	               16 Bit    Registers := 19    
+	               11 Bit    Registers := 27    
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 64    
++---Multipliers : 
+	                16x48  Multipliers := 8     
++---RAMs : 
+	              32K Bit         RAMs := 4     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 2     
+	  18 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 7     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 26    
+	   4 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   5 Input     11 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 4     
+	   7 Input     10 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 47    
+	  10 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 3     
+	  20 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	  18 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 8     
+Module victor_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 5     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 4     
+	               11 Bit    Registers := 15    
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 10    
+	   4 Input     11 Bit        Muxes := 1     
+	   3 Input     11 Bit        Muxes := 1     
+	   5 Input     11 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 4     
+	   7 Input     10 Bit        Muxes := 1     
+	   3 Input     10 Bit        Muxes := 1     
+	   8 Input     10 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 35    
+	  10 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 3     
+	  20 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module control_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 8     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 12    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	  18 Input     18 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 8     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  18 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 2     
+Module tdp_bram 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module tdp_bram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module dot_product 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module rotation_param 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     48 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 6     
+	                1 Bit    Registers := 3     
+Module updated_column 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     65 Bit       Adders := 1     
+	   2 Input     65 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               65 Bit    Registers := 2     
+	               64 Bit    Registers := 4     
+	               48 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Multipliers : 
+	                16x48  Multipliers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'u_dot_product_1/a_reg_reg[15:0]' into 'u_dot_product_1/b_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+INFO: [Synth 8-4471] merging register 'u_dot_product_2/a_reg_reg[15:0]' into 'u_dot_product_2/b_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:71]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:70]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:73]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 3 [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:72]
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP sy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg0.
+DSP Report: register A is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register A is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP cx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg0.
+DSP Report: register A is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register A is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP sx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg0.
+DSP Report: register A is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register A is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: Generating DSP cy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg0.
+DSP Report: register A is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register A is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+INFO: [Synth 8-4471] merging register 'y_reg_reg[15:0]' into 'y_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:41]
+INFO: [Synth 8-4471] merging register 'y_reg_reg[15:0]' into 'y_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:41]
+INFO: [Synth 8-4471] merging register 'x_reg_reg[15:0]' into 'x_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:40]
+INFO: [Synth 8-4471] merging register 'x_reg_reg[15:0]' into 'x_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:40]
+INFO: [Synth 8-4471] merging register 'x_reg_reg[15:0]' into 'x_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:40]
+INFO: [Synth 8-4471] merging register 'x_reg_reg[15:0]' into 'x_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:40]
+INFO: [Synth 8-4471] merging register 'x_reg_reg[15:0]' into 'x_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:40]
+INFO: [Synth 8-4471] merging register 'y_reg_reg[15:0]' into 'y_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:41]
+INFO: [Synth 8-4471] merging register 'y_reg_reg[15:0]' into 'y_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:41]
+INFO: [Synth 8-4471] merging register 'y_reg_reg[15:0]' into 'y_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v:41]
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP sy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg0.
+DSP Report: register A is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg0.
+DSP Report: Generating DSP sy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: register A is absorbed into DSP sy_reg_reg.
+DSP Report: register sy_reg_reg is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: operator sy_reg0 is absorbed into DSP sy_reg_reg.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP cx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg0.
+DSP Report: register A is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg0.
+DSP Report: Generating DSP cx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: register A is absorbed into DSP cx_reg_reg.
+DSP Report: register cx_reg_reg is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: operator cx_reg0 is absorbed into DSP cx_reg_reg.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP sx_reg_reg.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP sx_reg0, operation Mode is: A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg0.
+DSP Report: register A is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg0.
+DSP Report: Generating DSP sx_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register x_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: register A is absorbed into DSP sx_reg_reg.
+DSP Report: register sx_reg_reg is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: operator sx_reg0 is absorbed into DSP sx_reg_reg.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register B is absorbed into DSP cy_reg_reg.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: Generating DSP cy_reg0, operation Mode is: A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg0.
+DSP Report: register A is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg0.
+DSP Report: Generating DSP cy_reg_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register y_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: register A is absorbed into DSP cy_reg_reg.
+DSP Report: register cy_reg_reg is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+DSP Report: operator cy_reg0 is absorbed into DSP cy_reg_reg.
+INFO: [Synth 8-4471] merging register 'u_dot_product_1/b_reg_reg[15:0]' into 'u_dot_product_1/b_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+INFO: [Synth 8-4471] merging register 'u_dot_product_2/b_reg_reg[15:0]' into 'u_dot_product_2/b_reg_reg[15:0]' [C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v:32]
+DSP Report: Generating DSP u_dot_product_1/accumulator_reg, operation Mode is: (P+A2*B2)'.
+DSP Report: register u_dot_product_1/b_reg_reg is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: register u_dot_product_1/b_reg_reg is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: register u_dot_product_1/accumulator_reg is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: operator u_dot_product_1/accumulator0 is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: operator u_dot_product_1/accumulator1 is absorbed into DSP u_dot_product_1/accumulator_reg.
+DSP Report: Generating DSP u_dot_product_2/accumulator_reg, operation Mode is: (P+A2*B2)'.
+DSP Report: register u_dot_product_2/b_reg_reg is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: register u_dot_product_2/b_reg_reg is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: register u_dot_product_2/accumulator_reg is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: operator u_dot_product_2/accumulator0 is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: operator u_dot_product_2/accumulator1 is absorbed into DSP u_dot_product_2/accumulator_reg.
+DSP Report: Generating DSP u_dot_product_3/accumulator_reg, operation Mode is: (P+A2*B2)'.
+DSP Report: register u_dot_product_3/b_reg_reg is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: register u_dot_product_3/a_reg_reg is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: register u_dot_product_3/accumulator_reg is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: operator u_dot_product_3/accumulator0 is absorbed into DSP u_dot_product_3/accumulator_reg.
+DSP Report: operator u_dot_product_3/accumulator1 is absorbed into DSP u_dot_product_3/accumulator_reg.
+INFO: [Synth 8-3971] The signal u_tdp_bram_1/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal u_tdp_bram_2/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal u_tdp_bram_3/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal u_tdp_bram_4/mem_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_rotation_param/two_gamma_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram31_addrt_reg[10] )
+INFO: [Synth 8-3886] merging instance 'u_rotation_param/theta_reg_reg[46]' (FDRE) to 'u_rotation_param/theta_reg_reg[47]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram11_addrt_reg[10] )
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[0]' (FDRE) to 'u_control_fsm/addrv_bstart_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[1]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[2]' (FDRE) to 'u_control_fsm/addrb_bstart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[3]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[4]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[5]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[6]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[7]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[8]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[9]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_bstart_reg[10]' (FDRE) to 'u_control_fsm/addrv_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[0]' (FDRE) to 'u_control_fsm/addrv_astart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[1]' (FDRE) to 'u_control_fsm/addrv_astart_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[2]' (FDRE) to 'u_control_fsm/addrv_astart_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[3]' (FDRE) to 'u_control_fsm/addrv_astart_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[4]' (FDRE) to 'u_control_fsm/addrv_astart_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[5]' (FDRE) to 'u_control_fsm/addrv_astart_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[6]' (FDRE) to 'u_control_fsm/addrv_astart_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[7]' (FDRE) to 'u_control_fsm/addrv_astart_reg[8]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[8]' (FDRE) to 'u_control_fsm/addrv_astart_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[9]' (FDRE) to 'u_control_fsm/addrv_astart_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrv_astart_reg[10]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[0]' (FDRE) to 'u_control_fsm/addrb_bstart_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[1]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[3]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[4]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[5]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[6]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[7]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[8]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[9]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_bstart_reg[10]' (FDRE) to 'u_control_fsm/addrb_astart_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[0]' (FDRE) to 'u_control_fsm/addrb_astart_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[1]' (FDRE) to 'u_control_fsm/addrb_astart_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[2]' (FDRE) to 'u_control_fsm/addrb_astart_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[3]' (FDRE) to 'u_control_fsm/addrb_astart_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[4]' (FDRE) to 'u_control_fsm/addrb_astart_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[5]' (FDRE) to 'u_control_fsm/addrb_astart_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[6]' (FDRE) to 'u_control_fsm/addrb_astart_reg[7]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[7]' (FDRE) to 'u_control_fsm/addrb_astart_reg[8]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[8]' (FDRE) to 'u_control_fsm/addrb_astart_reg[9]'
+INFO: [Synth 8-3886] merging instance 'u_control_fsm/addrb_astart_reg[9]' (FDRE) to 'u_control_fsm/addrb_astart_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_control_fsm/addrb_astart_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram41_addr_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram21_addr_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram2_addrtt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_victor_fsm/bram1_addrtt_reg[18] )
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[47]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[46]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[45]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[44]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[43]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[42]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[41]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[40]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[39]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[38]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[37]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[36]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[35]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[34]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[33]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[32]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sy_reg_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[47]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[46]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[45]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[44]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[43]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[42]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[41]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[40]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[39]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[38]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[37]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[36]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[35]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[34]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[33]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[32]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cx_reg_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[47]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[46]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[45]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[44]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[43]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[42]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[41]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[40]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[39]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[38]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[37]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[36]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[35]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[34]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[33]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[32]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/sx_reg_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[47]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[46]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[45]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[44]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[43]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[42]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (u_updated_column_1/cy_reg_reg[41]) is unused and will be removed from module top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 893.816 ; gain = 521.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tdp_bram:                 | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|tdp_bram__parameterized0: | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|tdp_bram:                 | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|tdp_bram__parameterized0: | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|updated_column | (A2*B2)'         | 16     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|updated_column | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|updated_column | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dot_product    | (P+A2*B2)'       | 16     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dot_product    | (P+A2*B2)'       | 16     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dot_product    | (P+A2*B2)'       | 16     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++---------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_62/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_62/u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_63/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_63/u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_64/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_64/u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_65/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_65/u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 928.625 ; gain = 556.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 938.125 ; gain = 565.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name               | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tdp_bram:                 | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|tdp_bram__parameterized0: | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|tdp_bram:                 | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
+|tdp_bram__parameterized0: | mem_reg    | 2 K x 16(READ_FIRST)   | W | R | 2 K x 16(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
++--------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_1/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_3/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance u_tdp_bram_4/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cordic_2      |         1|
+|2     |div_gen_0     |         1|
+|3     |cordic_0      |         1|
+|4     |cordic_1      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |cordic_0  |     1|
+|2     |cordic_1  |     1|
+|3     |cordic_2  |     1|
+|4     |div_gen_0 |     1|
+|5     |CARRY4    |   171|
+|6     |DSP48E1_1 |     8|
+|7     |DSP48E1_2 |    11|
+|8     |DSP48E1_3 |     8|
+|9     |LUT1      |    14|
+|10    |LUT2      |   655|
+|11    |LUT3      |   237|
+|12    |LUT4      |   128|
+|13    |LUT5      |    96|
+|14    |LUT6      |    99|
+|15    |RAMB36E1  |     4|
+|16    |FDCE      |   256|
+|17    |FDPE      |     1|
+|18    |FDRE      |   872|
+|19    |FDSE      |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------+---------------------------+------+
+|      |Instance             |Module                     |Cells |
++------+---------------------+---------------------------+------+
+|1     |top                  |                           |  2815|
+|2     |  u_control_fsm      |control_fsm                |   336|
+|3     |  u_dot_product_1    |dot_product                |    64|
+|4     |  u_dot_product_2    |dot_product_0              |    65|
+|5     |  u_dot_product_3    |dot_product_1              |    64|
+|6     |  u_rotation_param   |rotation_param             |   494|
+|7     |  u_tdp_bram_1       |tdp_bram                   |     1|
+|8     |  u_tdp_bram_2       |tdp_bram__parameterized0   |     1|
+|9     |  u_tdp_bram_3       |tdp_bram_2                 |     1|
+|10    |  u_tdp_bram_4       |tdp_bram__parameterized0_3 |    33|
+|11    |  u_updated_column_1 |updated_column             |   485|
+|12    |  u_updated_column_2 |updated_column_4           |   468|
+|13    |  u_victor_fsm       |victor_fsm                 |   693|
++------+---------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 967.965 ; gain = 595.777
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 248 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 967.965 ; gain = 233.441
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 967.965 ; gain = 595.777
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 202 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 967.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+194 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 967.965 ; gain = 607.258
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 967.965 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 13:23:27 2026...

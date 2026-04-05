@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:project_mvp_top:1.0
-// IP Revision: 22
+// IP Revision: 34
 
 `timescale 1ns/1ps
 
@@ -69,27 +69,35 @@ module design_1_project_mvp_top_0_0 (
   bram_addra_uart,
   bram_dina_uart,
   bram_enb_uart,
-  bram_addrb_uart,
-  bram_doutb_uart,
   bram_uart_done,
-  bram_ena_dsp,
-  bram_wea_dsp,
-  bram_addra_dsp,
-  bram_dina_dsp,
-  bram_enb_dsp,
-  bram_addrb_dsp,
-  bram_doutb_dsp,
   bram_dsp_done,
   vga_wea,
   vga_addra,
   vga_dina,
   vga_enb,
   vga_addrb,
-  vga_doutb
+  vga_doutb,
+  vic_done,
+  vic_start,
+  vga_wea_dsp,
+  vga_addra_dsp,
+  vga_dina_dsp,
+  vga_ena_dsp,
+  vga_addrb_dsp,
+  vga_dout,
+  vga_enb_dsp,
+  vga_web_dsp,
+  bram_ena_3,
+  bram_wea_3,
+  bram_adouta_3,
+  bram_addra_3,
+  bram_enb_3,
+  bram_addrb_3,
+  bram_doutb_3
 );
 
 input wire clk2;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst:reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst:reset, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -106,16 +114,7 @@ output wire bram_wea_uart;
 output wire [13 : 0] bram_addra_uart;
 output wire [16 : 0] bram_dina_uart;
 output wire bram_enb_uart;
-output wire [13 : 0] bram_addrb_uart;
-input wire [16 : 0] bram_doutb_uart;
 output wire bram_uart_done;
-output wire bram_ena_dsp;
-output wire bram_wea_dsp;
-output wire [13 : 0] bram_addra_dsp;
-output wire [16 : 0] bram_dina_dsp;
-output wire bram_enb_dsp;
-output wire [13 : 0] bram_addrb_dsp;
-input wire [16 : 0] bram_doutb_dsp;
 output wire bram_dsp_done;
 output wire vga_wea;
 output wire [13 : 0] vga_addra;
@@ -123,6 +122,23 @@ output wire [16 : 0] vga_dina;
 output wire vga_enb;
 output wire [13 : 0] vga_addrb;
 input wire [16 : 0] vga_doutb;
+input wire vic_done;
+output wire vic_start;
+output wire vga_wea_dsp;
+output wire [13 : 0] vga_addra_dsp;
+output wire [16 : 0] vga_dina_dsp;
+output wire vga_ena_dsp;
+output wire [13 : 0] vga_addrb_dsp;
+input wire [3 : 0] vga_dout;
+output wire vga_enb_dsp;
+output wire vga_web_dsp;
+output wire bram_ena_3;
+output wire bram_wea_3;
+input wire [16 : 0] bram_adouta_3;
+output wire [13 : 0] bram_addra_3;
+output wire bram_enb_3;
+output wire [13 : 0] bram_addrb_3;
+input wire [16 : 0] bram_doutb_3;
 
   project_mvp_top inst (
     .clk2(clk2),
@@ -139,22 +155,30 @@ input wire [16 : 0] vga_doutb;
     .bram_addra_uart(bram_addra_uart),
     .bram_dina_uart(bram_dina_uart),
     .bram_enb_uart(bram_enb_uart),
-    .bram_addrb_uart(bram_addrb_uart),
-    .bram_doutb_uart(bram_doutb_uart),
     .bram_uart_done(bram_uart_done),
-    .bram_ena_dsp(bram_ena_dsp),
-    .bram_wea_dsp(bram_wea_dsp),
-    .bram_addra_dsp(bram_addra_dsp),
-    .bram_dina_dsp(bram_dina_dsp),
-    .bram_enb_dsp(bram_enb_dsp),
-    .bram_addrb_dsp(bram_addrb_dsp),
-    .bram_doutb_dsp(bram_doutb_dsp),
     .bram_dsp_done(bram_dsp_done),
     .vga_wea(vga_wea),
     .vga_addra(vga_addra),
     .vga_dina(vga_dina),
     .vga_enb(vga_enb),
     .vga_addrb(vga_addrb),
-    .vga_doutb(vga_doutb)
+    .vga_doutb(vga_doutb),
+    .vic_done(vic_done),
+    .vic_start(vic_start),
+    .vga_wea_dsp(vga_wea_dsp),
+    .vga_addra_dsp(vga_addra_dsp),
+    .vga_dina_dsp(vga_dina_dsp),
+    .vga_ena_dsp(vga_ena_dsp),
+    .vga_addrb_dsp(vga_addrb_dsp),
+    .vga_dout(vga_dout),
+    .vga_enb_dsp(vga_enb_dsp),
+    .vga_web_dsp(vga_web_dsp),
+    .bram_ena_3(bram_ena_3),
+    .bram_wea_3(bram_wea_3),
+    .bram_adouta_3(bram_adouta_3),
+    .bram_addra_3(bram_addra_3),
+    .bram_enb_3(bram_enb_3),
+    .bram_addrb_3(bram_addrb_3),
+    .bram_doutb_3(bram_doutb_3)
   );
 endmodule

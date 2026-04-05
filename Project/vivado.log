@@ -3658,3 +3658,577 @@ update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+set_property core_revision 22 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project Project
+open_bd_design {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:project_mvp_top:1.0 [get_ips  design_1_project_mvp_top_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_project_mvp_top_0_0 (project_mvp_top_v1_0 1.0) from revision 21 to revision 22
+WARNING: [BD 41-1731] Type mismatch between connected pins: /clk_wiz_0/clk_out2(clk) and /project_mvp_top_0_upgraded_ipi/clk2(undef)
+Wrote  : <C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_project_mvp_top_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-1347] Reset pin /project_mvp_top_0/rst (associated clock /project_mvp_top_0/clk) is connected to asynchronous reset source /reset.
+This may prevent design from meeting timing. Instead it should be connected to reset source /proc_sys_reset_0/peripheral_aresetn.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+WARNING: [BD 41-927] Following properties on pin /bram_ctrl_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+WARNING: [BD 41-927] Following properties on pin /project_mvp_top_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=/clk_wiz_0_clk_out1 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/bram_ctrl_0/b_we_3
+/bram_ctrl_0/b_din_3
+
+Wrote  : <C:\Users\khanm\OneDrive\Documents\GitHub\ECE532_Project_MVP\Project\Project.srcs\sources_1\bd\design_1\design_1.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_1'(17) to net 'project_mvp_top_0_bram_addra_uart'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_1'(32) to net 'project_mvp_top_0_bram_dina_uart'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/project_mvp_top_0/bram_doutb_uart'(17) to net 'bram_ctrl_0_b_dout_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/blk_mem_gen_0/addra'(16) to net 'project_mvp_top_0_vga_addra'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/blk_mem_gen_0/dina'(4) to net 'project_mvp_top_0_vga_dina'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/blk_mem_gen_0/addrb'(16) to net 'project_mvp_top_0_vga_addrb'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/project_mvp_top_0/vga_doutb'(17) to net 'blk_mem_gen_0_doutb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/project_mvp_top_0/bram_doutb_dsp'(17) to net 'bram_ctrl_0_b_dout_3'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_3'(17) to net 'project_mvp_top_0_bram_addrb_dsp'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_2'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_2'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_2'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_din_2'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_3'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_3'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_4'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_4'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_4'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_din_4'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_1'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_din_1'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/synth/design_1.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_1'(17) to net 'project_mvp_top_0_bram_addra_uart'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_1'(32) to net 'project_mvp_top_0_bram_dina_uart'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/project_mvp_top_0/bram_doutb_uart'(17) to net 'bram_ctrl_0_b_dout_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/blk_mem_gen_0/addra'(16) to net 'project_mvp_top_0_vga_addra'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/blk_mem_gen_0/dina'(4) to net 'project_mvp_top_0_vga_dina'(17) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/blk_mem_gen_0/addrb'(16) to net 'project_mvp_top_0_vga_addrb'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/project_mvp_top_0/vga_doutb'(17) to net 'blk_mem_gen_0_doutb'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/project_mvp_top_0/bram_doutb_dsp'(17) to net 'bram_ctrl_0_b_dout_3'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_3'(17) to net 'project_mvp_top_0_bram_addrb_dsp'(14) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_2'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_2'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_2'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_din_2'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_3'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_3'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_addr_4'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/a_din_4'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_4'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_din_4'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_addr_1'(17) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/bram_ctrl_0/b_din_1'(32) to net 'xlconstant_1_dout'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block project_mvp_top_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_1 .
+Exporting to file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+catch { config_ip_cache -export [get_ips -all design_1_project_mvp_top_0_0] }
+export_ip_user_files -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 16 design_1_project_mvp_top_0_0_synth_1
+[Tue Mar 31 12:55:59 2026] Launched design_1_project_mvp_top_0_0_synth_1...
+Run output will be captured here: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/design_1_project_mvp_top_0_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files -ipstatic_source_dir C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/modelsim} {questa=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/questa} {riviera=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/riviera} {activehdl=C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Tue Mar 31 12:58:10 2026] Launched synth_1...
+Run output will be captured here: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/synth_1/runme.log
+[Tue Mar 31 12:58:10 2026] Launched impl_1...
+Run output will be captured here: C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property  ip_repo_paths  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi}} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi'.
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_mux'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/bram_ctrl'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi'.
+create_ip -name top -vendor xilinx.com -library user -version 1.0 -module_name top_0 -dir c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip
+generate_target {instantiation_template} [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/top_0/top_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'top_0'...
+generate_target all [get_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.srcs/sources_1/ip/top_0/top_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'top_0'...
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/constrs_1/new' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/constrs_1/new/constraints.xdc' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_0/cordic_0.xci' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_1/cordic_1.xci' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/cordic_2/cordic_2.xci' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/ip/div_gen_0/div_gen_0.xci' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/control_fsm.v' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/dot_product.v' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/rotation_param.v' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/tdp_bram.v' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/imports/ECE532/updated_column.v' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/victor_fsm.v' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/matrixv.mem' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/matrixb.mem' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/default.mem' to.
+CRITICAL WARNING: [IP_Flow 19-664] Failed to create directory 'c:/Users/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new' to copy 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/jacobi 1 1/jacobi 1/jacobi/jacobi.srcs/sources_1/new/top.v' to.
+ERROR: [IP_Flow 19-167] Failed to deliver one or more file(s).
+ERROR: [IP_Flow 19-3505] IP Generation error: Failed to generate IP 'top_0'. Failed to generate 'Synthesis' outputs: 
+ERROR: [IP_Flow 19-98] Generation of the IP CORE failed.
+Failed to generate IP 'top_0'. Failed to generate 'Synthesis' outputs: 
+update_compile_order -fileset sources_1
+save_wave_config {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/Project.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_project
+current_project project_mvp_top_v1_0_project
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+set_property core_revision 23 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+set_property core_revision 24 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+CRITICAL WARNING: [HDL 9-806] Syntax error near "else". [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp\project_mvp_top.sv:97]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "else". [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv:97]
+ERROR: [IP_Flow 19-259] [HDL Parser] Failed analyze operation while parsing HDL.
+ERROR: [IP_Flow 19-258] [HDL Parser] Error parsing HDL file 'project_mvp_top.sv'.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+set_property core_revision 25 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+set_property core_revision 26 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv'.
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+ipx::merge_project_changes ports [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv'.
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+set_property core_revision 27 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv'.
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+set_property core_revision 28 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::add_file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type systemVerilogSource [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::add_file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type verilogSource [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::add_file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type systemVerilogSource [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::add_file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type systemVerilogSource [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::add_file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type systemVerilogSource [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::add_file C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type systemVerilogSource [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv'.
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+set_property core_revision 29 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+add_files -norecurse -copy_to c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv}
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv'.
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+update_compile_order -fileset sources_1
+set_property core_revision 30 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv] -no_script -reset -force -quiet
+remove_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_buf' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf.v:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_buf' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_rx' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'vga_buf' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'vga_output' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'reconstruction_buf' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_buf.sv:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'reconstruction_compute_64_1dsp' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv:23]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'svd_bram_firstcol_checker' [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv:23]
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'uart_buf()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf-old.v
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf.v
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'uart_rx()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_rx.v
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'vga_buf()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_buf.v
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'vga_output()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_output.v
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'reconstruction_buf()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_buf.sv
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'reconstruction_compute_64_1dsp()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'svd_bram_firstcol_checker()' found in library 'xil_defaultlib'
+Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_bram_firstcol_checker.sv
+	(Active) Duplicate found at line 23 of file c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv:]
+[Tue Mar 31 15:31:40 2026] Launched synth_1...
+Run output will be captured here: c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/project_mvp_top.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_250_5dsp.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_buf.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_bram_firstcol_checker.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf-old.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_rx.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_buf.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_output.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv] -no_script -reset -force -quiet
+remove_files  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/project_mvp_top.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_250_5dsp.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_buf.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_bram_firstcol_checker.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf-old.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_rx.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_buf.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_output.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv}
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_250_5dsp.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v] -no_script -reset -force -quiet
+remove_files  {c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_250_5dsp.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v}
+export_ip_user_files -of_objects  [get_files c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v] -no_script -reset -force -quiet
+remove_files  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v
+add_files -norecurse {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv}
+add_files -norecurse -copy_to c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/test_square_writer.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/input_bram_mux.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_200_5dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_200_5dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv}
+ERROR: [Vivado 12-3630] The destination file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv' already exists, please use -force if you want to overwrite!
+add_files -norecurse -copy_to c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_200_5dsp.sv
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/project_mvp_top.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf-old.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_rx.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_bram_firstcol_checker.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_output.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_buf.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_buf.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/project_mvp_top.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_64_1dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf-old.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_rx.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_bram_firstcol_checker.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_output.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/uart_buf.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/vga_buf.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_buf.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_250_5dsp.sv' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+set_property core_revision 31 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Tue Mar 31 15:36:35 2026] Launched synth_1...
+Run output will be captured here: c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1/runme.log
+add_files -norecurse -copy_to c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src {C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_200_5dsp.sv}
+ERROR: [Vivado 12-3630] The destination file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_250_5dsp.sv' already exists, please use -force if you want to overwrite!
+add_files -norecurse -copy_to c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_200_5dsp.sv
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Tue Mar 31 15:37:50 2026] Launched synth_1...
+Run output will be captured here: c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1/runme.log
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+set_property core_revision 32 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Tue Mar 31 15:40:10 2026] Launched synth_1...
+Run output will be captured here: c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.runs/synth_1/runme.log
+current_project bram_ctrl_v1_0_project
+current_project project_mvp_top_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 33 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5101] Packaging a component with a SystemVerilog top file is not fully supported. Please refer to UG1118 'Creating and Packaging Custom IP'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'bram_addra' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'bram_dina'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_u_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'exp_v_bram_addr' has a dependency on the module local parameter or undefined parameter 'EXP_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_u_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'EXP_W' by 16 for port or parameter 'exp_v_bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_dout'
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'W' by 17 for port or parameter 'bram_din'
+WARNING: [IP_Flow 19-587] [HDL Parser] HDL port or parameter 'out_bram_addr' has a dependency on the module local parameter or undefined parameter 'OUT_ADDR_W'.
+INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'OUT_W' by 4 for port or parameter 'out_bram_din'
+set_property core_revision 34 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project
+****** Webtalk v2018.3.1 (64-bit)
+  **** SW Build 2489853 on Tue Mar 26 04:20:25 MDT 2019
+  **** IP Build 2486929 on Tue Mar 26 06:44:21 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 31 16:35:43 2026...
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 31 16:35:47 2026...

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774957009">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1774986010">
   <File Type="PA-TCL" Name="project_mvp_top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="project_mvp_top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="project_mvp_top_reports.tcl"/>
@@ -11,41 +11,11 @@
   <File Type="VDS-TIMING-PB" Name="project_mvp_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v">
-      <FileInfo>
-        <Attr Name="Library" Val=""/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml">
+      <FileInfo SFType="IPXACT"/>
     </File>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v">
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv">
       <FileInfo>
-        <Attr Name="Library" Val=""/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v">
-      <FileInfo>
-        <Attr Name="Library" Val=""/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v">
-      <FileInfo>
-        <Attr Name="Library" Val=""/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv">
-      <FileInfo>
-        <Attr Name="Library" Val=""/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -53,7 +23,20 @@
     </File>
     <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv">
       <FileInfo>
-        <Attr Name="Library" Val=""/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -61,27 +44,70 @@
     </File>
     <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv">
       <FileInfo>
-        <Attr Name="Library" Val=""/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv">
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v">
       <FileInfo>
-        <Attr Name="Library" Val=""/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/component.xml">
-      <FileInfo SFType="IPXACT"/>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_200_5dsp.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_200_5dsp.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="project_mvp_top"/>
-      <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../../../../Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

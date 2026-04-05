@@ -37,17 +37,22 @@ set_property ip_repo_paths {
 update_ip_catalog
 set_property ip_output_repo c:/users/khanm/onedrive/documents/github/ece532_project_mvp/project/project.tmp/project_mvp_top_v1_0_project/project_mvp_top_v1_0_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library "" -sv {
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv
+read_verilog -library xil_defaultlib -sv {
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/project_mvp_top.sv
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_64_1dsp.sv
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_bram_firstcol_checker.sv
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/svd_preloader_250_5dsp.sv
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_buf.sv
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/reconstruction_compute_250_5dsp.sv
+  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/reconstruction_compute_200_5dsp.sv
+  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/src/svd_preloader_200_5dsp.sv
 }
-read_verilog -library "" {
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v
-  c:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v
+read_verilog -library xil_defaultlib {
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf-old.v
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_rx.v
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_output.v
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/uart_buf.v
+  C:/Users/khanm/OneDrive/Documents/GitHub/ECE532_Project_MVP/Project/project_mvp/vga_buf.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
